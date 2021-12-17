@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Catppuccin Latte (Light) */
+@layer base {
+  :root {
+    --background: 234 20% 97%; /* Base #eff1f5 */
+    --foreground: 234 16% 35%; /* Text #4c4f69 */
+    --card: 234 20% 97%; /* Base */
+    --card-foreground: 234 16% 35%; /* Text */
+    --popover: 232 17% 93%; /* Mantle #e6e9ef */
+    --popover-foreground: 234 16% 35%; /* Text */
+    --primary: 267 84% 58%; /* Mauve #8839ef */
+    --primary-foreground: 234 20% 97%; /* Base */
+    --secondary: 234 14% 86%; /* Surface0 #ccd0da */
+    --secondary-foreground: 234 16% 35%; /* Text */
+    --muted: 234 14% 86%; /* Surface0 */
+    --muted-foreground: 236 10% 43%; /* Subtext0 #6c6f85 */
+    --accent: 234 13% 80%; /* Surface1 #bcc0cc */
+    --accent-foreground: 234 16% 35%; /* Text */
+    --destructive: 347 87% 44%; /* Red #d20f39 */
+    --destructive-foreground: 234 20% 97%; /* Base */
+    --border: 234 14% 86%; /* Surface0 */
+    --input: 234 14% 86%; /* Surface0 */
+    --ring: 267 84% 58%; /* Mauve */
+    --radius: 0.5rem;
+
+    /* Additional Catppuccin colors */
+    --lavender: 239 97% 72%; /* #7287fd */
+    --blue: 220 91% 54%; /* #1e66f5 */
+    --sapphire: 189 70% 42%; /* #209fb5 */
+    --sky: 197 97% 46%; /* #04a5e5 */
+    --teal: 183 74% 35%; /* #179299 */
+    --green: 109 58% 40%; /* #40a02b */
+    --yellow: 35 77% 49%; /* #df8e1d */
+    --peach: 22 99% 52%; /* #fe640b */
+    --maroon: 355 76% 59%; /* #e64553 */
+    --red: 347 87% 44%; /* #d20f39 */
+    --mauve: 267 84% 58%; /* #8839ef */
+    --pink: 316 73% 69%; /* #ea76cb */
+    --flamingo: 0 60% 67%; /* #dd7878 */
+    --rosewater: 11 59% 67%; /* #dc8a78 */
+  }
+
+  /* Catppuccin Mocha (Dark) */
+  .dark {
+    --background: 240 21% 15%; /* Base #1e1e2e */
+    --foreground: 226 64% 88%; /* Text #cdd6f4 */
+    --card: 240 21% 15%; /* Base */
+    --card-foreground: 226 64% 88%; /* Text */
+    --popover: 240 21% 12%; /* Mantle #181825 */
+    --popover-foreground: 226 64% 88%; /* Text */
+    --primary: 267 84% 81%; /* Mauve #cba6f7 */
+    --primary-foreground: 240 21% 15%; /* Base */
+    --secondary: 237 16% 23%; /* Surface0 #313244 */
+    --secondary-foreground: 226 64% 88%; /* Text */
+    --muted: 237 16% 23%; /* Surface0 */
+    --muted-foreground: 228 24% 72%; /* Subtext1 #bac2de */
+    --accent: 236 16% 31%; /* Surface1 #45475a */
+    --accent-foreground: 226 64% 88%; /* Text */
+    --destructive: 343 81% 75%; /* Red #f38ba8 */
+    --destructive-foreground: 240 21% 15%; /* Base */
+    --border: 237 16% 23%; /* Surface0 */
+    --input: 237 16% 23%; /* Surface0 */
+    --ring: 267 84% 81%; /* Mauve */
+
+    /* Additional Catppuccin colors */
+    --lavender: 232 97% 85%; /* #b4befe */
+    --blue: 217 92% 76%; /* #89b4fa */
+    --sapphire: 189 71% 73%; /* #74c7ec */
+    --sky: 189 71% 73%; /* #89dceb */
+    --teal: 170 57% 73%; /* #94e2d5 */
+    --green: 115 54% 76%; /* #a6e3a1 */
+    --yellow: 41 86% 83%; /* #f9e2af */
+    --peach: 23 92% 75%; /* #fab387 */
+    --maroon: 351 74% 80%; /* #eba0ac */
+    --red: 343 81% 75%; /* #f38ba8 */
+    --mauve: 267 84% 81%; /* #cba6f7 */
+    --pink: 316 72% 86%; /* #f5c2e7 */
+    --flamingo: 0 59% 88%; /* #f2cdcd */
+    --rosewater: 10 56% 91%; /* #f5e0dc */
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Selection */
+::selection {
+  background-color: hsl(var(--primary) / 0.2);
+  color: hsl(var(--foreground));
+}
