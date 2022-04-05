@@ -1,6 +1,6 @@
 - Студент Факультета ПИиКТ в [ITMO University](https://itmo.ru/)
 
-- Все лабы и отчеты доступны в репозитории [RomanVassilchenko/MyWork_ITMO](https://github.com/RomanVassilchenko/MyWork_ITMO)
+- Все лабы и отчеты доступны в репозитории [RomanVassilchenko/ITMOProjects](https://github.com/RomanVassilchenko/ITMOProjects)
 
 <h3 align="left">Отвечаю только в телеграме &nbsp;
    <a href="https://t.me/roman_vassilchenko" target="_blank" rel="noreferrer"> <img align="center" alt="RomanVasssilchenko | Telegram" width="22px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/2048px-Telegram_2019_Logo.svg.png"/>
