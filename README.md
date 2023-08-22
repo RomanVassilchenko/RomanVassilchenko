@@ -1,6 +1,10 @@
-- Студент Факультета ПИиКТ в [ITMO University](https://itmo.ru/)
+### Полезная информация
 
-- Все лабы и отчеты доступны в репозитории [RomanVassilchenko/ITMOProjects](https://github.com/RomanVassilchenko/ITMOProjects)
+- Студент Software Engineering в [AITU](https://astanait.edu.kz/)
+
+- Проекты и лабораторные во время учебы в ИТМО [RomanVassilchenko/ITMOProjects](https://github.com/RomanVassilchenko/ITMOProjects)
+
+- Крутой Pet проект на Go [Simple URL Shortener](https://github.com/RomanVassilchenko/simple-url-shortener)
 
 <h3 align="left">Контакты &nbsp;
    <a href="https://t.me/roman_vassilchenko" target="_blank" rel="noreferrer"> <img align="center" alt="RomanVasssilchenko | Telegram" width="22px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/2048px-Telegram_2019_Logo.svg.png"/>
