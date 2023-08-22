@@ -13,10 +13,11 @@
 
 ### Языки и навыки
 
+- Go
 - Java
-- .NET Core
 - C++
 - PostgreSQL
+- SQLite
 - Git
 - Bash
 
