@@ -9,7 +9,7 @@
 ### 🌐 Интересные ссылки
 
 - 🔗 Мой пет-проект на Go - [Simple URL Shortener](https://github.com/RomanVassilchenko/simple-url-shortener)
-- 📄 Мое [Резюме](https://sus.kz/cv)
+- 📄 Мое [Резюме](https://drive.google.com/file/d/17VJnnc9CcHNo24kuj0ldWEgxrkOv-QUP/view?usp=sharing)
 - 📘 Мои проекты и лабораторные работы во время учебы в [ИТМО](https://github.com/RomanVassilchenko/ITMOProjects)
 
 ### 💻 Языки программирования
