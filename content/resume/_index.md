@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "📄 Резюме"
 description: "Роман Васильченко — Go Backend Engineer, опыт работы в Ozon, микросервисы и высокие нагрузки"
 ShowToc: true
@@ -158,4 +158,4 @@ TocOpen: true
 [![Telegram](https://img.shields.io/badge/Telegram-Roman__Vassilchenko-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/Roman_Vassilchenko)
 
 **📞 Телефон:** +7 775 900-46-26
-
+ -->
