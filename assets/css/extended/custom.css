@@ -1,0 +1,640 @@
+/* Custom styling for Roman Vassilchenko's portfolio */
+
+/* Root variables for consistent theming */
+:root {
+    --go-blue: #00ADD8;
+    --go-light-blue: #5DC9E2;
+    --go-dark-blue: #0E4C7A;
+    --accent-orange: #FF6B35;
+    --success-green: #00C896;
+    --warning-amber: #FFB627;
+    --info-purple: #7C3AED;
+    --glassmorphism: rgba(255, 255, 255, 0.1);
+    --glassmorphism-border: rgba(255, 255, 255, 0.2);
+    --soft-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --glow-shadow: 0 0 20px rgba(0, 173, 216, 0.3);
+    --border-radius: 12px;
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Enhanced profile mode with glassmorphism */
+.profile {
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--go-light-blue) 0%, transparent 70%);
+    opacity: 0.1;
+    animation: var(--pulse);
+    z-index: -1;
+}
+
+.profile .profile_inner {
+    backdrop-filter: blur(10px);
+    background: var(--glassmorphism);
+    border: 1px solid var(--glassmorphism-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+    box-shadow: var(--soft-shadow);
+}
+
+.profile .profile_inner h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--go-blue), var(--go-light-blue));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    animation: var(--pulse);
+}
+
+.profile .profile_inner .subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* Modern button styling with hover effects */
+.profile .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.profile .buttons .button {
+    background: linear-gradient(135deg, var(--go-blue), var(--go-light-blue));
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: var(--soft-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile .buttons .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.profile .buttons .button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--glow-shadow);
+    text-decoration: none;
+    color: white;
+}
+
+.profile .buttons .button:hover::before {
+    left: 100%;
+}
+
+/* Enhanced social icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--box-shadow);
+}
+
+/* Badge styling for tech stack */
+img[src*="shields.io"] {
+    margin: 0.2rem;
+    transition: var(--transition);
+}
+
+img[src*="shields.io"]:hover {
+    transform: scale(1.05);
+}
+
+/* Table enhancements */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1.5rem 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+table th,
+table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+table tr:hover {
+    background-color: rgba(0, 122, 204, 0.1);
+}
+
+/* Code block enhancements */
+pre {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Enhanced headings */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.post-content h2::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+/* Card-like styling for project sections */
+.project-card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* Achievement highlights */
+.achievement {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(40, 167, 69, 0.1);
+    border-left: 4px solid var(--success-color);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.achievement::before {
+    content: '✅';
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Contact information styling */
+.contact-method {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.contact-method:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+/* Enhanced responsive design */
+@media (max-width: 768px) {
+    .profile .profile_inner h1 {
+        font-size: 2rem;
+    }
+    
+    .profile .profile_inner {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+    
+    .profile .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .profile .buttons .button {
+        width: 200px;
+        text-align: center;
+    }
+    
+    .glassmorphism-card {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .skill-tag {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .social-icons {
+        gap: 0.5rem;
+    }
+    
+    .social-icons a {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .post-content h2::before {
+        display: none;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    table th,
+    table td {
+        padding: 0.5rem;
+    }
+    
+    .floating-contact {
+        bottom: 1rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    #menu {
+        font-size: 0.9rem;
+    }
+    
+    #menu a {
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .logo a {
+        font-size: 1.3rem;
+    }
+    
+    /* Header improvements for mobile */
+    header.header {
+        padding: 0.5rem 0;
+    }
+    
+    .nav {
+        padding: 0 1rem;
+    }
+}
+
+/* Dark theme adjustments using PaperMod's .dark class */
+.dark .project-card,
+.dark .contact-method {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.dark .profile .profile_inner {
+    background: rgba(46, 46, 51, 0.8);
+    border: 1px solid rgba(155, 156, 157, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.dark table tr:nth-child(even) {
+    background-color: rgba(155, 156, 157, 0.1);
+}
+
+.dark table tr:hover {
+    background-color: rgba(0, 173, 216, 0.2);
+}
+
+.dark .achievement {
+    background: rgba(0, 200, 150, 0.1);
+    border-left-color: var(--success-green);
+}
+
+.dark .glassmorphism-card {
+    background: rgba(29, 30, 32, 0.8);
+    border: 1px solid rgba(155, 156, 157, 0.2);
+}
+
+/* Advanced animations and keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.post-content {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.profile img {
+    animation: float 3s ease-in-out infinite;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--go-blue), var(--go-light-blue));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    margin: 0.25rem;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--soft-shadow);
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: var(--glow-shadow);
+}
+
+.glassmorphism-card {
+    backdrop-filter: blur(10px);
+    background: var(--glassmorphism);
+    border: 1px solid var(--glassmorphism-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--soft-shadow);
+    transition: var(--transition);
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.glassmorphism-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 173, 216, 0.2);
+}
+
+/* Enhanced header styling */
+header.header {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid var(--glassmorphism-border);
+    box-shadow: var(--soft-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.dark header.header {
+    background: rgba(29, 30, 32, 0.9);
+    border-bottom: 1px solid rgba(155, 156, 157, 0.2);
+}
+
+.logo a {
+    background: linear-gradient(135deg, var(--go-blue), var(--go-light-blue));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+}
+
+#menu a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+#menu a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, var(--go-blue), var(--go-light-blue));
+    transition: width 0.3s ease;
+}
+
+#menu a:hover {
+    background: var(--glassmorphism);
+    transform: translateY(-2px);
+}
+
+#menu a:hover::before,
+#menu .active::before {
+    width: 80%;
+}
+
+#menu .active {
+    background: var(--glassmorphism);
+    border-bottom: none;
+    font-weight: 600;
+}
+
+button#theme-toggle {
+    background: var(--glassmorphism);
+    border: 1px solid var(--glassmorphism-border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    margin: auto 8px;
+}
+
+button#theme-toggle:hover {
+    background: linear-gradient(135deg, var(--go-blue), var(--go-light-blue));
+    color: white;
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: var(--glow-shadow);
+}
+
+.dark button#theme-toggle {
+    background: rgba(46, 46, 51, 0.8);
+    border: 1px solid rgba(155, 156, 157, 0.2);
+}
+
+/* Focus styles for accessibility */
+.profile .buttons .button:focus,
+.social-icons a:focus {
+    outline: 3px solid var(--accent-orange);
+    outline-offset: 2px;
+}
+
+/* Floating contact button */
+.floating-contact {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    background: linear-gradient(135deg, var(--go-blue), var(--go-light-blue));
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: var(--glow-shadow);
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.floating-contact:hover {
+    transform: scale(1.1) rotate(5deg);
+    color: white;
+    box-shadow: 0 0 30px rgba(0, 173, 216, 0.5);
+}
+
+.floating-contact::before {
+    content: '💬';
+    animation: var(--pulse);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improved code blocks */
+.highlight {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--soft-shadow);
+}
+
+.dark .highlight {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Better typography */
+.post-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.post-content blockquote {
+    background: var(--glassmorphism);
+    border-left: 4px solid var(--go-blue);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    position: relative;
+}
+
+.dark .post-content blockquote {
+    background: rgba(46, 46, 51, 0.8);
+    border-left-color: var(--go-light-blue);
+}
+
+/* Print styles */
+@media print {
+    .social-icons,
+    .profile .buttons,
+    nav,
+    .floating-contact {
+        display: none;
+    }
+    
+    .project-card,
+    .contact-method {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

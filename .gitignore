@@ -1,0 +1,20 @@
+# Hugo build output
+public/
+resources/
+
+# Hugo caches
+.hugo_build.lock
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Node, if used
+node_modules/
+
+# Go worktrees (if any)
+.idea/
+.vscode/
+
+# Claude
+.claude/
