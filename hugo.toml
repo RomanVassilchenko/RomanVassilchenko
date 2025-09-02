@@ -94,11 +94,6 @@ buildExpired = false
     url = "https://t.me/Roman_Vassilchenko"
     title = "Telegram"
 
-  [[params.socialIcons]]
-    name = "rss"
-    url = "/index.xml"
-    title = "RSS"
-
 
 
 [outputs]

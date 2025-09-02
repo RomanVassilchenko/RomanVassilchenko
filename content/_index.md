@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Главная"
 description: "Go Backend Engineer — высоконагруженные микросервисы, gRPC/REST API, PostgreSQL, Kafka, мониторинг"
 draft: false
@@ -36,4 +36,4 @@ Go/Golang • Микросервисы • gRPC • PostgreSQL • Kafka • Ela
 
 **Лучший способ связаться** — написать в [Telegram](https://t.me/Roman_Vassilchenko) или на [email](mailto:roman.vassilchenko.work@gmail.com)
 
-<!-- Открыт для интересных проектов и предложений! ✨ -->  
+<!-- Открыт для интересных проектов и предложений! ✨ -->   -->
