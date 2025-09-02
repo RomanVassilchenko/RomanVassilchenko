@@ -1,7 +1,5 @@
 baseURL = "https://romanv.dev/"
-title = "Роман Васильченко — Go Backend Engineer"
 theme = "PaperMod"
-languageCode = "ru-ru"
 defaultContentLanguage = "ru"
 enableEmoji = true
 enableInlineShortcodes = true
@@ -9,6 +7,63 @@ enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
+
+[languages]
+  [languages.ru]
+    languageCode = "ru-ru"
+    languageName = "Русский"
+    title = "Роман Васильченко — Go Backend Engineer"
+    weight = 1
+
+    [languages.ru.params]
+      title = "Роман Васильченко"
+      description = "Go Backend Engineer из Астаны. Высоконагруженные микросервисы, gRPC/REST API, PostgreSQL/Elastic, Kafka, мониторинг и алертинг."
+      keywords = ["Go", "Golang", "Backend", "Microservices", "gRPC", "REST", "PostgreSQL", "Kafka", "ElasticSearch", "Prometheus", "Grafana", "Resume", "Blog", "Астана", "Казахстан", "Ozon"]
+      author = "Роман Васильченко"
+
+      [languages.ru.params.profileMode]
+        enabled = true
+        title = "Роман Васильченко"
+        subtitle = "Go Backend Engineer • Астана, Казахстан (GMT+5)"
+        imageUrl = "/images/avatar.png"
+        imageTitle = "Роман Васильченко"
+        imageWidth = 160
+        imageHeight = 160
+        buttons = [
+          {name = "Резюме", url = "/resume/ru.pdf", target = "_blank"}
+        ]
+
+      [languages.ru.params.homeInfoParams]
+        Title = "Go Backend • Микросервисы • Observability"
+        Content = "Высоконагруженные Go-сервисы, gRPC/REST API, PostgreSQL/Kafka/Elastic, Prometheus/Grafana мониторинг. Опыт в Ozon, создание pet-проектов для борьбы с коррупцией."
+
+  [languages.en]
+    languageCode = "en-us"
+    languageName = "English"
+    title = "Roman Vassilchenko — Go Backend Engineer"
+    weight = 2
+
+    [languages.en.params]
+      title = "Roman Vassilchenko"
+      description = "Go Backend Engineer from Astana. High-load microservices, gRPC/REST API, PostgreSQL/Elastic, Kafka, monitoring and alerting."
+      keywords = ["Go", "Golang", "Backend", "Microservices", "gRPC", "REST", "PostgreSQL", "Kafka", "ElasticSearch", "Prometheus", "Grafana", "Resume", "Blog", "Astana", "Kazakhstan", "Ozon"]
+      author = "Roman Vassilchenko"
+
+      [languages.en.params.profileMode]
+        enabled = true
+        title = "Roman Vassilchenko"
+        subtitle = "Go Backend Engineer • Astana, Kazakhstan (GMT+5)"
+        imageUrl = "/images/avatar.png"
+        imageTitle = "Roman Vassilchenko"
+        imageWidth = 160
+        imageHeight = 160
+        buttons = [
+          {name = "Resume", url = "/resume/en.pdf", target = "_blank"}
+        ]
+
+      [languages.en.params.homeInfoParams]
+        Title = "Go Backend • Microservices • Observability"
+        Content = "High-load Go services, gRPC/REST API, PostgreSQL/Kafka/Elastic, Prometheus/Grafana monitoring. Experience at Ozon, creating pet projects to fight corruption."
 
 [minify]
   disableXML = true
@@ -19,10 +74,6 @@ buildExpired = false
 
 [params]
   env = "production"
-  title = "Роман Васильченко"
-  description = "Go Backend Engineer из Астаны. Высоконагруженные микросервисы, gRPC/REST API, PostgreSQL/Elastic, Kafka, мониторинг и алертинг."
-  keywords = ["Go", "Golang", "Backend", "Microservices", "gRPC", "REST", "PostgreSQL", "Kafka", "ElasticSearch", "Prometheus", "Grafana", "Resume", "Blog", "Астана", "Казахстан", "Ozon"]
-  author = "Роман Васильченко"
 
   # Optimized settings
   DateFormat = "02.01.2006"
@@ -51,18 +102,6 @@ buildExpired = false
     apple_touch_icon = "/apple-touch-icon.png"
     safari_pinned_tab = "/safari-pinned-tab.svg"
 
-  [params.profileMode]
-    enabled = true
-    title = "Роман Васильченко"
-    subtitle = "Go Backend Engineer • Астана, Казахстан"
-    imageUrl = "/images/avatar.png"
-    imageTitle = "Роман Васильченко"
-    imageWidth = 160
-    imageHeight = 160
-
-  [params.homeInfoParams]
-    Title = "Go Backend • Микросервисы • Observability"
-    Content = "Высоконагруженные Go-сервисы, gRPC/REST API, PostgreSQL/Kafka/Elastic, Prometheus/Grafana мониторинг. Опыт в Ozon, создание pet-проектов для борьбы с коррупцией."
 
   [params.cover]
     linkFullImages = true
