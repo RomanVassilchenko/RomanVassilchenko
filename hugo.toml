@@ -4,6 +4,15 @@ theme = "PaperMod"
 languageCode = "ru-ru"
 defaultContentLanguage = "ru"
 enableEmoji = true
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+  disableXML = true
+  minifyOutput = true
 
 [pagination]
   pagerSize = 10
@@ -11,10 +20,12 @@ enableEmoji = true
 [params]
   env = "production"
   title = "Роман Васильченко"
-  description = "Go Backend-разработчик из Астаны. Высоконагруженные микросервисы, gRPC/REST API, PostgreSQL/Elastic, Kafka, мониторинг и алертинг."
+  description = "Go Backend Engineer из Астаны. Высоконагруженные микросервисы, gRPC/REST API, PostgreSQL/Elastic, Kafka, мониторинг и алертинг."
   keywords = ["Go", "Golang", "Backend", "Microservices", "gRPC", "REST", "PostgreSQL", "Kafka", "ElasticSearch", "Prometheus", "Grafana", "Resume", "Blog", "Астана", "Казахстан", "Ozon"]
   author = "Роман Васильченко"
-  DateFormat = "02 Jan 2006"
+  
+  # Optimized settings
+  DateFormat = "02.01.2006"
   defaultTheme = "auto"
   disableThemeToggle = false
   showReadingTime = true
@@ -28,6 +39,10 @@ enableEmoji = true
   TocOpen = false
   comments = false
   mainSections = ["posts"]
+  
+  # Performance
+  disableFingerprinting = false
+  disableScrollToTop = false
 
   [params.assets]
     favicon = "/favicon.ico"
@@ -38,36 +53,36 @@ enableEmoji = true
 
   [params.profileMode]
     enabled = true
-    title = "👋 Роман Васильченко"
-    subtitle = "🚀 Go Backend Engineer • 📍 Астана, Казахстан"
+    title = "Роман Васильченко"
+    subtitle = "Go Backend Engineer • Астана, Казахстан"
     imageUrl = "/images/avatar.svg"
     imageTitle = "Роман Васильченко"
-    imageWidth = 180
-    imageHeight = 180
+    imageWidth = 160
+    imageHeight = 160
 
     [[params.profileMode.buttons]]
-      name = "📄 Резюме"
+      name = "Резюме"
       url = "/resume/"
 
     [[params.profileMode.buttons]]
-      name = "📝 Посты"
+      name = "Посты"
       url = "/posts/"
 
     [[params.profileMode.buttons]]
-      name = "🛠️ Проекты"
+      name = "Проекты"
       url = "/projects/"
 
     [[params.profileMode.buttons]]
-      name = "👤 Обо мне"
+      name = "Обо мне"
       url = "/about/"
 
     [[params.profileMode.buttons]]
-      name = "📞 Контакты"
+      name = "Контакты"
       url = "/contact/"
 
   [params.homeInfoParams]
-    Title = "🚀 Go Backend • Микросервисы • Observability"
-    Content = "Высоконагруженные Go‑сервисы, gRPC/REST API, PostgreSQL/Kafka/Elastic, Prometheus/Grafana мониторинг. Опыт в Ozon, создание pet-проектов для борьбы с коррупцией."
+    Title = "Go Backend • Микросервисы • Observability"
+    Content = "Высоконагруженные Go-сервисы, gRPC/REST API, PostgreSQL/Kafka/Elastic, Prometheus/Grafana мониторинг. Опыт в Ozon, создание pet-проектов для борьбы с коррупцией."
 
   [params.cover]
     linkFullImages = true
@@ -106,23 +121,23 @@ enableEmoji = true
 
 [menu]
   [[menu.main]]
-    name = "📝 Посты"
+    name = "Посты"
     url = "/posts/"
     weight = 10
   [[menu.main]]
-    name = "🛠️ Проекты"
+    name = "Проекты"
     url = "/projects/"
     weight = 20
   [[menu.main]]
-    name = "📄 Резюме"
+    name = "Резюме"
     url = "/resume/"
     weight = 30
   [[menu.main]]
-    name = "👤 Обо мне"
+    name = "Обо мне"
     url = "/about/"
     weight = 40
   [[menu.main]]
-    name = "📞 Контакты"
+    name = "Контакты"
     url = "/contact/"
     weight = 50
 

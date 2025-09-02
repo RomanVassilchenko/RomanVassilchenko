@@ -1,34 +1,51 @@
-# Привет, я Roman Vassilchenko 👋
+# Роман Васильченко
 
-[![Telegram](https://img.shields.io/badge/Telegram-@roman_vassilchenko-blue?style=flat-square&logo=telegram)](https://t.me/roman_vassilchenko)
+> Go Backend Engineer • Микросервисы • Высокая нагрузка
 
-## 🚀 О себе
+<div align="center">
 
-Я студент по направлению Software Engineering в [AITU (Астана)](https://astanait.edu.kz/), и я с увлечением учусь создавать крутые программные продукты!
+[![Website](https://img.shields.io/badge/Website-romanv.dev-00ADD8?style=for-the-badge&logo=go)](https://romanv.dev)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail)](mailto:roman.vassilchenko.work@gmail.com)
+[![Telegram](https://img.shields.io/badge/Telegram-@Roman__Vassilchenko-26A5E4?style=for-the-badge&logo=telegram)](https://t.me/Roman_Vassilchenko)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-rovassilchenko-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/rovassilchenko/)
 
-### 🌐 Интересные ссылки
+</div>
 
-- 🔗 Мой пет-проект на Go - [Simple URL Shortener](https://github.com/RomanVassilchenko/simple-url-shortener)
-- 📘 Мои проекты и лабораторные работы во время учебы в [ИТМО](https://github.com/RomanVassilchenko/ITMOProjects)
+## 🎯 О себе
 
-### 💻 Языки программирования
+**Go-разработчик** в Ozon с фокусом на высоконагруженные системы и производительность.  
+Создаю микросервисы, оптимизирую SQL, настраиваю мониторинг.
 
-[![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)](https://golang.org/)
-[![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=java&logoColor=white)](https://www.java.com/)
-[![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+### 💼 Сейчас работаю в Ozon
+- ⚡ **Ускорил SQL-запросы в 8 раз** — с 30 сек до 4 сек
+- 🔍 **Оптимизировал поиск в 2.5 раза** в ElasticSearch
+- 🏗️ **Разбил монолит** на микросервисы, снизив нагрузку на 25%
 
-### 🛠️ Технологии
+### 🛠️ Stack
 
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
-[![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/)
-[![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
-[![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)](https://www.linux.org/)
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)
+![ElasticSearch](https://img.shields.io/badge/Elastic-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
 
-### 📊 GitHub Stats
+### 🚀 Pet-проект
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=RomanVassilchenko&show_icons=true&locale=en)](https://github.com/RomanVassilchenko)
+**DACA/AdalQarau** — платформа анализа госзакупок для выявления коррупции  
+Граф связей между компаниями • Микросервисная архитектура • Используется правоохранительными органами
 
-Меня всегда можно найти в [Telegram](https://t.me/roman_vassilchenko), где я готов обсудить интересные проекты и обменяться опытом. Добро пожаловать в мой мир разработки!
+### 🎓 Образование
+
+**AITU** — Software Engineering (2023-2025)  
+**ИТМО** — Software Engineering (2021-2023)
+
+---
+
+<div align="center">
+
+**📞 +7 775 900-46-26** • **📧 roman.vassilchenko.work@gmail.com**
+
+*Открыт для интересных проектов и предложений*
+
+</div>

@@ -1,42 +1,42 @@
 ---
-title: "👤 Обо мне"
+title: "Обо мне"
 description: "Go Backend Engineer из Астаны — создаю надёжные высоконагруженные системы"
 ShowToc: true
 TocOpen: false
 ---
 
-## 🙋‍♂️ Кто я
+## Кто я
 
-Привет! Меня зовут **Роман Васильченко**. Я Go Backend-разработчик из Астаны, Казахстан.
+**Роман Васильченко** — Go Backend-разработчик из Астаны, Казахстан.
 
 <!-- Фокусируюсь на создании надёжных, масштабируемых систем с высокой производительностью. Особенно люблю оптимизировать узкие места и делать системы более observability-friendly.
 
-## 💡 Моя философия разработки
+## Моя философия разработки
 
 - **Performance First** — измеряю всё, оптимизирую узкие места
 - **Code Quality** — читаемый код, хорошая архитектура, переиспользуемые компоненты  
 - **Observability** — система должна "говорить" о своём состоянии
 - **Team Impact** — делюсь знаниями, создаю инструменты для команды -->
 
-## 🎯 Что я делаю лучше всего
+## Что я делаю лучше всего
 
-### 🚀 Высоконагруженные системы
+### Высоконагруженные системы
 
 Проектирую и оптимизирую микросервисы для обработки больших объёмов данных. Умею находить и устранять узкие места в производительности.
 
-### 🔗 API Design & Integration  
+### API Design & Integration  
 
 Создаю эффективные gRPC и REST API. Проектирую интеграции между сервисами через Kafka, обеспечиваю backward compatibility.
 
-### 🗄️ Работа с данными
+### Работа с данными
 
 Оптимизирую SQL-запросы, проектирую схемы БД, настраиваю индексы. Опыт с PostgreSQL, Redis, ClickHouse, ElasticSearch.
 
-### 📊 Monitoring & Alerting
+### Monitoring & Alerting
 
 Настраиваю комплексный мониторинг систем: метрики (Prometheus), логи (Loki), дашборды (Grafana), алерты для быстрого реагирования.
 
-## 🏢 Мой путь в Ozon
+## Мой путь в Ozon
 
 С 2023 года работаю в команде внутренних продуктов Ozon. За это время:
 
@@ -46,7 +46,7 @@ TocOpen: false
 - **Создал staff-lib** — библиотека используется в десятках микросервисов команды
 - **Улучшил observability** — настроил дашборды и алертинг
 
-## 🔬 Pet-проект: DACA/AdalQarau  
+## Pet-проект: DACA/AdalQarau  
 
 Разрабатываю платформу аналитики госзакупок для выявления коррупционных рисков:
 
@@ -55,17 +55,17 @@ TocOpen: false
 - **Масштабируемость** — микросервисная архитектура с PostgreSQL, MinIO
 <!-- - **Impact** — используется правоохранительными органами РК -->
 
-## 🎓 Образование
+## Образование
 
 - **Astana IT University (AITU)** — Бакалавриат Software Engineering (2023–2025), Магистратура Software Engineering (2025-2027)
 - **Университет ИТМО** — Software Engineering (2021–2023, перевелся в Астану)
 
-## 🌍 Языки
+## Языки
 
 - **Русский** — родной
 - **Английский** — C1 (свободное чтение документации, участие в митингах)
 
-## 🎨 Интересы
+## Интересы
 
 Помимо программирования увлекаюсь:
 
@@ -73,16 +73,16 @@ TocOpen: false
 <!-- - **Open Source** — контрибучу в проекты, делюсь наработками -->
 - **Менторством** — помогал коллегам junior'ам, как ментор
 
-## 📞 Связаться со мной
+## Связаться со мной
 
 Всегда открыт для обсуждения интересных проектов и возможностей сотрудничества!
 
 **Предпочитаемые форматы работы:** офис, гибрид, удаленка  
 **Что ищу:** продуктовые команды со сложными техническими вызовами
 
-[![Email](https://img.shields.io/badge/Email-roman.vassilchenko.work%40gmail.com-red?style=for-the-badge&logo=gmail)](mailto:roman.vassilchenko.work@gmail.com)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-rovassilchenko-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/rovassilchenko/)  
-[![GitHub](https://img.shields.io/badge/GitHub-RomanVassilchenko-black?style=for-the-badge&logo=github)](https://github.com/RomanVassilchenko)  
-[![Telegram](https://img.shields.io/badge/Telegram-Roman__Vassilchenko-blue?style=for-the-badge&logo=telegram)](https://t.me/Roman_Vassilchenko)  
+**Email:** [roman.vassilchenko.work@gmail.com](mailto:roman.vassilchenko.work@gmail.com)  
+**LinkedIn:** [rovassilchenko](https://www.linkedin.com/in/rovassilchenko/)  
+**GitHub:** [RomanVassilchenko](https://github.com/RomanVassilchenko)  
+**Telegram:** [@Roman_Vassilchenko](https://t.me/Roman_Vassilchenko)  
 
-📞 **Телефон:** +7 775 900-46-26
+**Телефон:** +7 775 900-46-26
