@@ -94,8 +94,6 @@ buildExpired = false
     url = "https://t.me/Roman_Vassilchenko"
     title = "Telegram"
 
-
-
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
