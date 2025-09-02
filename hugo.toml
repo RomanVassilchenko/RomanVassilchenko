@@ -60,26 +60,6 @@ buildExpired = false
     imageWidth = 160
     imageHeight = 160
 
-    [[params.profileMode.buttons]]
-      name = "Резюме"
-      url = "/resume/"
-
-    [[params.profileMode.buttons]]
-      name = "Посты"
-      url = "/posts/"
-
-    [[params.profileMode.buttons]]
-      name = "Проекты"
-      url = "/projects/"
-
-    [[params.profileMode.buttons]]
-      name = "Обо мне"
-      url = "/about/"
-
-    [[params.profileMode.buttons]]
-      name = "Контакты"
-      url = "/contact/"
-
   [params.homeInfoParams]
     Title = "Go Backend • Микросервисы • Observability"
     Content = "Высоконагруженные Go-сервисы, gRPC/REST API, PostgreSQL/Kafka/Elastic, Prometheus/Grafana мониторинг. Опыт в Ozon, создание pet-проектов для борьбы с коррупцией."
@@ -119,32 +99,7 @@ buildExpired = false
     url = "/index.xml"
     title = "RSS"
 
-[menu]
-  [[menu.main]]
-    name = "Посты"
-    url = "/posts/"
-    weight = 10
-  [[menu.main]]
-    name = "Проекты"
-    url = "/projects/"
-    weight = 20
-  [[menu.main]]
-    name = "Резюме"
-    url = "/resume/"
-    weight = 30
-  [[menu.main]]
-    name = "Обо мне"
-    url = "/about/"
-    weight = 40
-  [[menu.main]]
-    name = "Контакты"
-    url = "/contact/"
-    weight = 50
 
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-  series = "series"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
