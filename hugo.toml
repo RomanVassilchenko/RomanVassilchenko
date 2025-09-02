@@ -23,7 +23,7 @@ buildExpired = false
   description = "Go Backend Engineer из Астаны. Высоконагруженные микросервисы, gRPC/REST API, PostgreSQL/Elastic, Kafka, мониторинг и алертинг."
   keywords = ["Go", "Golang", "Backend", "Microservices", "gRPC", "REST", "PostgreSQL", "Kafka", "ElasticSearch", "Prometheus", "Grafana", "Resume", "Blog", "Астана", "Казахстан", "Ozon"]
   author = "Роман Васильченко"
-  
+
   # Optimized settings
   DateFormat = "02.01.2006"
   defaultTheme = "auto"
@@ -39,7 +39,7 @@ buildExpired = false
   TocOpen = false
   comments = false
   mainSections = ["posts"]
-  
+
   # Performance
   disableFingerprinting = false
   disableScrollToTop = false
@@ -55,7 +55,7 @@ buildExpired = false
     enabled = true
     title = "Роман Васильченко"
     subtitle = "Go Backend Engineer • Астана, Казахстан"
-    imageUrl = "/images/avatar.svg"
+    imageUrl = "/images/avatar.png"
     imageTitle = "Роман Васильченко"
     imageWidth = 160
     imageHeight = 160
