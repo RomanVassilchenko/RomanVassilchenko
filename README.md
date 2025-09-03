@@ -103,9 +103,11 @@ Building **high-load systems** and distributed microservices for HR-tech platfor
 
 ### Current Status
 
-<img src="https://img.shields.io/badge/Full_time-Employed-blue?style=for-the-badge" alt="Full-time Employed">
+<img src="https://img.shields.io/badge/Status-Full--time_Employed-0A66C2?style=for-the-badge" alt="Full-time Employed">
 <br><br>
-Currently focused on **Go microservices**, performance optimization, and observability.  
-Open to interesting **future opportunities** — reach out via [Telegram](https://t.me/Roman_Vassilchenko) or [email](mailto:roman.vassilchenko.work@gmail.com).
+
+Focused on high-performance **Go microservices**, performance tuning, and **observability** (metrics, tracing, logging).
+
+Open to future opportunities — contact via <a href="https://t.me/Roman_Vassilchenko">Telegram</a> · <a href="mailto:roman.vassilchenko.work@gmail.com">Email</a>
 
 </div>
