@@ -1,34 +1,46 @@
 {{ define "main" }}
-  <div class="homepage-layout">
-    {{/* Левая колонка: профиль с кнопкой резюме внутри блока */}}
-    <div class="homepage-left">
-      <div class="homepage-profile">
+  {{ if eq .Language.Lang "en" }}
+    {{/* English version: centered profile only */}}
+    <div class="homepage-layout-centered">
+      <div class="homepage-profile-centered">
         {{ if (and site.Params.profileMode.enabled .IsHome) }}
           {{ partial "index_profile.html" . }}
         {{ end }}
       </div>
     </div>
-
-    {{/* Правая колонка: посты без заголовка */}}
-    <div class="homepage-posts">
-      <div class="post-list">
-        {{ $posts := where site.RegularPages "Section" "posts" }}
-        {{ range first 3 (sort $posts "Date" "desc") }}
-          <a class="post-item" href="{{ .RelPermalink }}">
-            <div class="post-item-header">
-              <h3 class="post-item-title">{{ .Title }}</h3>
-              <span class="post-item-date">{{ .Date.Format (site.Params.DateFormat | default "2006-01-02") }}</span>
-            </div>
-            {{ with .Summary }}
-              <p class="post-item-summary">{{ . | plainify }}</p>
-            {{ end }}
-          </a>
-        {{ end }}
+  {{ else }}
+    {{/* Russian version: two-column layout with posts */}}
+    <div class="homepage-layout">
+      {{/* Левая колонка: профиль с кнопкой резюме внутри блока */}}
+      <div class="homepage-left">
+        <div class="homepage-profile">
+          {{ if (and site.Params.profileMode.enabled .IsHome) }}
+            {{ partial "index_profile.html" . }}
+          {{ end }}
+        </div>
       </div>
-      {{/* Кнопка "Все посты" под постами */}}
-      <div class="all-posts-button">
-        <a class="all-posts-link" href="/posts/">Все посты</a>
+
+      {{/* Правая колонка: посты без заголовка */}}
+      <div class="homepage-posts">
+        <div class="post-list">
+          {{ $posts := where site.RegularPages "Section" "posts" }}
+          {{ range first 3 (sort $posts "Date" "desc") }}
+            <a class="post-item" href="{{ .RelPermalink }}">
+              <div class="post-item-header">
+                <h3 class="post-item-title">{{ .Title }}</h3>
+                <span class="post-item-date">{{ .Date.Format (site.Params.DateFormat | default "2006-01-02") }}</span>
+              </div>
+              {{ with .Summary }}
+                <p class="post-item-summary">{{ . | plainify }}</p>
+              {{ end }}
+            </a>
+          {{ end }}
+        </div>
+        {{/* Кнопка "Все посты" под постами */}}
+        <div class="all-posts-button">
+          <a class="all-posts-link" href="/posts/">Все посты</a>
+        </div>
       </div>
     </div>
-  </div>
+  {{ end }}
 {{ end }}

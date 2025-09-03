@@ -667,6 +667,44 @@ html {
     /* Убираем фиксированную высоту для естественного скролла */
 }
 
+/* English version: centered single column layout */
+.homepage-layout-centered {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+
+.homepage-profile-centered {
+    width: 100%;
+    max-width: 500px; /* Slightly wider for centered version */
+    margin: 0 auto;
+}
+
+.homepage-profile-centered .profile {
+    padding: 0;
+}
+
+.homepage-profile-centered .profile::before {
+    display: none; /* Remove background animation for cleaner look */
+}
+
+.homepage-profile-centered .profile .profile_inner {
+    width: 100%;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+    background: var(--theme);
+    border-radius: var(--border-radius);
+}
+
+.dark .homepage-profile-centered .profile .profile_inner {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
 .homepage-left { 
     /* Убираем центрирование для натуральной высоты */
     position: sticky;
@@ -860,6 +898,20 @@ html {
     
     .homepage-profile {
         max-width: 100%; /* На мобильных убираем ограничение ширины */
+    }
+    
+    /* Centered layout mobile adjustments */
+    .homepage-layout-centered {
+        padding: 0 1rem;
+        margin-top: 1rem;
+    }
+    
+    .homepage-profile-centered {
+        max-width: 100%;
+    }
+    
+    .homepage-profile-centered .profile .profile_inner {
+        padding: 2rem 1.5rem;
     }
     
     .post-item-header {
