@@ -1,0 +1,223 @@
+/* Layout improvements */
+
+/* Profile page styling */
+.home .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.home .profile-image img {
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.home .profile-image img:hover {
+    transform: scale(1.05);
+}
+
+.home .profile-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.home .profile-content h2 {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.home .profile-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.home .profile-buttons a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--theme);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.home .profile-buttons a:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Social buttons section */
+.home .social-section {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.home .social-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.home .social-buttons a.social-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--theme);
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    min-width: 120px;
+    text-align: center;
+}
+
+.home .social-buttons a.social-button:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Resume button section */
+.home .resume-section {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.home .resume-section a.resume-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary);
+    color: var(--theme);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.home .resume-section a.resume-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home .social-icons {
+    margin-top: 1rem;
+}
+
+.home .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--secondary);
+    transition: all 0.3s ease;
+}
+
+.home .social-icons a:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .home .profile {
+        flex-direction: column;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .home .social-buttons {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* Wider content for posts */
+.post-single .post-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.post-single {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Ensure other elements also get the wider layout */
+.post-single .post-header,
+.post-single .post-footer {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TOC width adjustment */
+.post-single .toc {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* List pages wider for better post cards, but not homepage */
+.list:not(.home) .main {
+    max-width: 900px;
+}
+
+/* Make sure mermaid diagrams fit well in wider layout */
+.post-single .mermaid {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Code blocks in wider layout */
+.post-single pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Tables in wider layout */
+.post-single table {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+}
+
+.post-single table tbody,
+.post-single table thead {
+    display: table;
+    width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .post-single,
+    .post-single .post-content,
+    .post-single .post-header,
+    .post-single .post-footer,
+    .post-single .toc {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .post-single table {
+        white-space: normal;
+    }
+}

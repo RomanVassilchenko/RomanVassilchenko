@@ -1,12 +1,16 @@
 ---
 title: "DACA/AdalQarau: архитектура аналитики госзакупок"
 date: 2025-09-02
-tags: ["Go", "gRPC", "PostgreSQL", "MinIO", "Architecture", "Clean Architecture"]
+tags:
+  ["Go", "gRPC", "PostgreSQL", "MinIO", "Architecture", "Clean Architecture"]
 categories: ["Side Project", "Architecture"]
 draft: false
+cover:
+  image: "/images/posts/daca-architecture.svg"
+  alt: "Логотип AdalQarau"
+ShowToc: true
+TocOpen: false
 ---
-
-# Архитектура системы аналитики госзакупок DACA/AdalQarau
 
 Комплексная система анализа государственных закупок, построенная на современных принципах архитектуры с разделением ответственности, type-safe контрактами и автоматизацией процессов.
 
@@ -21,7 +25,7 @@ graph TB
     Client[👥 Клиенты] --> CF[☁️ Cloudflare Edge]
     CF --> WARP[🔒 Cloudflare Warp]
     WARP --> SERVER[🖥️ Сервер в Казахстане<br/>Без белого IP]
-    
+
     subgraph "🌍 Cloudflare Global Network"
         CF
         WARP
@@ -29,20 +33,20 @@ graph TB
         CF --> CFLint
         CFLint --> WARP
     end
-    
+
     SERVER --> API[🚀 daca-api :7000]
-    
+
     API --> DB[🗄️ PostgreSQL]
     API --> S3[📦 MinIO/S3]
     API --> Vault[🔐 HashiCorp Vault]
-    
+
     Jobs[⚙️ Background Jobs] --> DB
     Jobs --> S3
     Jobs --> TG[🤖 Telegram Bot API]
-    
+
     API --> TG
     TG --> Users[👨‍💼 Пользователи Telegram]
-    
+
     subgraph "🇰🇿 Self-Hosted Infrastructure (Kazakhstan)"
         SERVER
         API
@@ -51,7 +55,7 @@ graph TB
         S3
         Vault
     end
-    
+
     style CF fill:#f39c12,stroke:#e67e22,stroke-width:3px,color:#fff
     style WARP fill:#e67e22,stroke:#d35400,stroke-width:3px,color:#fff
     style SERVER fill:#27ae60,stroke:#229954,stroke-width:3px,color:#fff
@@ -143,44 +147,44 @@ graph LR
         HTTP[🌍 HTTP Gateway]
         PB[📋 Protocol Buffers]
     end
-    
+
     subgraph "⚙️ Application Layer"
         APP[🏗️ App Services]
         MW[🛡️ Middleware]
     end
-    
+
     subgraph "💼 Business Layer"
         SVC[🔧 Service Layer]
         MDL[📊 Domain Models]
     end
-    
+
     subgraph "💾 Data Layer"
         REPO[🗃️ Repository]
         ADAPT[🔗 Adapters]
     end
-    
+
     subgraph "🏗️ Infrastructure"
         PG[🗄️ PostgreSQL]
         MINIO[📦 MinIO/S3]
         VLT[🔐 Vault]
         TG_API[🤖 Telegram API]
     end
-    
+
     GRPC --> APP
     HTTP --> APP
     PB --> GRPC
-    
+
     APP --> SVC
     MW --> SVC
-    
+
     SVC --> REPO
     SVC --> MDL
-    
+
     REPO --> PG
     ADAPT --> MINIO
     ADAPT --> VLT
     ADAPT --> TG_API
-    
+
     style GRPC fill:#3498db,stroke:#2980b9,stroke-width:3px,color:#fff
     style HTTP fill:#27ae60,stroke:#229954,stroke-width:3px,color:#fff
     style PB fill:#f39c12,stroke:#e67e22,stroke-width:3px,color:#fff
@@ -294,11 +298,11 @@ job := scheduler.NewJob(
 ```mermaid
 sequenceDiagram
     participant User as 👤 Пользователь
-    participant TG as 🤖 Telegram Bot  
+    participant TG as 🤖 Telegram Bot
     participant API as 🚀 daca-api
     participant Vault as 🔐 HashiCorp Vault
     participant Web as 🌐 Web Interface
-    
+
     User->>+TG: 📱 /connect
     TG->>+API: 🔑 Запрос на генерацию кода
     API->>API: 🎲 generateSecureCode(6)
@@ -306,7 +310,7 @@ sequenceDiagram
     Vault->>-API: ✅ OK
     API->>-TG: 📋 Возврат кода
     TG->>-User: 💬 "Ваш код: ABC123"
-    
+
     User->>+Web: ⌨️ Ввод кода в веб-интерфейсе
     Web->>+API: 🔍 Валидация кода
     API->>+Vault: 📡 Получить данные по коду
@@ -316,7 +320,7 @@ sequenceDiagram
     Vault->>-API: ✅ Deleted
     API->>-Web: 🎉 Успешное связывание
     Web->>-User: 🎊 "Telegram подключен!"
-    
+
     rect rgb(240, 248, 255)
         Note over Vault: ⏰ TTL автоматически<br/>🗑️ удаляет истекшие коды
     end
@@ -327,7 +331,7 @@ sequenceDiagram
 ```go
 // Генерация временного кода
 code := generateSecureCode(6)
-err := vaultClient.StoreWithTTL(ctx, 
+err := vaultClient.StoreWithTTL(ctx,
     fmt.Sprintf("telegram/codes/%s", code),
     map[string]interface{}{
         "telegram_id": telegramID,
@@ -499,22 +503,22 @@ sequenceDiagram
     participant DB as 🗄️ PostgreSQL
     participant S3 as 📦 MinIO/S3
     participant TG as 🤖 Telegram Bot
-    
+
     User->>+API: 📊 Запрос на генерацию Excel
     API->>+Queue: ➕ Добавить задачу в очередь
     API->>-User: ✅ 202 Accepted (async)
-    
+
     Queue->>+BG: 🔄 Выполнить задачу
     BG->>+DB: 📡 Получить данные
     DB->>-BG: 📈 Возврат данных
-    
+
     BG->>BG: 📝 Генерация Excel файла
     BG->>+S3: ⬆️ Загрузка файла
     S3->>-BG: ✅ Подтверждение загрузки
-    
+
     BG->>+TG: 📤 Отправка уведомления
     TG->>-User: 📱 Telegram уведомление с ссылкой
-    
+
     rect rgb(255, 243, 224)
         Note over BG: ⚠️ Обработка ошибок:<br/>🔄 Retry с экспоненциальной задержкой<br/>📢 Telegram уведомления об ошибках
     end
@@ -554,9 +558,9 @@ on:
     branches: [main]
 
 jobs:
-  validate:    # Линтинг и проверки качества
-  publish:     # Сборка и публикация Docker образов  
-  deploy:      # Автоматическое развертывание
+  validate: # Линтинг и проверки качества
+  publish: # Сборка и публикация Docker образов
+  deploy: # Автоматическое развертывание
 ```
 
 **Workflow файлы:**
@@ -572,35 +576,35 @@ jobs:
 flowchart TD
     A[📝 git push to main] --> B[🚀 GitHub Actions Trigger]
     B --> C{🔄 CI Pipeline}
-    
+
     C --> D[✅ validate Job]
     C --> E[📦 publish Job]
-    
+
     D --> F[🧹 Go Linting]
     D --> G[📋 Protobuf Validation]
     D --> H[🗄️ SQL Migration Check]
-    
+
     E --> I[🐳 Build Docker Image]
     E --> J[⬆️ Push to GHCR]
-    
+
     F --> K{🤔 All Checks Pass?}
     G --> K
     H --> K
     I --> K
     J --> K
-    
+
     K -->|✅ Yes| L[🚀 deploy Job]
     K -->|❌ No| M[💥 Pipeline Failed]
-    
+
     L --> N[🖥️ Self-Hosted Runner KZ]
     N --> O[⬇️ Git Pull Latest]
     N --> P[🔑 Docker Login GHCR]
     N --> Q[⚙️ make deploy]
-    
+
     Q --> R[🐳 Docker Compose Up]
     R --> S[🔍 Verify Containers]
     S --> T[🎉 Deployment Success]
-    
+
     style A fill:#3498db,stroke:#2980b9,stroke-width:3px,color:#fff
     style T fill:#27ae60,stroke:#229954,stroke-width:3px,color:#fff
     style M fill:#e74c3c,stroke:#c0392b,stroke-width:3px,color:#fff
@@ -632,21 +636,21 @@ flowchart TD
 graph LR
     Internet[🌐 Интернет] --> CF[☁️ Cloudflare Edge]
     CF --> Warp[🔒 Cloudflare Warp Tunnel]
-    
+
     subgraph "🛡️ Cloudflare Services"
         CF
         CDN[📦 CDN Cache]
-        WAF[🛡️ Web Application Firewall]  
+        WAF[🛡️ Web Application Firewall]
         LB[⚖️ Load Balancer]
         CF --> CDN
         CF --> WAF
         CF --> LB
         LB --> Warp
     end
-    
+
     Warp -.->|🔐 Encrypted Tunnel| Server[🖥️ Сервер в Казахстане]
     Server --> Docker[🐳 Docker Compose Stack]
-    
+
     style CF fill:#f39c12,stroke:#e67e22,stroke-width:3px,color:#fff
     style Warp fill:#e67e22,stroke:#d35400,stroke-width:3px,color:#fff
     style Server fill:#27ae60,stroke:#229954,stroke-width:3px,color:#fff
@@ -666,7 +670,7 @@ graph LR
 **Self-Hosted Infrastructure (Казахстан):**
 
 - **Location**: Астана, Казахстан - близость к основной аудитории
-- **Network**: Серый IP с Warp tunnel для публичного доступа  
+- **Network**: Серый IP с Warp tunnel для публичного доступа
 - **Self-hosted runner**: GitHub Actions runner для автоматизации
 - **Docker Compose**: Управление контейнерами через compose файлы
 - **Multi-stage deployment**: Раздельные файлы для apps, databases, swagger
@@ -676,7 +680,7 @@ graph LR
 ```bash
 # Основной процесс развертывания
 1. Git pull latest code
-2. Docker login to GitHub Container Registry  
+2. Docker login to GitHub Container Registry
 3. make deploy - запуск через Makefile
 4. Verification - проверка running containers
 ```

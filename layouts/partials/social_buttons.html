@@ -1,0 +1,10 @@
+<div class="social-buttons">
+    {{- $context := .context | default . }}
+    {{- $socialIcons := ($context.Site.Language.Params.socialIcons | default $context.Site.Params.socialIcons) }}
+    {{- range $socialIcons }}
+    <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer"
+        class="social-button">
+        {{ (.title | default .name) | title }}
+    </a>
+    {{- end }}
+</div>

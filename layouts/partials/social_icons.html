@@ -1,0 +1,10 @@
+<div class="social-icons" {{ with .align}}align="{{.}}" {{- end }}>
+    {{- /* Use global site params so this works inside nested contexts (e.g., profileMode). */ -}}
+    {{- $socialIcons := (site.Language.Params.socialIcons | default site.Params.socialIcons) -}}
+    {{- range $socialIcons }}
+    <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
+        title="{{ (.title | default .name) | title }}">
+        {{- partial "svg.html" . }}
+    </a>
+    {{- end }}
+</div>

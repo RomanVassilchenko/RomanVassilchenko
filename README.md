@@ -41,11 +41,11 @@ Building **high-load systems** and distributed microservices for HR-tech platfor
 
 ## Projects
 
-| Project | Description | Stack |
-|----------|-------------|-------|
-| **AdalQarau (ex-DACA)** | Public procurement analytics for Kazakhstan. Risk scoring, graph relations, Excel exports. Used by law enforcement agencies. | Go, PostgreSQL, MinIO, Kafka, GraphQL, Buf |
-| **Staff Portal 2.0** | Next-gen internal HR portal: microservices, real-time analytics, smart routing. | Go, PostgreSQL, Kafka, Redis, Grafana |
-| **Matrix Hiring System** | High-scale point-hiring workflow management. | Go, PostgreSQL, ElasticSearch, Kafka |
+| Project                  | Description                                                                                                                  | Stack                                      |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| **AdalQarau (ex-DACA)**  | Public procurement analytics for Kazakhstan. Risk scoring, graph relations, Excel exports. Used by law enforcement agencies. | Go, PostgreSQL, MinIO, Kafka, GraphQL, Buf |
+| **Staff Portal 2.0**     | Next-gen internal HR portal: microservices, real-time analytics, smart routing.                                              | Go, PostgreSQL, Kafka, Redis, Grafana      |
+| **Matrix Hiring System** | High-scale point-hiring workflow management.                                                                                 | Go, PostgreSQL, ElasticSearch, Kafka       |
 
 ---
 
@@ -78,11 +78,11 @@ Building **high-load systems** and distributed microservices for HR-tech platfor
 
 ## Education
 
-| Degree | Institution | Years | Notes |
-|--------|-------------|-------|-------|
-| B.Sc. (Years 1-2) | ITMO University | 2021–2023 | Core CS & Engineering Fundamentals |
-| B.Sc. (Completion) | Astana IT University (AITU) | 2023–2025 | Backend & distributed systems focus |
-| M.Sc. (In Progress) | Astana IT University (AITU) | 2025–2027 | Research: high-load & reliability |
+| Degree                               | Institution                 | Years     | Notes                                                                    |
+| ------------------------------------ | --------------------------- | --------- | ------------------------------------------------------------------------ |
+| B.Sc. (Years 1-2)                    | ITMO University             | 2021–2023 | Core CS & Engineering Fundamentals                                       |
+| B.Sc. (Years 3-4)                    | Astana IT University (AITU) | 2023–2025 | Backend & distributed systems focus                                      |
+| M.Sc. Computer Science & Engineering | Astana IT University (AITU) | 2025–2027 | Research: high-load distributed systems & ML (performance & reliability) |
 
 ---
 

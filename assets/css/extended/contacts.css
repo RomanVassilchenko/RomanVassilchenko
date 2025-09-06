@@ -1,0 +1,129 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 140px));
+  justify-content: center;
+  gap: var(--gap);
+  margin-top: 1rem;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--entry);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-decoration: none;
+  transition: transform 0.06s ease, border-color 0.2s ease, background 0.2s ease;
+  aspect-ratio: 1 / 1;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+.contact-card .icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.contact-card .label {
+  font-weight: 600;
+  text-align: center;
+}
+
+.contact-intro {
+  margin-bottom: 0.5rem;
+}
+
+.contact-page .post-header {
+  text-align: center;
+}
+
+.contact-page .post-header .post-title {
+  margin: 0 auto;
+}
+
+.contact-page .post-content {
+  text-align: center;
+}
+
+.contact-page .post-content img {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.contact-page .post-content ul,
+.contact-page .post-content ol {
+  display: inline-block;
+  text-align: left; /* keep bullets tidy if used */
+}
+
+/* Center-align all single posts by default */
+.post-single .post-header {
+  text-align: center;
+}
+
+.post-single .post-header .post-title,
+.post-single .post-description {
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+}
+
+.page-header h1,
+.page-header .post-description {
+  margin: 0 auto;
+}
+
+.list .post-content,
+.list .post-description {
+  text-align: center;
+}
+
+.post-entry,
+.post-entry .entry-header,
+.post-entry .entry-content,
+.post-entry .entry-footer {
+  text-align: center;
+}
+
+.post-entry .entry-content p {
+  margin: 0 auto;
+}
+
+.home-info,
+.home-info .entry-header,
+.home-info .entry-content,
+.home-info .entry-footer {
+  text-align: center;
+}
+
+/* Keep list items readable when parent is centered */
+.main ul,
+.main ol {
+  display: inline-block;
+  text-align: left;
+}
+
+.post-single .post-content {
+  text-align: center;
+}
+
+.post-single .post-content img {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.post-single .post-content ul,
+.post-single .post-content ol {
+  display: inline-block;
+  text-align: left;
+}

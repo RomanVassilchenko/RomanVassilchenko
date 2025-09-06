@@ -1,0 +1,7 @@
+/* Header without sticky positioning - scrollable */
+.header {
+  position: static;
+  background: var(--theme);
+  border-bottom: 1px solid var(--border);
+}
+
