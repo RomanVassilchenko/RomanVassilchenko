@@ -8,8 +8,6 @@ draft: false
 cover:
   image: "/images/posts/daca-architecture.svg"
   alt: "Логотип AdalQarau"
-ShowToc: true
-TocOpen: false
 ---
 
 Комплексная система анализа государственных закупок, построенная на современных принципах архитектуры с разделением ответственности, type-safe контрактами и автоматизацией процессов.

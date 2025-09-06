@@ -32,6 +32,16 @@
     font-size: 1.3em;
 }
 
+/* Improve anchor navigation offset for in-page links */
+.post-content h1[id],
+.post-content h2[id],
+.post-content h3[id],
+.post-content h4[id],
+.post-content h5[id],
+.post-content h6[id] {
+    scroll-margin-top: 80px;
+}
+
 /* Code blocks */
 .post-content pre {
     background: var(--code-bg);
@@ -57,9 +67,144 @@
     text-align: center;
     margin: 2rem 0;
     padding: 1rem;
-    background: var(--theme);
+    background: var(--entry, var(--theme));
     border-radius: 8px;
     border: 1px solid var(--border);
+}
+
+/* Light theme Mermaid styling */
+body:not(.dark) .mermaid svg {
+    background: transparent;
+}
+
+body:not(.dark) .mermaid .node rect,
+body:not(.dark) .mermaid .node circle,
+body:not(.dark) .mermaid .node polygon {
+    stroke: #333333 !important;
+    stroke-width: 2px !important;
+}
+
+body:not(.dark) .mermaid .edgePath .path {
+    stroke: #333333 !important;
+    stroke-width: 2px !important;
+}
+
+body:not(.dark) .mermaid .arrowheadPath {
+    fill: #333333 !important;
+    stroke: #333333 !important;
+}
+
+body:not(.dark) .mermaid .cluster rect {
+    stroke: #666666 !important;
+    stroke-width: 1px !important;
+}
+
+body:not(.dark) .mermaid text {
+    fill: #333333 !important;
+}
+
+body:not(.dark) .mermaid .label {
+    color: #333333 !important;
+}
+
+/* Dark theme Mermaid styling */
+body.dark .mermaid svg {
+    background: transparent;
+}
+
+body.dark .mermaid .node rect,
+body.dark .mermaid .node circle,
+body.dark .mermaid .node polygon {
+    stroke: #ffffff !important;
+    stroke-width: 2px !important;
+}
+
+body.dark .mermaid .edgePath .path {
+    stroke: #ffffff !important;
+    stroke-width: 2px !important;
+}
+
+body.dark .mermaid .arrowheadPath {
+    fill: #ffffff !important;
+    stroke: #ffffff !important;
+}
+
+body.dark .mermaid .cluster rect {
+    stroke: #cccccc !important;
+    stroke-width: 1px !important;
+}
+
+body.dark .mermaid text {
+    fill: #ffffff !important;
+}
+
+body.dark .mermaid .label {
+    color: #ffffff !important;
+}
+
+/* Custom node colors for both themes - maintain readability */
+.mermaid .node .label {
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+
+/* Ensure flowchart node text is always readable */
+body:not(.dark) .mermaid .flowchart-label,
+body:not(.dark) .mermaid .node .label {
+    color: #000000 !important;
+}
+
+body.dark .mermaid .flowchart-label,
+body.dark .mermaid .node .label {
+    color: #ffffff !important;
+}
+
+/* Subgraph styling for better visibility */
+body:not(.dark) .mermaid .cluster .label {
+    color: #333333 !important;
+    font-weight: bold !important;
+}
+
+body.dark .mermaid .cluster .label {
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+/* Sequence diagram styling */
+body:not(.dark) .mermaid .actor {
+    stroke: #333333 !important;
+    fill: #f9f9f9 !important;
+}
+
+body:not(.dark) .mermaid .actor-line {
+    stroke: #333333 !important;
+}
+
+body:not(.dark) .mermaid .messageLine0,
+body:not(.dark) .mermaid .messageLine1 {
+    stroke: #333333 !important;
+}
+
+body:not(.dark) .mermaid .messageText {
+    fill: #333333 !important;
+}
+
+body.dark .mermaid .actor {
+    stroke: #ffffff !important;
+    fill: #2d2d2d !important;
+}
+
+body.dark .mermaid .actor-line {
+    stroke: #ffffff !important;
+}
+
+body.dark .mermaid .messageLine0,
+body.dark .mermaid .messageLine1 {
+    stroke: #ffffff !important;
+}
+
+body.dark .mermaid .messageText {
+    fill: #ffffff !important;
 }
 
 /* Tables */
@@ -175,6 +320,33 @@
     padding-left: 0;
 }
 
+/* Improve readability of code blocks in light theme */
+body:not(.dark) .post-content pre,
+body:not(.dark) .post-content .chroma {
+    background: #f8fafc; /* subtle light */
+    border-color: #e5e7eb;
+}
+
+body:not(.dark) .post-content code:not(pre code) {
+    background: #f3f4f6;
+}
+
+/* Slightly softer background for inline code in dark theme */
+body.dark .post-content code:not(pre code) {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Make ToC more compact and clear */
+.post-single .toc details > summary {
+    cursor: pointer;
+}
+.post-single .toc .inner {
+    font-size: 0.95em;
+}
+.post-single .toc a {
+    word-break: break-word;
+}
+
 .toc ul ul {
     padding-left: 1.5rem;
     margin-top: 0.5rem;
@@ -194,6 +366,25 @@
     color: var(--primary);
 }
 
+/* Ensure stable vertical layout for Hugo ToC */
+.toc nav#TableOfContents ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+.toc nav#TableOfContents li {
+    display: list-item;
+    margin: 0.25rem 0;
+}
+.toc nav#TableOfContents ul ul {
+    padding-left: 1.25rem;
+    margin-top: 0.25rem;
+}
+.toc nav#TableOfContents a {
+    display: inline-block;
+    padding: 2px 0;
+}
+
 /* Cover image */
 .post-cover {
     text-align: center;
@@ -201,12 +392,22 @@
 }
 
 .post-cover img {
-    max-width: 600px;
     width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .post-cover img {
+        width: 80%;
+        max-width: 80%;
+    }
 }
 
 .post-cover img:hover {
@@ -219,7 +420,6 @@
     color: var(--secondary);
     margin-top: 0.75rem;
     font-size: 0.9em;
-    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }

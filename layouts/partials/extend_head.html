@@ -1,0 +1,12 @@
+{{- /* Project-level CSS overrides loaded after the main stylesheet */ -}}
+{{- $overrides := resources.Get "css/extended/overrides.css" -}}
+{{- if $overrides -}}
+  {{- $overrides = $overrides | resources.Minify -}}
+  {{- if not site.Params.assets.disableFingerprinting -}}
+    {{- $overrides = $overrides | fingerprint -}}
+    <link crossorigin="anonymous" href="{{ $overrides.RelPermalink }}" integrity="{{ $overrides.Data.Integrity }}" rel="preload stylesheet" as="style">
+  {{- else -}}
+    <link crossorigin="anonymous" href="{{ $overrides.RelPermalink }}" rel="preload stylesheet" as="style">
+  {{- end -}}
+{{- end -}}
+

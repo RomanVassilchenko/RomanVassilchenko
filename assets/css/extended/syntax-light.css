@@ -1,0 +1,112 @@
+/* Light theme syntax highlighting overrides to improve contrast on white */
+/* Applies only when not in dark mode */
+body:not(.dark) .chroma {
+  color: #24292e; /* base text */
+}
+
+/* Reset all token spans to inherit base color to avoid low-contrast dark theme palette leaking in light mode */
+body:not(.dark) .chroma span { color: inherit; }
+
+/* Line numbers */
+body:not(.dark) .chroma .ln,
+body:not(.dark) .chroma .lnt {
+  color: #57606a;
+}
+
+/* Comments */
+body:not(.dark) .chroma .c,
+body:not(.dark) .chroma .ch,
+body:not(.dark) .chroma .cm,
+body:not(.dark) .chroma .c1,
+body:not(.dark) .chroma .cs,
+body:not(.dark) .chroma .cp,
+body:not(.dark) .chroma .cpf {
+  color: #6a737d; font-style: italic;
+}
+
+/* Keywords */
+body:not(.dark) .chroma .k,
+body:not(.dark) .chroma .kc,
+body:not(.dark) .chroma .kd,
+body:not(.dark) .chroma .kn,
+body:not(.dark) .chroma .kp,
+body:not(.dark) .chroma .kr,
+body:not(.dark) .chroma .kt {
+  color: #d73a49; /* red */
+}
+
+/* Functions and names */
+body:not(.dark) .chroma .nf,
+body:not(.dark) .chroma .fm,
+body:not(.dark) .chroma .na,
+body:not(.dark) .chroma .nd,
+body:not(.dark) .chroma .nc,
+body:not(.dark) .chroma .nn,
+body:not(.dark) .chroma .nt {
+  color: #6f42c1; /* purple */
+}
+
+/* Strings */
+body:not(.dark) .chroma .s,
+body:not(.dark) .chroma .sa,
+body:not(.dark) .chroma .sb,
+body:not(.dark) .chroma .sc,
+body:not(.dark) .chroma .dl,
+body:not(.dark) .chroma .sd,
+body:not(.dark) .chroma .s2,
+body:not(.dark) .chroma .se,
+body:not(.dark) .chroma .sh,
+body:not(.dark) .chroma .si,
+body:not(.dark) .chroma .sx,
+body:not(.dark) .chroma .sr,
+body:not(.dark) .chroma .s1,
+body:not(.dark) .chroma .ss {
+  color: #032f62; /* dark blue */
+}
+
+/* Numbers */
+body:not(.dark) .chroma .m,
+body:not(.dark) .chroma .mb,
+body:not(.dark) .chroma .mf,
+body:not(.dark) .chroma .mh,
+body:not(.dark) .chroma .mi,
+body:not(.dark) .chroma .il,
+body:not(.dark) .chroma .mo {
+  color: #005cc5; /* blue */
+}
+
+/* Operators and punctuation */
+body:not(.dark) .chroma .o,
+body:not(.dark) .chroma .ow,
+body:not(.dark) .chroma .p {
+  color: #24292e;
+}
+
+/* Variables */
+body:not(.dark) .chroma .nv,
+body:not(.dark) .chroma .vc,
+body:not(.dark) .chroma .vg,
+body:not(.dark) .chroma .vi,
+body:not(.dark) .chroma .vm,
+body:not(.dark) .chroma .no,
+body:not(.dark) .chroma .py {
+  color: #e36209; /* orange */
+}
+
+/* Diff and generic */
+body:not(.dark) .chroma .gd { color: #b31d28; background-color: #ffebe9; }
+body:not(.dark) .chroma .gi { color: #116329; background-color: #e6ffec; }
+body:not(.dark) .chroma .ge { font-style: italic; }
+body:not(.dark) .chroma .gs { font-weight: 600; }
+body:not(.dark) .chroma .gh,
+body:not(.dark) .chroma .gu { color: #005cc5; font-weight: 600; }
+body:not(.dark) .chroma .gt { color: #b31d28; }
+body:not(.dark) .chroma .w  { color: transparent; }
+
+/* Links inside code (rare) */
+body:not(.dark) .chroma a { color: #0969da; text-decoration: underline; }
+
+/* Make sure pre > code has good contrast in light theme */
+body:not(.dark) .post-content pre code {
+  color: #24292e;
+}

@@ -20,7 +20,7 @@ languages:
       profileMode:
         enabled: true
         title: "Роман Васильченко"
-        subtitle: "Go бэкенд-инженер • Высоконагруженные системы • Распределённые архитектуры"
+        subtitle: "Go бэкенд-инженер в Ozon Tech • Астана • UTC +5"
         imageUrl: /images/avatar.png
         imageTitle: "Роман Васильченко"
         imageWidth: 150
@@ -59,7 +59,7 @@ languages:
       profileMode:
         enabled: true
         title: "Roman Vassilchenko"
-        subtitle: "Go Backend Engineer • High Load Systems • Distributed Architectures"
+        subtitle: "Go Backend Engineer in Ozon Tech • Astana • UTC +5"
         imageUrl: /images/avatar.png
         imageTitle: "Roman Vassilchenko"
         imageWidth: 150

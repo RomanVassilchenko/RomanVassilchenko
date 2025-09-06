@@ -1,0 +1,55 @@
+/* Fix code block colors on light theme: light background, dark text */
+
+/* Ensure light theme code blocks use a light background */
+:root {
+  --code-block-bg: rgb(246, 248, 250); /* #f6f8fa */
+}
+
+/* Preserve dark theme values so we don't override them via cascade */
+.dark {
+  --code-block-bg: rgb(46, 46, 51);
+}
+
+/* Light theme: readable code text color for both fenced and highlighted blocks */
+body:not(.dark) .post-content pre code {
+  color: var(--content);
+  background: var(--code-block-bg) !important;
+}
+
+/* Light theme: override Chroma base color (token colors still apply) */
+body:not(.dark) .post-content .chroma {
+  color: var(--content);
+}
+
+/* Code scroll fixes (both themes) */
+.post-content .highlight,
+.post-content pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure the syntax-highlight container itself scrolls when needed (covers line-numbers table layout) */
+.post-content .chroma {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Allow the inner line-numbers table to grow without forcing page overflow */
+.post-content .lntable {
+  width: auto;
+}
+
+/* Allow highlighted tables (with line numbers) to exceed container width */
+.post-content .highlighttable,
+.post-content .highlight table {
+  table-layout: auto !important;
+  width: auto !important;
+}
+
+/* Keep long lines unwrapped and scrollable */
+.post-content pre code {
+  display: block;             /* override theme's grid that breaks scroll */
+  white-space: pre;            /* preserve whitespace; no wrapping */
+  word-break: normal;          /* don't break inside long tokens */
+  overflow-wrap: normal;       /* avoid forced wrapping */
+}
