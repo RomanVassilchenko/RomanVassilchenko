@@ -97,33 +97,21 @@
                 </button>
                 {{- end }}
 
-                {{- $lang := .Lang}}
-                {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
-                {{- with site.Home.Translations }}
+                {{- $lang := .Lang }}
+                {{- $separator := or $label_text (not site.Params.disableThemeToggle) }}
+                {{- $translations := .Translations -}}
+                {{- if not $translations -}}
+                  {{- $translations = site.Home.Translations -}}
+                {{- end -}}
+                {{- with $translations }}
                 <ul class="lang-switch">
                     {{- if $separator }}<li>|</li>{{ end }}
                     {{- range . -}}
                     {{- if ne $lang .Lang }}
-                    {{- $href := "" -}}
-                    {{- $currentSection := $.Section -}}
-                    {{- $targetURL := "" -}}
-                    
-                    {{- if eq $currentSection "contacts" -}}
-                        {{- $targetURL = "contacts/" -}}
-                    {{- else if eq $currentSection "posts" -}}
-                        {{- $targetURL = "posts/" -}}
-                    {{- else -}}
-                        {{- $targetURL = "" -}}
-                    {{- end -}}
-                    
-                    {{- if $isProd -}}
-                        {{- $href = (printf "%s%s" .Permalink $targetURL) -}}
-                    {{- else -}}
-                        {{- $href = (printf "%s%s" .RelPermalink $targetURL) -}}
-                    {{- end -}}
                     <li>
-                        <a href="{{ $href }}" title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
-                            aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
+                        <a href="{{ if $isProd }}{{ .Permalink }}{{ else }}{{ .RelPermalink }}{{ end }}"
+                           title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
+                           aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
                             {{- if (and site.Params.displayFullLangName (.Language.LanguageName)) }}
                             {{- .Language.LanguageName | emojify -}}
                             {{- else }}
@@ -132,7 +120,7 @@
                         </a>
                     </li>
                     {{- end -}}
-                    {{- end}}
+                    {{- end }}
                 </ul>
                 {{- end }}
             </div>

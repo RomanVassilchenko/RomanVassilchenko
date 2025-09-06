@@ -1,0 +1,31 @@
+.library-page .post-header {
+  text-align: center;
+}
+
+.library-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin: 1rem auto 0;
+  max-width: 720px;
+}
+
+.library-btn {
+  display: block;
+  width: 100%;
+  background: var(--entry);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: left;
+  transition: transform 0.06s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.library-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+

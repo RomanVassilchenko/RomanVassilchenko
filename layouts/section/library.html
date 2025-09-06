@@ -1,0 +1,26 @@
+{{ define "main" }}
+<article class="post-single library-page">
+  <header class="post-header page-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="post-description">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  {{ with .Content }}
+  <div class="post-content">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  <div class="library-list">
+    {{- with .Params.documents }}
+      {{- range . }}
+      <a class="library-btn" href="{{ .url | safeURL }}" target="_blank" rel="noopener noreferrer" title="{{ .title }}">
+        {{ .title }}
+      </a>
+      {{- end }}
+    {{- end }}
+  </div>
+</article>
+{{ end }}

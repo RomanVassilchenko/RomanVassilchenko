@@ -27,7 +27,7 @@ languages:
         imageHeight: 150
         buttons:
           - name: Резюме
-            url: /resume/ru.pdf
+            url: /documents/resume_ru.pdf
       socialIcons:
         - name: github
           url: https://github.com/RomanVassilchenko
@@ -51,6 +51,10 @@ languages:
           name: Контакты
           url: /contacts/
           weight: 3
+        - identifier: library
+          name: Библиотека
+          pageRef: /library
+          weight: 4
   en:
     title: "Roman Vassilchenko"
     languageName: "English"
@@ -66,7 +70,7 @@ languages:
         imageHeight: 150
         buttons:
           - name: Resume
-            url: /resume/en.pdf
+            url: /documents/resume_en.pdf
       socialIcons:
         - name: github
           url: https://github.com/RomanVassilchenko
@@ -90,6 +94,10 @@ languages:
           name: Contacts
           url: /contacts/
           weight: 3
+        - identifier: library
+          name: Library
+          pageRef: /library
+          weight: 4
 
 params:
   # General
@@ -122,7 +130,7 @@ params:
     imageHeight: 150
     buttons:
       - name: Resume
-        url: /resume/en.pdf
+        url: /documents/resume_en.pdf
 
   # Don't show posts on homepage
   mainSections: []
