@@ -118,6 +118,9 @@ params:
   ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   ShowWordCount: true
+  ShowToc: false
+  TocOpen: false
+  UseHugoToc: false
 
   # Profile mode - applies to homepage
   profileMode:
@@ -145,6 +148,10 @@ markup:
     guessSyntax: true
     lineNos: true
     style: github
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
 
 # Enable Mermaid diagrams
 enableEmoji: true

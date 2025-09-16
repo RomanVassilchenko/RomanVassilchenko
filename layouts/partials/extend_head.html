@@ -10,3 +10,53 @@
   {{- end -}}
 {{- end -}}
 
+{{- /* Mermaid.js for diagrams */ -}}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'default',
+    securityLevel: 'loose',
+    fontFamily: 'inherit',
+    flowchart: {
+      useMaxWidth: true,
+      htmlLabels: true
+    }
+  });
+
+  // Initialize Mermaid diagrams when DOM is ready
+  document.addEventListener('DOMContentLoaded', function() {
+    // Find all code blocks with language 'mermaid'
+    const mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
+
+    mermaidBlocks.forEach(function(block, index) {
+      const mermaidCode = block.textContent;
+      const id = 'mermaid-' + index;
+
+      // Create a new div element for the Mermaid diagram
+      const mermaidDiv = document.createElement('div');
+      mermaidDiv.className = 'mermaid';
+      mermaidDiv.id = id;
+      mermaidDiv.textContent = mermaidCode;
+
+      // Replace the code block with the Mermaid div
+      block.parentNode.parentNode.replaceChild(mermaidDiv, block.parentNode);
+    });
+
+    // Initialize Mermaid after processing all blocks
+    mermaid.init();
+  });
+</script>
+
+{{- /* Enhanced features JavaScript */ -}}
+{{- $enhancedJS := resources.Get "js/enhanced-features.js" -}}
+{{- if $enhancedJS -}}
+  {{- $enhancedJS = $enhancedJS | resources.Minify -}}
+  {{- if not site.Params.assets.disableFingerprinting -}}
+    {{- $enhancedJS = $enhancedJS | fingerprint -}}
+    <script crossorigin="anonymous" src="{{ $enhancedJS.RelPermalink }}" integrity="{{ $enhancedJS.Data.Integrity }}"></script>
+  {{- else -}}
+    <script crossorigin="anonymous" src="{{ $enhancedJS.RelPermalink }}"></script>
+  {{- end -}}
+{{- end -}}
+

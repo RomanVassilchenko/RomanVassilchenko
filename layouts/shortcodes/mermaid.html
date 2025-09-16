@@ -1,0 +1,4 @@
+{{- $id := printf "mermaid-%d" (index . 1 | default 0) -}}
+<div class="mermaid" id="{{ $id }}">
+{{ .Inner | safeHTML }}
+</div>
