@@ -142,9 +142,3 @@ Developed core features for high-scale recruitment and hiring workflow managemen
 
 <img src="https://img.shields.io/badge/Status-Full--time_Employed-0A66C2?style=for-the-badge" alt="Full-time Employed">
 <br><br>
-
-Focused on high-performance **Go microservices**, performance tuning, and **observability** (metrics, tracing, logging).
-
-Open to future opportunities — contact via <a href="https://t.me/Roman_Vassilchenko">Telegram</a> · <a href="mailto:roman.vassilchenko.work@gmail.com">Email</a>
-
-</div>
