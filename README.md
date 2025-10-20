@@ -18,7 +18,7 @@
 <table>
 <tr>
 <td width="30%" align="center">
-<img src="https://img.shields.io/badge/Backend_Developer-Bereke_Bank-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Bereke Bank">
+<img src="https://img.shields.io/badge/-Bereke_Bank-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Bereke Bank">
 </td>
 <td width="70%">
 
@@ -39,7 +39,7 @@ Developing **collateralized auto loan systems** with complex orchestration and e
 </tr>
 <tr>
 <td width="30%" align="center">
-<img src="https://img.shields.io/badge/Go_Developer-Ozon-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Ozon">
+<img src="https://img.shields.io/badge/-Ozon-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Ozon">
 </td>
 <td width="70%">
 
@@ -93,6 +93,7 @@ Developed core features for high-scale recruitment and hiring workflow managemen
 
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Vertica](https://img.shields.io/badge/Vertica-E95420?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDJMMiAyMmgyMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=&logoColor=white)
 ![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 
@@ -105,6 +106,7 @@ Developed core features for high-scale recruitment and hiring workflow managemen
 ### Tools & APIs
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Camunda](https://img.shields.io/badge/Camunda-FC5D0D?style=for-the-badge&logo=camunda&logoColor=white)
 ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
 ![Protobuf](https://img.shields.io/badge/Protobuf-FFCA28?style=for-the-badge&logo=google&logoColor=white)
 
