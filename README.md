@@ -18,20 +18,56 @@
 <table>
 <tr>
 <td width="30%" align="center">
+<img src="https://img.shields.io/badge/Backend_Developer-Bereke_Bank-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Bereke Bank">
+</td>
+<td width="70%">
+
+**Middle Backend Developer @ Bereke Bank (Sep 2024 – Present)**
+*Auto Loan Issuance Team*
+
+Developing **collateralized auto loan systems** with complex orchestration and external integrations.
+
+**Key Responsibilities:**
+
+- Building credit issuance workflows using **Camunda BPMN** orchestration
+- Integrating with government services (state registries, identity verification, vehicle databases)
+- Designing microservice architecture for internal banking system integrations
+- Implementing real-time credit scoring and decision-making pipelines
+- Managing high-load financial transaction processing with strict consistency requirements
+
+</td>
+</tr>
+<tr>
+<td width="30%" align="center">
 <img src="https://img.shields.io/badge/Go_Developer-Ozon-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Ozon">
 </td>
 <td width="70%">
 
-**Go Backend Engineer @ Ozon (2023 – Present)**
+**Junior Go Developer @ Ozon (Sep 2024 – Sep 2025)**
+*Staff Team*
 
-Building **high-load systems** and distributed microservices for HR-tech platforms serving **60,000+ employees**.
+Built and maintained **internal HR-tech platforms** serving **60,000+ employees** across distributed microservices architecture.
 
 **Key Achievements:**
 
-- Optimized SQL queries **8×** (150ms → 18ms)
-- Boosted ElasticSearch performance **2.5×**
-- Migrated legacy monolith to microservices → **-25% core load**
-- Created shared internal library (`staff-lib`) adopted across dozens of services
+- Refactored RPC communication layer, improving inter-service reliability
+- Boosted ElasticSearch performance **2.5×** in complex search scenarios
+- Migrated legacy monolith components to microservices → **-25% core load**
+- Contributed to shared internal libraries adopted across multiple teams
+
+---
+
+**Go Backend Intern @ Ozon (Dec 2023 – Aug 2024)**
+*Matrix Hiring Team*
+
+Developed core features for high-scale recruitment and hiring workflow management system.
+
+**Key Contributions:**
+
+- Implemented point-hiring workflow automation
+- Optimized database queries and API response times
+- Integrated ElasticSearch for candidate search functionality
+- Built monitoring dashboards for real-time system health tracking
 
 </td>
 </tr>
@@ -92,7 +128,6 @@ Building **high-load systems** and distributed microservices for HR-tech platfor
 
 <a href="https://github.com/RomanVassilchenko">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=RomanVassilchenko&show_icons=true&theme=default&count_private=true&hide_border=true&hide_title=true" />
-  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=RomanVassilchenko&hide_border=true&theme=default" />
 </a>
 
 </div>
