@@ -151,9 +151,11 @@ Built notification service for HR and managers via corporate messenger. Created 
 ## Education
 
 **M.Sc. Computer Science & Engineering** — Astana IT University, Kazakhstan (2025 – 2027)
+
 - Research: High-load Systems & ML
 
 **B.Sc. Computer Science** — Astana IT University + ITMO University (2021 – 2025)
+
 - Years 1-2 at ITMO (St. Petersburg), Years 3-4 at AITU (Astana)
 - Backend & Distributed Systems Focus
 
@@ -165,4 +167,3 @@ Built notification service for HR and managers via corporate messenger. Created 
 [![GitHub followers](https://img.shields.io/github/followers/RomanVassilchenko?label=Followers&style=flat-square&color=00ADD8)](https://github.com/RomanVassilchenko)
 
 </div>
-

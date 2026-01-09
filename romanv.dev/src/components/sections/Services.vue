@@ -64,11 +64,11 @@ const services = [
           ></div>
 
           <!-- Text -->
-          <div class="flex-1 min-w-0">
-            <h3 class="font-semibold text-foreground group-hover:text-primary transition-colors">
+          <div class="min-w-0 flex-1">
+            <h3 class="font-semibold text-foreground transition-colors group-hover:text-primary">
               {{ t(`services.items.${service.key}.name`) }}
             </h3>
-            <p class="text-sm text-muted-foreground truncate">
+            <p class="truncate text-sm text-muted-foreground">
               {{ t(`services.items.${service.key}.description`) }}
             </p>
           </div>

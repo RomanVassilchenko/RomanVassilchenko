@@ -34,7 +34,7 @@ const socialLinks = [
             class="h-40 w-40 overflow-hidden rounded-full shadow-xl ring-4 ring-primary/20 md:h-48 md:w-48"
           >
             <img
-              src="/images/avatar.jpg"
+              src="https://github.com/RomanVassilchenko.png"
               alt="Roman Vassilchenko"
               class="h-full w-full object-cover"
             />
