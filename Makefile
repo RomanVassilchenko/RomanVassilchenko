@@ -8,7 +8,7 @@ SITE_DIR = romanv.dev
 all: help
 
 #--------------------------
-# Resume targets
+# Resume targets (Typst)
 #--------------------------
 
 # Generate both English and Russian PDFs
@@ -22,18 +22,16 @@ en: $(PUBLIC_DIR)/resume_en.pdf
 ru: $(PUBLIC_DIR)/resume_ru.pdf
 
 # Build English resume
-$(PUBLIC_DIR)/resume_en.pdf: $(RESUME_DIR)/resume_en.tex
+$(PUBLIC_DIR)/resume_en.pdf: $(RESUME_DIR)/resume.typ $(RESUME_DIR)/i18n.typ
 	@mkdir -p $(PUBLIC_DIR)
 	@echo "Building English resume..."
-	@cd $(RESUME_DIR) && xelatex -interaction=nonstopmode -output-directory=../public/documents resume_en.tex > /dev/null
-	@cd $(RESUME_DIR) && xelatex -interaction=nonstopmode -output-directory=../public/documents resume_en.tex > /dev/null
+	@cd $(RESUME_DIR) && typst compile resume.typ --input lang=en ../public/documents/resume_en.pdf
 
 # Build Russian resume
-$(PUBLIC_DIR)/resume_ru.pdf: $(RESUME_DIR)/resume_ru.tex
+$(PUBLIC_DIR)/resume_ru.pdf: $(RESUME_DIR)/resume.typ $(RESUME_DIR)/i18n.typ
 	@mkdir -p $(PUBLIC_DIR)
 	@echo "Building Russian resume..."
-	@cd $(RESUME_DIR) && xelatex -interaction=nonstopmode -output-directory=../public/documents resume_ru.tex > /dev/null
-	@cd $(RESUME_DIR) && xelatex -interaction=nonstopmode -output-directory=../public/documents resume_ru.tex > /dev/null
+	@cd $(RESUME_DIR) && typst compile resume.typ --input lang=ru ../public/documents/resume_ru.pdf
 
 #--------------------------
 # Website targets
@@ -65,20 +63,19 @@ lint:
 format:
 	@cd $(SITE_DIR) && npm run format
 	@prettier --write "*.md" 2>/dev/null || true
-	@latexindent -w -s $(RESUME_DIR)/*.tex 2>/dev/null && rm -f $(RESUME_DIR)/*.bak* || true
+	@typstfmt $(RESUME_DIR)/*.typ 2>/dev/null || true
 
 #--------------------------
 # Clean targets
 #--------------------------
 
-# Clean LaTeX auxiliary files
+# Clean generated PDFs
 clean:
-	@rm -f $(PUBLIC_DIR)/*.aux $(PUBLIC_DIR)/*.log $(PUBLIC_DIR)/*.out $(PUBLIC_DIR)/*.synctex.gz
-	@echo "✓ Cleaned auxiliary files"
-
-# Clean everything including PDFs and dist
-distclean: clean
 	@rm -f $(PUBLIC_DIR)/resume_*.pdf
+	@echo "✓ Cleaned resume PDFs"
+
+# Clean everything including dist and node_modules
+distclean: clean
 	@rm -rf $(SITE_DIR)/dist $(SITE_DIR)/node_modules
 	@echo "✓ Cleaned all generated files"
 
@@ -89,7 +86,7 @@ distclean: clean
 help:
 	@echo "Usage: make [target]"
 	@echo ""
-	@echo "Resume:"
+	@echo "Resume (Typst):"
 	@echo "  generate    Build both EN/RU resumes to public/documents"
 	@echo "  en          Build English resume only"
 	@echo "  ru          Build Russian resume only"
@@ -100,8 +97,8 @@ help:
 	@echo "  build       Build for production (includes resume generation)"
 	@echo "  preview     Preview production build"
 	@echo "  lint        Run type checker"
-	@echo "  format      Format code (Prettier + latexindent)"
+	@echo "  format      Format code (Prettier + typstfmt)"
 	@echo ""
 	@echo "Clean:"
-	@echo "  clean       Remove LaTeX auxiliary files"
+	@echo "  clean       Remove generated resume PDFs"
 	@echo "  distclean   Remove all generated files (PDFs, dist, node_modules)"
