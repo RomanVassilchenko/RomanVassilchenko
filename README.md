@@ -15,21 +15,6 @@
 
 ---
 
-## About This Repository
-
-This repository contains the source code for [romanv.dev](https://romanv.dev) — my personal portfolio website.
-
-**Tech Stack**: Vue 3, TypeScript, Tailwind CSS, Vite
-
-```bash
-# Quick start
-make install    # Install dependencies
-make dev        # Run development server
-make build      # Build for production (includes resume PDF generation)
-```
-
----
-
 ## Professional Experience
 
 ### Bereke Bank — Middle Backend Developer
