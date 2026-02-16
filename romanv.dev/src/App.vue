@@ -6,7 +6,6 @@ import TechStack from './components/sections/TechStack.vue'
 import Projects from './components/sections/Projects.vue'
 import Education from './components/sections/Education.vue'
 import Contact from './components/sections/Contact.vue'
-import Services from './components/sections/Services.vue'
 import Footer from './components/layout/Footer.vue'
 </script>
 
@@ -20,7 +19,6 @@ import Footer from './components/layout/Footer.vue'
       <Projects />
       <Education />
       <Contact />
-      <Services />
     </main>
     <Footer />
   </div>

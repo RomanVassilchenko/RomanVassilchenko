@@ -153,32 +153,6 @@ export default {
     linkedin: 'LinkedIn',
     github: 'GitHub',
   },
-  services: {
-    title: 'Self-Hosted Services',
-    subtitle: 'All infrastructure runs on NixOS with declarative configuration',
-    items: {
-      bitwarden: {
-        name: 'Vaultwarden',
-        description: 'Password manager',
-      },
-      joplin: {
-        name: 'Joplin Server',
-        description: 'Notes synchronization',
-      },
-      photos: {
-        name: 'Immich',
-        description: 'Photo library',
-      },
-      git: {
-        name: 'Forgejo',
-        description: 'Git hosting',
-      },
-      nixCache: {
-        name: 'Nix Cache',
-        description: 'Binary cache server',
-      },
-    },
-  },
   footer: {
     madeWith: 'Made with',
     and: 'and',
