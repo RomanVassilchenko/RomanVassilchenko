@@ -19,15 +19,15 @@
     present: "Present",
 
     // Summary
-    summary: "Go Backend Engineer with 2+ years of experience building high-load distributed systems. Designing and developing microservices that process millions of requests: event-driven architecture with Kafka, PostgreSQL optimization, gRPC/REST APIs. Currently at Bereke Bank building auto loan collateral system. Creator of AdalQarau — a procurement analytics platform with anomaly detection algorithms. Open to international relocation.",
+    summary: "Go Backend Engineer with experience building high-load distributed systems. Designing and developing microservices that process millions of requests: event-driven architecture with Kafka, PostgreSQL optimization, gRPC/REST APIs. Currently at Bereke Bank building auto loan collateral system. Creator of AdalQarau — a procurement analytics platform with anomaly detection algorithms. Open to international relocation.",
 
     // Skills
-    skills-text: "Golang (2+ years), gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers (ProtoBuf), MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
+    skills-text: "Golang, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers (ProtoBuf), MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
 
     // Experience - Bereke Bank
     bereke-title: "Middle Backend Go Developer",
     bereke-company: "Bereke Bank",
-    bereke-date: "Sep 2024 — Present",
+    bereke-date: "Sep 2025 — Present",
     bereke-subtitle: "B2C Loan Request Platform · production; microservices; event-driven",
     bereke-item-1: "Developing and maintaining B2C loan-request microservices for auto dealership credit processing.",
     bereke-item-2: "Actively working with Camunda BPMN workflows for complex business process automation.",
@@ -39,7 +39,7 @@
     // Experience - Ozon Junior
     ozon-jr-title: "Junior Backend Go Developer",
     ozon-jr-company: "Ozon Tech",
-    ozon-jr-date: "Aug 2024 — Sep 2024",
+    ozon-jr-date: "Aug 2024 — Sep 2025",
     ozon-jr-subtitle: "Enterprise Employee Portal (60,000+ users) · production; monolith → microservices",
     ozon-jr-item-1: "Led monolith decomposition: extracted employee data into standalone service, reducing core load by 20–25%.",
     ozon-jr-item-2: "Developed staff-lib — reusable library for DB access, validation, and middleware — adopted across dozens of services.",
@@ -59,6 +59,11 @@
     ozon-intern-stack: "Go, PostgreSQL, Redis, ElasticSearch, Kafka, ClickHouse, gRPC, REST",
 
     // Education
+    edu-masters-title: "M.Sc. in Computer Science & Engineering",
+    edu-masters-school: "Astana IT University (AITU), Astana",
+    edu-masters-date: "2025 — Present",
+    edu-masters-item: "Thesis: Intelligent Methods for Analyzing and Detecting Anomalies in Tender Procurement Data.",
+
     edu-bachelors-title: "B.Sc. in Software Engineering",
     edu-bachelors-school: "Astana IT University (AITU), Astana",
     edu-bachelors-date: "2023 — 2025",
@@ -71,7 +76,7 @@
 
     // Additional
     additional-item-1: "Full-time availability (on-site / hybrid / remote).",
-    additional-item-2: "Open to international relocation (Netherlands, Denmark, Cyprus).",
+    additional-item-2: "Open to international relocation (Netherlands, Denmark, Cyprus, etc.).",
     additional-item-3: "Seeking challenging backend engineering roles with growth opportunities.",
 
     // Languages
@@ -105,15 +110,15 @@
     present: "Наст. время",
 
     // Summary
-    summary: "Go Backend инженер с 2+ годами опыта в высоконагруженных распределённых системах. Проектирую и разрабатываю микросервисы, обрабатывающие миллионы запросов: событийная архитектура на Kafka, оптимизация PostgreSQL, gRPC/REST API. В Bereke Bank создаю систему кредитования под залог авто. Автор AdalQarau — платформы аналитики госзакупок с алгоритмами обнаружения аномалий. Открыт к международному релокейту.",
+    summary: "Go Backend инженер с опытом в высоконагруженных распределённых системах. Проектирую и разрабатываю микросервисы, обрабатывающие миллионы запросов: событийная архитектура на Kafka, оптимизация PostgreSQL, gRPC/REST API. В Bereke Bank создаю систему кредитования под залог авто. Автор AdalQarau — платформы аналитики госзакупок с алгоритмами обнаружения аномалий. Открыт к международному релокейту.",
 
     // Skills
-    skills-text: "Golang (2+ года), gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers (ProtoBuf), MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
+    skills-text: "Golang, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers (ProtoBuf), MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
 
     // Experience - Bereke Bank
     bereke-title: "Middle Backend Go Разработчик",
     bereke-company: "Bereke Bank",
-    bereke-date: "Сен 2024 — Наст. время",
+    bereke-date: "Сен 2025 — Наст. время",
     bereke-subtitle: "B2C Платформа кредитных заявок · production; микросервисы; event-driven",
     bereke-item-1: "Разрабатываю и поддерживаю B2C микросервисы кредитных заявок для обработки автокредитов через дилерские центры.",
     bereke-item-2: "Активно работаю с Camunda BPMN workflows для автоматизации сложных бизнес-процессов.",
@@ -125,7 +130,7 @@
     // Experience - Ozon Junior
     ozon-jr-title: "Junior Backend Go Разработчик",
     ozon-jr-company: "Ozon Tech",
-    ozon-jr-date: "Авг 2024 — Сен 2024",
+    ozon-jr-date: "Авг 2024 — Сен 2025",
     ozon-jr-subtitle: "Корпоративный портал сотрудников (60 000+ пользователей) · production; монолит → микросервисы",
     ozon-jr-item-1: "Провёл декомпозицию монолита: вынес данные сотрудников в отдельный сервис, снизив нагрузку на ядро на 20–25%.",
     ozon-jr-item-2: "Разработал staff-lib — переиспользуемую библиотеку для работы с БД, валидации и middleware — внедрена в десятках сервисов.",
@@ -145,6 +150,11 @@
     ozon-intern-stack: "Go, PostgreSQL, Redis, ElasticSearch, Kafka, ClickHouse, gRPC, REST",
 
     // Education
+    edu-masters-title: "Магистратура, Computer Science & Engineering",
+    edu-masters-school: "Astana IT University (AITU), Астана",
+    edu-masters-date: "2025 — Наст. время",
+    edu-masters-item: "Тема: Интеллектуальные методы анализа и обнаружения аномалий в данных тендерных закупок.",
+
     edu-bachelors-title: "Бакалавриат, Software Engineering",
     edu-bachelors-school: "Astana IT University (AITU), Астана",
     edu-bachelors-date: "2023 — 2025",
@@ -157,7 +167,7 @@
 
     // Additional
     additional-item-1: "Полная занятость (офис / гибрид / удалённо).",
-    additional-item-2: "Открыт к релокации (Нидерланды, Дания, Кипр).",
+    additional-item-2: "Открыт к релокации (Нидерланды, Дания, Кипр и др.).",
     additional-item-3: "Ищу интересные backend-позиции с возможностями роста.",
 
     // Languages

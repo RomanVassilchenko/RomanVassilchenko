@@ -259,6 +259,15 @@
 // Education
 #section-title(tr("education"))
 
+#edu-entry(
+  tr("edu-masters-title"),
+  tr("edu-masters-school"),
+  tr("edu-masters-date"),
+  (tr("edu-masters-item"),),
+)
+
+#v(0.25em)
+
 #{
   grid(
     columns: (1fr, auto),
