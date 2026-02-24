@@ -26,7 +26,7 @@ export default {
         company: 'Bereke Bank',
         role: 'Middle Backend Developer',
         team: 'Auto Loan Issuance Team',
-        period: 'Sep 2024 – Present',
+        period: 'Sep 2025 – Present',
         description:
           'Building car-collateralized auto loan system. Microservice architecture with business process orchestration via Camunda.',
         achievements: [
@@ -41,7 +41,7 @@ export default {
         company: 'Ozon',
         role: 'Junior Go Developer',
         team: 'Staff Team',
-        period: 'Sep 2023 – Sep 2024',
+        period: 'Aug 2024 – Sep 2025',
         description:
           'Built enterprise products for 60,000+ employees. Created key systems and led major legacy code refactoring.',
         achievements: [
@@ -59,7 +59,7 @@ export default {
         company: 'Ozon',
         role: 'Go Backend Intern',
         team: 'Matrix Hiring Team',
-        period: 'Dec 2022 – Aug 2023',
+        period: 'Dec 2023 – Aug 2024',
         description:
           'Worked on Matrix hiring system — full cycle from job posting to employee onboarding.',
         achievements: [
@@ -132,16 +132,16 @@ export default {
         degree: 'M.Sc. Computer Science & Engineering',
         school: 'Astana IT University',
         location: 'Kazakhstan',
-        period: '2025 – 2027',
-        focus: 'Research: High-load Systems & ML',
+        period: '2025 – Present',
+        focus: 'Research topic: Intelligent Methods for Analyzing and Detecting Anomalies in Tender Procurement Data',
       },
       bachelors: {
-        degree: 'B.Sc. Computer Science',
-        school: 'Astana IT University + ITMO University',
-        location: 'Kazakhstan / Russia',
-        period: '2021 – 2025',
+        degree: 'B.Sc. Software Engineering',
+        school: 'Astana IT University',
+        location: 'Kazakhstan',
+        period: '2023 – 2025',
         focus: 'Backend & Distributed Systems Focus',
-        note: 'Years 1-2 at ITMO (St. Petersburg), Years 3-4 at AITU (Astana)',
+        note: 'Previous studies: ITMO University, St. Petersburg (2021-2023)',
       },
     },
   },

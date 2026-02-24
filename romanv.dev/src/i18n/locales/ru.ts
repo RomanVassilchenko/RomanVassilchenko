@@ -26,7 +26,7 @@ export default {
         company: 'Bereke Bank',
         role: 'Middle Backend Developer',
         team: 'Команда автокредитования',
-        period: 'Сен 2024 – Настоящее время',
+        period: 'Сен 2025 – Настоящее время',
         description:
           'Разрабатываю систему автокредитования под залог автомобиля. Микросервисная архитектура с оркестрацией бизнес-процессов через Camunda.',
         achievements: [
@@ -41,7 +41,7 @@ export default {
         company: 'Ozon',
         role: 'Junior Go Developer',
         team: 'Команда Staff',
-        period: 'Сен 2023 – Сен 2024',
+        period: 'Авг 2024 – Сен 2025',
         description:
           'Разработка корпоративных продуктов для 60 000+ сотрудников. Создавал ключевые системы и проводил рефакторинг legacy-кода.',
         achievements: [
@@ -59,7 +59,7 @@ export default {
         company: 'Ozon',
         role: 'Go Backend Intern',
         team: 'Команда Matrix Hiring',
-        period: 'Дек 2022 – Авг 2023',
+        period: 'Дек 2023 – Авг 2024',
         description:
           'Работал над системой найма «Матрица» — полный цикл от заявки на HH до выхода сотрудника на работу.',
         achievements: [
@@ -132,16 +132,16 @@ export default {
         degree: 'Магистр компьютерных наук',
         school: 'Astana IT University',
         location: 'Казахстан',
-        period: '2025 – 2027',
-        focus: 'Исследования: Высоконагруженные системы и ML',
+        period: '2025 – Настоящее время',
+        focus: 'Тема исследования: Интеллектуальные методы анализа и обнаружения аномалий в данных тендерных закупок',
       },
       bachelors: {
-        degree: 'Бакалавр компьютерных наук',
-        school: 'Astana IT University + Университет ИТМО',
-        location: 'Казахстан / Россия',
-        period: '2021 – 2025',
+        degree: 'Бакалавр программной инженерии',
+        school: 'Astana IT University',
+        location: 'Казахстан',
+        period: '2023 – 2025',
         focus: 'Backend и распределённые системы',
-        note: '1-2 курс в ИТМО (Санкт-Петербург), 3-4 курс в AITU (Астана)',
+        note: 'Предыдущее обучение: Университет ИТМО (Санкт-Петербург), 2021-2023',
       },
     },
   },
