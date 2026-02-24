@@ -19,10 +19,10 @@
     present: "Present",
 
     // Summary
-    summary: "Go Backend Engineer with experience building high-load distributed systems. Designing and developing microservices that process millions of requests: event-driven architecture with Kafka, PostgreSQL optimization, gRPC/REST APIs. Currently at Bereke Bank building auto loan collateral system. Creator of AdalQarau — a procurement analytics platform with anomaly detection algorithms. Open to international relocation.",
+    summary: "Go backend engineer with hands-on experience building high-load distributed systems. I design and develop microservices that process millions of requests using event-driven architecture with Kafka, PostgreSQL optimization, and gRPC/REST APIs. At Bereke Bank, I build a collateral-backed auto loan platform. Creator of AdalQarau, a public procurement analytics platform with anomaly detection algorithms. Open to international relocation.",
 
     // Skills
-    skills-text: "Golang, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers (ProtoBuf), MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
+    skills-text: "Go, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers, MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
 
     // Experience - Bereke Bank
     bereke-title: "Middle Backend Go Developer",
@@ -110,39 +110,39 @@
     present: "Наст. время",
 
     // Summary
-    summary: "Go Backend инженер с опытом в высоконагруженных распределённых системах. Проектирую и разрабатываю микросервисы, обрабатывающие миллионы запросов: событийная архитектура на Kafka, оптимизация PostgreSQL, gRPC/REST API. В Bereke Bank создаю систему кредитования под залог авто. Автор AdalQarau — платформы аналитики госзакупок с алгоритмами обнаружения аномалий. Открыт к международному релокейту.",
+    summary: "Go backend-инженер с опытом разработки высоконагруженных распределённых систем. Проектирую и развиваю микросервисы, которые обрабатывают миллионы запросов: событийная архитектура на Kafka, оптимизация PostgreSQL, gRPC/REST API. В Bereke Bank развиваю платформу автокредитования под залог автомобиля. Автор AdalQarau - платформы аналитики госзакупок с алгоритмами обнаружения аномалий. Открыт к международной релокации.",
 
     // Skills
-    skills-text: "Golang, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers (ProtoBuf), MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
+    skills-text: "Go, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers, MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
 
     // Experience - Bereke Bank
-    bereke-title: "Middle Backend Go Разработчик",
+    bereke-title: "Middle Go Backend разработчик",
     bereke-company: "Bereke Bank",
     bereke-date: "Сен 2025 — Наст. время",
-    bereke-subtitle: "B2C Платформа кредитных заявок · production; микросервисы; event-driven",
+    bereke-subtitle: "B2C-платформа кредитных заявок · production; микросервисы; event-driven",
     bereke-item-1: "Разрабатываю и поддерживаю B2C микросервисы кредитных заявок для обработки автокредитов через дилерские центры.",
-    bereke-item-2: "Активно работаю с Camunda BPMN workflows для автоматизации сложных бизнес-процессов.",
-    bereke-item-3: "Реализовывал множество интеграций с разными командами и сервисами по API/Kafka.",
+    bereke-item-2: "Работаю с Camunda BPMN для автоматизации сложных бизнес-процессов.",
+    bereke-item-3: "Реализовал интеграции с внутренними командами и сервисами через API и Kafka.",
     bereke-item-4: "Создал интеграцию с Mattermost для алертов и уведомлений по банковским операциям.",
     bereke-item-5: "Участвовал в инициативах цифровой трансформации основных банковских сервисов.",
     bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, CI/CD",
 
     // Experience - Ozon Junior
-    ozon-jr-title: "Junior Backend Go Разработчик",
+    ozon-jr-title: "Junior Go Backend разработчик",
     ozon-jr-company: "Ozon Tech",
     ozon-jr-date: "Авг 2024 — Сен 2025",
     ozon-jr-subtitle: "Корпоративный портал сотрудников (60 000+ пользователей) · production; монолит → микросервисы",
     ozon-jr-item-1: "Провёл декомпозицию монолита: вынес данные сотрудников в отдельный сервис, снизив нагрузку на ядро на 20–25%.",
-    ozon-jr-item-2: "Разработал staff-lib — переиспользуемую библиотеку для работы с БД, валидации и middleware — внедрена в десятках сервисов.",
+    ozon-jr-item-2: "Разработал staff-lib - переиспользуемую библиотеку для работы с БД, валидации и middleware; её внедрили в десятках сервисов.",
     ozon-jr-item-3: "Автоматизировал контроль посещаемости: освобождение неиспользуемых мест и блокировка повторных неявок.",
     ozon-jr-item-4: "Реализовал конвейер экспорта данных из Ozon Forms в Vertica для аналитических команд.",
     ozon-jr-stack: "Go, gRPC, PostgreSQL, ClickHouse, Redis, Kafka, Vertica",
 
     // Experience - Ozon Intern
-    ozon-intern-title: "Backend Developer Intern",
+    ozon-intern-title: "Стажёр Go Backend разработчик",
     ozon-intern-company: "Ozon Tech",
     ozon-intern-date: "Дек 2023 — Авг 2024",
-    ozon-intern-subtitle: "Ozon Matrix Platform (Система найма компании) · production; микросервисы; высокая нагрузка",
+    ozon-intern-subtitle: "Ozon Matrix Platform (корпоративная система найма) · production; микросервисы; высокая нагрузка",
     ozon-intern-item-1: "Оптимизировал сложные SQL-запросы, ускорив генерацию списков кандидатов до 8×.",
     ozon-intern-item-2: "Переработал логику фильтров ElasticSearch — улучшил скорость в 2.5× и снизил нагрузку на кластер.",
     ozon-intern-item-3: "Интегрировал Chatzone (Mattermost) через выделенный gRPC-сервис уведомлений с шардированием и отложенной отправкой через Kafka — сократил время ответа менеджеров на заявки.",
@@ -163,12 +163,12 @@
     edu-prev-title: "Предыдущее обучение",
     edu-prev-school: "Университет ИТМО, Санкт-Петербург",
     edu-prev-date: "2021 — 2023",
-    edu-prev-item: "2 года обучения до перевода в AITU на Software Engineering.",
+    edu-prev-item: "2 года обучения до перевода в AITU на программу Software Engineering.",
 
     // Additional
     additional-item-1: "Полная занятость (офис / гибрид / удалённо).",
     additional-item-2: "Открыт к релокации (Нидерланды, Дания, Кипр и др.).",
-    additional-item-3: "Ищу интересные backend-позиции с возможностями роста.",
+    additional-item-3: "Рассматриваю сильные backend-позиции с возможностями профессионального роста.",
 
     // Languages
     lang-russian: "Русский — Родной",

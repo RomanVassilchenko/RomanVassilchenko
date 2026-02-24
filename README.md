@@ -19,7 +19,7 @@
 
 ### Bereke Bank — Middle Backend Developer
 
-**Auto Loan Issuance Team** · Sep 2024 – Present
+**Auto Loan Issuance Team** · Sep 2025 - Present
 
 Building car-collateralized auto loan system. Microservice architecture with business process orchestration via Camunda.
 
@@ -34,7 +34,7 @@ Building car-collateralized auto loan system. Microservice architecture with bus
 
 ### Ozon — Junior Go Developer
 
-**Staff Team** · Sep 2023 – Sep 2024
+**Staff Team** · Aug 2024 - Sep 2025
 
 Built enterprise products for 60,000+ employees. Created key systems and led major legacy code refactoring.
 
@@ -52,7 +52,7 @@ Built enterprise products for 60,000+ employees. Created key systems and led maj
 
 ### Ozon — Go Backend Intern
 
-**Matrix Hiring Team** · Dec 2022 – Aug 2023
+**Matrix Hiring Team** · Dec 2023 - Aug 2024
 
 Worked on Matrix hiring system — full cycle from job posting to employee onboarding.
 
@@ -135,13 +135,13 @@ Built notification service for HR and managers via corporate messenger. Created 
 
 ## Education
 
-**M.Sc. Computer Science & Engineering** — Astana IT University, Kazakhstan (2025 – 2027)
+**M.Sc. Computer Science & Engineering** — Astana IT University, Kazakhstan (2025 - Present)
 
 - Research: High-load Systems & ML
 
-**B.Sc. Computer Science** — Astana IT University + ITMO University (2021 – 2025)
+**B.Sc. Software Engineering** — Astana IT University, Kazakhstan (2023 - 2025)
 
-- Years 1-2 at ITMO (St. Petersburg), Years 3-4 at AITU (Astana)
+- Previous studies: ITMO University, St. Petersburg (2021 - 2023)
 - Backend & Distributed Systems Focus
 
 ---

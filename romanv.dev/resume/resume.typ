@@ -26,7 +26,7 @@
 
 // Document setup
 #set document(
-  title: if lang == "en" { "Roman Vassilchenko - Go Backend Developer" } else { "Роман Васильченко - Go Backend Разработчик" },
+  title: if lang == "en" { "Roman Vassilchenko - Go Backend Developer" } else { "Роман Васильченко - Go Backend разработчик" },
   author: if lang == "en" { "Roman Vassilchenko" } else { "Роман Васильченко" },
 )
 
@@ -180,17 +180,17 @@
   text(size: 9pt, fill: light-gray)[#tr("bereke-subtitle")]
   v(0.2em)
   if lang == "en" {
-    [- Developing and maintaining *B2C loan-request microservices* for auto dealership credit processing.]
-    [- Actively working with *Camunda BPMN workflows* for complex business process automation.]
-    [- Implemented *multiple integrations* with various teams and services via API/Kafka.]
-    [- Created *Mattermost integration* for alerts and notifications across banking operations.]
-    [- Participated in digital transformation initiatives of core banking services.]
+    [- Developing and maintaining *B2C loan-request microservices* for auto loan processing via dealership channels.]
+    [- Working with *Camunda BPMN* to automate complex business workflows.]
+    [- Implemented *integrations* with internal teams and services via API and Kafka.]
+    [- Built *Mattermost integration* for operational alerts and notifications.]
+    [- Contributing to digital transformation initiatives across core banking services.]
   } else {
-    [- Разрабатываю и поддерживаю *B2C микросервисы кредитных заявок* для обработки автокредитов через дилерские центры.]
-    [- Активно работаю с *Camunda BPMN workflows* для автоматизации сложных бизнес-процессов.]
-    [- Реализовывал *множество интеграций* с разными командами и сервисами по API/Kafka.]
-    [- Создал *интеграцию с Mattermost* для алертов и уведомлений по банковским операциям.]
-    [- Участвовал в инициативах цифровой трансформации основных банковских сервисов.]
+    [- Разрабатываю и поддерживаю *B2C-микросервисы кредитных заявок* для оформления автокредитов через дилерские каналы.]
+    [- Работаю с *Camunda BPMN* для автоматизации сложных бизнес-процессов.]
+    [- Реализовал *интеграции* с внутренними командами и сервисами через API и Kafka.]
+    [- Разработал *интеграцию с Mattermost* для операционных алертов и уведомлений.]
+    [- Участвую в цифровой трансформации ключевых банковских сервисов.]
   }
   v(0.15em)
   tech-stack-badge()
@@ -214,10 +214,10 @@
     [- Led monolith decomposition: extracted employee data into standalone service, reducing core load by *20–25%*.]
     [- Developed *staff-lib* — reusable library for DB access, validation, and middleware — adopted across dozens of services.]
     [- Automated attendance enforcement: reclaiming unused seats and blocking repeat no-shows.]
-    [- Built data export pipeline from Ozon Forms to Vertica for analytics teams.]
+    [- Built a data export pipeline from Ozon Forms to Vertica for analytics teams.]
   } else {
     [- Провёл декомпозицию монолита: вынес данные сотрудников в отдельный сервис, снизив нагрузку на ядро на *20–25%*.]
-    [- Разработал *staff-lib* — переиспользуемую библиотеку для работы с БД, валидации и middleware — внедрена в десятках сервисов.]
+    [- Разработал *staff-lib* — переиспользуемую библиотеку для работы с БД, валидации и middleware; внедрил её в десятках сервисов.]
     [- Автоматизировал контроль посещаемости: освобождение неиспользуемых мест и блокировка повторных неявок.]
     [- Реализовал конвейер экспорта данных из Ozon Forms в Vertica для аналитических команд.]
   }
