@@ -137,7 +137,7 @@ Built notification service for HR and managers via corporate messenger. Created 
 
 **M.Sc. Computer Science & Engineering** — Astana IT University, Kazakhstan (2025 - Present)
 
-- Research: High-load Systems & ML
+- Research topic: Intelligent Methods for Analyzing and Detecting Anomalies in Tender Procurement Data
 
 **B.Sc. Software Engineering** — Astana IT University, Kazakhstan (2023 - 2025)
 
