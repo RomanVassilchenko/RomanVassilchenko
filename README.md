@@ -103,7 +103,7 @@ Worked on Matrix hiring system — full cycle from job posting to employee onboa
 
 ## Featured Projects
 
-### [AdalQarau](https://daca.kz)
+### [AdalQarau](https://adalqarau.kz)
 
 **Public Procurement Analytics Platform**
 

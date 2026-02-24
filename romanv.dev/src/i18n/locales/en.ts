@@ -87,7 +87,7 @@ export default {
     items: {
       adalqarau: {
         name: 'AdalQarau',
-        url: 'https://daca.kz',
+        url: 'https://adalqarau.kz',
         description: 'Public Procurement Analytics Platform',
         details:
           "Risk scoring system for Kazakhstan's public procurement. Graph-based relationship analysis between participants, automated anomaly detection, and report generation.",

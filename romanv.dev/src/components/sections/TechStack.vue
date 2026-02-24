@@ -73,7 +73,10 @@ const techCategories = [
                   v-if="tech.icon"
                   :src="`https://cdn.simpleicons.org/${tech.icon}/${tech.color?.replace('#', '')}`"
                   :alt="tech.name"
-                  class="h-4 w-4"
+                  :class="[
+                    'h-4 w-4',
+                    tech.icon === 'apachekafka' ? 'dark:invert' : '',
+                  ]"
                 />
                 <!-- Color dot fallback for items without icons -->
                 <div
