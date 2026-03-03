@@ -16,6 +16,7 @@ const techCategories = [
     key: 'databases',
     items: [
       { name: 'PostgreSQL', icon: 'postgresql', color: '#4169E1' },
+      { name: 'ClickHouse', icon: 'clickhouse', color: '#FFCC01' },
       { name: 'Redis', icon: 'redis', color: '#DC382D' },
       { name: 'ElasticSearch', icon: 'elasticsearch', color: '#005571' },
       { name: 'Vertica', color: '#0073C6' },
@@ -73,10 +74,7 @@ const techCategories = [
                   v-if="tech.icon"
                   :src="`https://cdn.simpleicons.org/${tech.icon}/${tech.color?.replace('#', '')}`"
                   :alt="tech.name"
-                  :class="[
-                    'h-4 w-4',
-                    tech.icon === 'apachekafka' ? 'dark:invert' : '',
-                  ]"
+                  :class="['h-4 w-4', tech.icon === 'apachekafka' ? 'dark:invert' : '']"
                 />
                 <!-- Color dot fallback for items without icons -->
                 <div

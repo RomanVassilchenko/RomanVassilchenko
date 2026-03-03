@@ -3,7 +3,6 @@ import Header from './components/layout/Header.vue'
 import Hero from './components/sections/Hero.vue'
 import Experience from './components/sections/Experience.vue'
 import TechStack from './components/sections/TechStack.vue'
-import Projects from './components/sections/Projects.vue'
 import Education from './components/sections/Education.vue'
 import Contact from './components/sections/Contact.vue'
 import Footer from './components/layout/Footer.vue'
@@ -16,7 +15,6 @@ import Footer from './components/layout/Footer.vue'
       <Hero />
       <Experience />
       <TechStack />
-      <Projects />
       <Education />
       <Contact />
     </main>

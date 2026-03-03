@@ -13,7 +13,6 @@ const isMobileMenuOpen = ref(false)
 const navItems = [
   { key: 'experience', href: '#experience' },
   { key: 'skills', href: '#skills' },
-  { key: 'projects', href: '#projects' },
   { key: 'education', href: '#education' },
   { key: 'contact', href: '#contact' },
 ]

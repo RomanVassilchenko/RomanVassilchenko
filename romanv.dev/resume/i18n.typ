@@ -19,7 +19,7 @@
     present: "Present",
 
     // Summary
-    summary: "Go backend engineer with hands-on experience building high-load distributed systems. I design and develop microservices that process millions of requests using event-driven architecture with Kafka, PostgreSQL optimization, and gRPC/REST APIs. At Bereke Bank, I build a collateral-backed auto loan platform. Creator of AdalQarau, a public procurement analytics platform with anomaly detection algorithms. Open to international relocation.",
+    summary: "Go backend engineer with hands-on experience building high-load distributed systems. I design and develop microservices that process millions of requests using event-driven architecture with Kafka, PostgreSQL optimization, and gRPC/REST APIs. At Bereke Bank, I worked on launching a collateral-backed auto loan platform and now build a unified credit pipeline from scratch. Creator of AdalQarau, a public procurement analytics platform with anomaly detection algorithms.",
 
     // Skills
     skills-text: "Go, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers, MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
@@ -28,13 +28,13 @@
     bereke-title: "Middle Backend Go Developer",
     bereke-company: "Bereke Bank",
     bereke-date: "Sep 2025 — Present",
-    bereke-subtitle: "B2C Loan Request Platform · production; microservices; event-driven",
-    bereke-item-1: "Developing and maintaining B2C loan-request microservices for auto dealership credit processing.",
-    bereke-item-2: "Actively working with Camunda BPMN workflows for complex business process automation.",
-    bereke-item-3: "Implemented multiple integrations with various teams and services via API/Kafka.",
-    bereke-item-4: "Created Mattermost integration for alerts and notifications across banking operations.",
-    bereke-item-5: "Participated in digital transformation initiatives of core banking services.",
-    bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, CI/CD",
+    bereke-subtitle: "Auto Loan + Credit Pipeline Teams · production; microservices; event-driven",
+    bereke-item-1: "Worked on launching the collateral-backed auto loan system via Camunda BPMN process orchestration.",
+    bereke-item-2: "Implemented integrations with government services: collateral verification, credit history, identity checks.",
+    bereke-item-3: "Created Mattermost integration for real-time alerts on banking operations.",
+    bereke-item-4: "Transitioned to Credit Pipeline team: designing unified credit conveyor from scratch with high-load architecture.",
+    bereke-item-5: "Laying architectural patterns and integrations with core banking systems and external data sources.",
+    bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, GraphQL, REST, CI/CD",
 
     // Experience - Ozon Junior
     ozon-jr-title: "Junior Backend Go Developer",
@@ -45,7 +45,9 @@
     ozon-jr-item-2: "Developed staff-lib — reusable library for DB access, validation, and middleware — adopted across dozens of services.",
     ozon-jr-item-3: "Automated attendance enforcement: reclaiming unused seats and blocking repeat no-shows.",
     ozon-jr-item-4: "Built data export pipeline from Ozon Forms to Vertica for analytics teams.",
-    ozon-jr-stack: "Go, gRPC, PostgreSQL, ClickHouse, Redis, Kafka, Vertica",
+    ozon-jr-item-5: "Built document generation systems and configurable templating engines for corporate reporting.",
+    ozon-jr-item-6: "Implemented video preview generation and backend optimizations for large file processing in Ozon Disk.",
+    ozon-jr-stack: "Go, gRPC, PostgreSQL, ClickHouse, Redis, Kafka, Vertica, Prometheus, Grafana",
 
     // Experience - Ozon Intern
     ozon-intern-title: "Backend Developer Intern",
@@ -56,7 +58,7 @@
     ozon-intern-item-2: "Re-engineered ElasticSearch filter logic — improved speed 2.5× and reduced cluster load.",
     ozon-intern-item-3: "Integrated Chatzone (Mattermost) via dedicated gRPC notification service with sharding and delayed Kafka dispatch — cut manager response time to applications.",
     ozon-intern-item-4: "Designed Grafana dashboards for proactive error monitoring — boosted anomaly detection and response speed.",
-    ozon-intern-stack: "Go, PostgreSQL, Redis, ElasticSearch, Kafka, ClickHouse, gRPC, REST",
+    ozon-intern-stack: "Go, PostgreSQL, Redis, ElasticSearch, Kafka, ClickHouse, gRPC, REST, Grafana",
 
     // Education
     edu-masters-title: "M.Sc. in Computer Science & Engineering",
@@ -110,7 +112,7 @@
     present: "Наст. время",
 
     // Summary
-    summary: "Go backend-инженер с опытом разработки высоконагруженных распределённых систем. Проектирую и развиваю микросервисы, которые обрабатывают миллионы запросов: событийная архитектура на Kafka, оптимизация PostgreSQL, gRPC/REST API. В Bereke Bank развиваю платформу автокредитования под залог автомобиля. Автор AdalQarau - платформы аналитики госзакупок с алгоритмами обнаружения аномалий. Открыт к международной релокации.",
+    summary: "Go backend-инженер с опытом высоконагруженных распределённых систем. Строю микросервисы на событийной архитектуре с Kafka, оптимизирую PostgreSQL, проектирую gRPC/REST API. В Bereke Bank работал над запуском платформы автокредитования под залог, сейчас строю единый кредитный конвеер с нуля. Автор AdalQarau — платформы аналитики госзакупок с алгоритмами обнаружения аномалий.",
 
     // Skills
     skills-text: "Go, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers, MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
@@ -119,13 +121,13 @@
     bereke-title: "Middle Go Backend разработчик",
     bereke-company: "Bereke Bank",
     bereke-date: "Сен 2025 — Наст. время",
-    bereke-subtitle: "B2C-платформа кредитных заявок · production; микросервисы; event-driven",
-    bereke-item-1: "Разрабатываю и поддерживаю B2C микросервисы кредитных заявок для обработки автокредитов через дилерские центры.",
-    bereke-item-2: "Работаю с Camunda BPMN для автоматизации сложных бизнес-процессов.",
-    bereke-item-3: "Реализовал интеграции с внутренними командами и сервисами через API и Kafka.",
-    bereke-item-4: "Создал интеграцию с Mattermost для алертов и уведомлений по банковским операциям.",
-    bereke-item-5: "Участвовал в инициативах цифровой трансформации основных банковских сервисов.",
-    bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, CI/CD",
+    bereke-subtitle: "Команда автокредитования → Единый кредитный конвеер · production; микросервисы; event-driven",
+    bereke-item-1: "Работал над запуском системы автокредитования под залог с BPMN-оркестрацией через Camunda.",
+    bereke-item-2: "Реализовал интеграции с государственными сервисами: проверка залога, кредитная история, идентификация личности.",
+    bereke-item-3: "Создал интеграцию с Mattermost для алертов по банковским операциям в реальном времени.",
+    bereke-item-4: "Перешёл в команду кредитного конвеера: проектирую единый кредитный конвеер с нуля (high-load архитектура).",
+    bereke-item-5: "Закладываю архитектурные паттерны и интеграции с банковскими системами и внешними источниками данных.",
+    bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, GraphQL, REST, CI/CD",
 
     // Experience - Ozon Junior
     ozon-jr-title: "Junior Go Backend разработчик",
@@ -136,7 +138,9 @@
     ozon-jr-item-2: "Разработал staff-lib - переиспользуемую библиотеку для работы с БД, валидации и middleware; её внедрили в десятках сервисов.",
     ozon-jr-item-3: "Автоматизировал контроль посещаемости: освобождение неиспользуемых мест и блокировка повторных неявок.",
     ozon-jr-item-4: "Реализовал конвейер экспорта данных из Ozon Forms в Vertica для аналитических команд.",
-    ozon-jr-stack: "Go, gRPC, PostgreSQL, ClickHouse, Redis, Kafka, Vertica",
+    ozon-jr-item-5: "Создал системы генерации документов и настраиваемые шаблонизаторы для корпоративной отчётности.",
+    ozon-jr-item-6: "Реализовал генерацию превью видео и бэкенд-оптимизации для обработки больших файлов в Ozon Disk.",
+    ozon-jr-stack: "Go, gRPC, PostgreSQL, ClickHouse, Redis, Kafka, Vertica, Prometheus, Grafana",
 
     // Experience - Ozon Intern
     ozon-intern-title: "Стажёр Go Backend разработчик",
@@ -147,7 +151,7 @@
     ozon-intern-item-2: "Переработал логику фильтров ElasticSearch — улучшил скорость в 2.5× и снизил нагрузку на кластер.",
     ozon-intern-item-3: "Интегрировал Chatzone (Mattermost) через выделенный gRPC-сервис уведомлений с шардированием и отложенной отправкой через Kafka — сократил время ответа менеджеров на заявки.",
     ozon-intern-item-4: "Спроектировал Grafana-дашборды для проактивного мониторинга ошибок — повысил скорость обнаружения и реагирования на аномалии.",
-    ozon-intern-stack: "Go, PostgreSQL, Redis, ElasticSearch, Kafka, ClickHouse, gRPC, REST",
+    ozon-intern-stack: "Go, PostgreSQL, Redis, ElasticSearch, Kafka, ClickHouse, gRPC, REST, Grafana",
 
     // Education
     edu-masters-title: "Магистратура, Computer Science & Engineering",

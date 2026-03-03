@@ -11,7 +11,7 @@ export default {
     name: 'Roman Vassilchenko',
     title: 'Go Backend Engineer',
     location: 'Astana, Kazakhstan',
-    currentWork: 'Working on auto loan system at',
+    currentWork: 'Building unified credit pipeline at',
     company: 'Bereke Bank',
     cta: {
       resume: 'View Resume',
@@ -25,17 +25,18 @@ export default {
       bereke: {
         company: 'Bereke Bank',
         role: 'Middle Backend Developer',
-        team: 'Auto Loan Issuance Team',
+        team: 'Auto Loan → Credit Pipeline Teams',
         period: 'Sep 2025 – Present',
         description:
-          'Building car-collateralized auto loan system. Microservice architecture with business process orchestration via Camunda.',
+          'Worked on launching the auto loan system with collateral backing, then transitioned to Credit Pipeline team. Currently designing and building a unified credit conveyor from scratch on a high-load microservice architecture with Camunda BPMN orchestration.',
         achievements: [
-          'Designing and implementing credit issuance features via BPMN orchestration',
-          'Government service integrations: collateral verification, identity check, credit history',
-          'Building microservice architecture with integrations to internal banking systems',
-          'Working on scoring systems and automated decision-making',
+          'Worked on launching the collateral-backed auto loan system with Camunda BPMN orchestration',
+          'Implemented integrations with government services: collateral verification, credit history, identity checks',
+          'Created Mattermost integration for real-time alerts on banking operations',
+          'Transitioned to Credit Pipeline team: designing unified credit conveyor from scratch with high-load architecture',
+          'Laying architectural patterns and integrations with core banking systems and external data sources',
         ],
-        tech: ['Go', 'PostgreSQL', 'Camunda', 'Kafka', 'Docker', 'Microservices'],
+        tech: ['Go', 'PostgreSQL', 'Camunda', 'Kafka', 'Docker', 'GraphQL', 'REST'],
       },
       ozonStaff: {
         company: 'Ozon',
@@ -52,8 +53,19 @@ export default {
           'Ozon Disk — built functionality for enterprise storage solution',
           'Conflict of interest service — automated analysis of 60,000 employees for audits',
           'Office booking system — access pass & parking integration, auto-ban for no-shows',
+          'Built document generation systems and configurable templating engines for corporate reporting',
+          'Implemented video preview generation and backend optimizations for large file processing in Ozon Disk',
         ],
-        tech: ['Go', 'PostgreSQL', 'ElasticSearch', 'Kafka', 'Redis', 'Grafana'],
+        tech: [
+          'Go',
+          'gRPC',
+          'PostgreSQL',
+          'ClickHouse',
+          'ElasticSearch',
+          'Kafka',
+          'Redis',
+          'Grafana',
+        ],
       },
       ozonIntern: {
         company: 'Ozon',
@@ -67,7 +79,7 @@ export default {
           'Created stability monitoring and analytics dashboards',
           'Optimized database queries and API response times',
         ],
-        tech: ['Go', 'PostgreSQL', 'ElasticSearch', 'Kafka'],
+        tech: ['Go', 'gRPC', 'REST', 'PostgreSQL', 'ElasticSearch', 'Kafka', 'Grafana'],
       },
     },
   },
@@ -127,13 +139,15 @@ export default {
   education: {
     title: 'Education',
     thesis: 'Bachelor Thesis',
+    projectTitle: 'Personal Project',
     degrees: {
       masters: {
         degree: 'M.Sc. Computer Science & Engineering',
         school: 'Astana IT University',
         location: 'Kazakhstan',
         period: '2025 – Present',
-        focus: 'Research topic: Intelligent Methods for Analyzing and Detecting Anomalies in Tender Procurement Data',
+        focus:
+          'Research topic: Intelligent Methods for Analyzing and Detecting Anomalies in Tender Procurement Data',
       },
       bachelors: {
         degree: 'B.Sc. Software Engineering',

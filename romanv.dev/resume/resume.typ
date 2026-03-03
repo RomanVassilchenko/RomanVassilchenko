@@ -180,17 +180,17 @@
   text(size: 9pt, fill: light-gray)[#tr("bereke-subtitle")]
   v(0.2em)
   if lang == "en" {
-    [- Developing and maintaining *B2C loan-request microservices* for auto loan processing via dealership channels.]
-    [- Working with *Camunda BPMN* to automate complex business workflows.]
-    [- Implemented *integrations* with internal teams and services via API and Kafka.]
-    [- Built *Mattermost integration* for operational alerts and notifications.]
-    [- Contributing to digital transformation initiatives across core banking services.]
+    [- Worked on launching the *auto loan system* with collateral backing via Camunda BPMN process orchestration.]
+    [- Implemented integrations with *government services*: collateral verification, credit history, identity checks.]
+    [- Created *Mattermost integration* for real-time alerts on banking operations.]
+    [- Transitioned to *Credit Pipeline team*: designing unified credit conveyor from scratch with high-load architecture.]
+    [- Laying architectural patterns and integrations with *core banking systems* and external data sources.]
   } else {
-    [- Разрабатываю и поддерживаю *B2C-микросервисы кредитных заявок* для оформления автокредитов через дилерские каналы.]
-    [- Работаю с *Camunda BPMN* для автоматизации сложных бизнес-процессов.]
-    [- Реализовал *интеграции* с внутренними командами и сервисами через API и Kafka.]
-    [- Разработал *интеграцию с Mattermost* для операционных алертов и уведомлений.]
-    [- Участвую в цифровой трансформации ключевых банковских сервисов.]
+    [- Работал над запуском *системы автокредитования* под залог с BPMN-оркестрацией через Camunda.]
+    [- Реализовал интеграции с *государственными сервисами*: проверка залога, кредитная история, идентификация личности.]
+    [- Создал *интеграцию с Mattermost* для алертов по банковским операциям в реальном времени.]
+    [- Перешёл в *команду кредитного конвеера*: проектирую единый кредитный конвеер с нуля (high-load архитектура).]
+    [- Закладываю архитектурные паттерны и интеграции с *банковскими системами* и внешними источниками данных.]
   }
   v(0.15em)
   tech-stack-badge()
@@ -215,11 +215,15 @@
     [- Developed *staff-lib* — reusable library for DB access, validation, and middleware — adopted across dozens of services.]
     [- Automated attendance enforcement: reclaiming unused seats and blocking repeat no-shows.]
     [- Built a data export pipeline from Ozon Forms to Vertica for analytics teams.]
+    [- Built *document generation systems* and configurable templating engines for corporate reporting.]
+    [- Implemented *video preview generation* and backend optimizations for large file processing in Ozon Disk.]
   } else {
     [- Провёл декомпозицию монолита: вынес данные сотрудников в отдельный сервис, снизив нагрузку на ядро на *20–25%*.]
     [- Разработал *staff-lib* — переиспользуемую библиотеку для работы с БД, валидации и middleware; внедрил её в десятках сервисов.]
     [- Автоматизировал контроль посещаемости: освобождение неиспользуемых мест и блокировка повторных неявок.]
     [- Реализовал конвейер экспорта данных из Ozon Forms в Vertica для аналитических команд.]
+    [- Создал *системы генерации документов* и настраиваемые шаблонизаторы для корпоративной отчётности.]
+    [- Реализовал *генерацию превью видео* и бэкенд-оптимизации для обработки больших файлов в Ozon Disk.]
   }
   v(0.15em)
   tech-stack-badge()
@@ -275,12 +279,6 @@
     text(weight: "bold")[#upper(tr("edu-bachelors-title"))] + [ ] + emph(tr("edu-bachelors-school")),
     text(weight: "bold", fill: accent)[#tr("edu-bachelors-date")]
   )
-  v(0.2em)
-  if lang == "en" {
-    [- *Relevant Coursework:* Graph Theory Methods in Information Systems (Neo4j + GDS), Advanced Database Systems (PostgreSQL optimization), NoSQL Systems (MongoDB + FastAPI).]
-  } else {
-    [- *Ключевые курсы:* Методы теории графов в информационных системах (Neo4j + GDS), Продвинутые системы баз данных (оптимизация PostgreSQL), NoSQL-системы (MongoDB + FastAPI).]
-  }
 }
 
 #v(0.25em)
@@ -300,7 +298,6 @@
   [
     #section-title(tr("additional"))
     - #tr("additional-item-1")
-    - #tr("additional-item-2")
     - #tr("additional-item-3")
   ],
   [
