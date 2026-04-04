@@ -3,6 +3,13 @@
 //               typst compile resume.typ --input lang=ru resume_ru.pdf
 
 #import "i18n.typ": translations, t
+// Font Awesome 7 icon helpers (FA7 is installed locally)
+#let fa-phone(size: 1em)    = text(font: "Font Awesome 7 Free Solid", size: size)[\u{f095}]
+#let fa-envelope(size: 1em) = text(font: "Font Awesome 7 Free Solid", size: size)[\u{f0e0}]
+#let fa-globe(size: 1em)    = text(font: "Font Awesome 7 Free Solid", size: size)[\u{f0ac}]
+#let fa-github(size: 1em)   = text(font: "Font Awesome 7 Brands",     size: size)[\u{f09b}]
+#let fa-linkedin(size: 1em) = text(font: "Font Awesome 7 Brands",     size: size)[\u{f0e1}]
+#let fa-telegram(size: 1em) = text(font: "Font Awesome 7 Brands",     size: size)[\u{f2c6}]
 
 // Get language from CLI input or default to English
 #let lang = sys.inputs.at("lang", default: "en")
@@ -13,6 +20,7 @@
   name-ru: "Роман Васильченко",
   phone: "+7 775 900-46-26",
   email: "roman.vassilchenko.work@gmail.com",
+  website: "romanv.dev",
   github: "github.com/RomanVassilchenko",
   linkedin: "linkedin.com/in/rovassilchenko",
   telegram: "t.me/Roman_Vassilchenko",
@@ -32,26 +40,26 @@
 
 #set page(
   paper: "a4",
-  margin: 1.5cm,
+  margin: 1.25cm,
   numbering: none,
 )
 
 #set text(
   font: "Inter",
-  size: 11pt,
+  size: 10.6pt,
   fill: dark-gray,
   lang: lang,
 )
 
 #set par(
   justify: false,
-  leading: 0.65em,
+  leading: 0.6em,
 )
 
 #set list(
-  indent: 1.5em,
-  body-indent: 0.5em,
-  spacing: 0.4em,
+  indent: 1.35em,
+  body-indent: 0.4em,
+  spacing: 0.24em,
 )
 
 // Helper function for translation
@@ -59,17 +67,17 @@
 
 // Section title with accent underline
 #let section-title(title) = {
-  v(0.5em)
-  text(weight: "bold", size: 12pt)[#title]
-  v(0.1em)
-  line(length: 100%, stroke: 2pt + accent)
-  v(0.3em)
+  v(0.32em)
+  text(weight: "bold", size: 11.5pt)[#title]
+  v(0.06em)
+  line(length: 100%, stroke: 1.7pt + accent)
+  v(0.18em)
 }
 
 // Tech stack badge
 #let tech-stack-badge() = {
-  box(fill: bg-gray, inset: (x: 4pt, y: 2pt), radius: 2pt)[
-    #text(weight: "bold", size: 9pt)[#tr("tech-stack")]
+  box(fill: bg-gray, inset: (x: 3.5pt, y: 1.5pt), radius: 2pt)[
+    #text(weight: "bold", size: 8.5pt)[#tr("tech-stack")]
   ]
 }
 
@@ -82,16 +90,16 @@
     text(weight: "bold", fill: accent)[#date]
   )
   if subtitle != none {
-    text(size: 9pt, fill: light-gray)[#subtitle]
+    text(size: 8.5pt, fill: light-gray)[#subtitle]
   }
-  v(0.2em)
+  v(0.14em)
   for item in items {
     [- #item]
   }
-  v(0.15em)
+  v(0.1em)
   tech-stack-badge()
-  h(4pt)
-  text(size: 10pt)[#stack]
+  h(3pt)
+  text(size: 9.4pt)[#stack]
 }
 
 // Education entry
@@ -102,7 +110,7 @@
     text(weight: "bold")[#upper(title)] + [ ] + emph(school),
     text(weight: "bold", fill: accent)[#date]
   )
-  v(0.2em)
+  v(0.14em)
   for item in items {
     [- #item]
   }
@@ -116,55 +124,58 @@
     text(weight: "bold")[#upper(role)] + [ ] + emph(name),
     text(weight: "bold", fill: accent)[#date]
   )
-  v(0.2em)
+  v(0.14em)
   for item in items {
     [- #item]
   }
-  v(0.15em)
+  v(0.1em)
   tech-stack-badge()
-  h(4pt)
-  text(size: 10pt)[#stack]
+  h(3pt)
+  text(size: 9.4pt)[#stack]
 }
 
 // === DOCUMENT CONTENT ===
 
 // Header - compact two-column layout
 #{
-  set par(leading: 0.5em)
+  set par(leading: 0.44em)
   grid(
-    columns: (5.5cm, 1fr),
-    gutter: 0.7cm,
+    columns: (6.6cm, 1fr),
+    gutter: 0.55cm,
     // Left column: badge, name, contacts
     align(top)[
       #box(fill: accent, inset: (x: 5pt, y: 2pt), radius: 2pt)[
-        #text(fill: white, weight: "bold", size: 8pt)[#tr("job-title")]
+        #text(fill: white, weight: "bold", size: 7.5pt)[#tr("job-title")]
       ]
-      #v(0.3em)
-      #text(weight: "bold", size: 22pt, tracking: -0.3pt)[
+      #v(0.2em)
+      #text(weight: "bold", size: 20.5pt, tracking: -0.3pt)[
         #if lang == "en" { personal.name-en } else { personal.name-ru }
       ]
-      #v(0.4em)
-      #text(size: 9pt)[
-        #personal.phone \
-        #link("mailto:" + personal.email)[#personal.email] \
-        #link("https://" + personal.github)[#personal.github] \
-        #link("https://" + personal.linkedin)[#personal.linkedin] \
-        #link("https://" + personal.telegram)[#personal.telegram]
+      #v(0.26em)
+      #text(size: 8.4pt)[
+        #fa-phone(size: 8pt) #personal.phone \
+        #fa-envelope(size: 8pt) #link("mailto:" + personal.email)[#personal.email] \
+        #fa-globe(size: 8pt) #link("https://" + personal.website)[#personal.website] \
+        #fa-github(size: 8pt) #link("https://" + personal.github)[#personal.github] \
+        #fa-linkedin(size: 8pt) #link("https://" + personal.linkedin)[#personal.linkedin] \
+        #fa-telegram(size: 8pt) #link("https://" + personal.telegram)[#personal.telegram]
       ]
     ],
-    // Right column: summary
+    // Right column: tagline + key skills
     align(top)[
-      #v(0.5em)
-      #text(size: 10pt)[#tr("summary")]
+      #v(0.34em)
+      #text(size: 9.2pt, style: "italic", fill: light-gray)[#tr("tagline")]
+      #v(0.24em)
+      #text(weight: "bold", size: 11.5pt)[#tr("key-skills")]
+      #v(0.06em)
+      #line(length: 100%, stroke: 1.7pt + accent)
+      #v(0.18em)
+      #tech-stack-badge()
+      #h(3pt)
+      #text(size: 9.25pt)[#tr("skills-text")]
     ],
   )
 }
-
-// Key Skills
-#section-title(tr("key-skills"))
-#tech-stack-badge()
-#h(4pt)
-#text(size: 10pt)[#tr("skills-text")]
 
 // Work Experience
 #section-title(tr("work-experience"))
@@ -177,28 +188,19 @@
     text(weight: "bold")[#upper(tr("bereke-title"))] + [ ] + emph(tr("bereke-company")),
     text(weight: "bold", fill: accent)[#tr("bereke-date")]
   )
-  text(size: 9pt, fill: light-gray)[#tr("bereke-subtitle")]
-  v(0.2em)
-  if lang == "en" {
-    [- Worked on launching the *auto loan system* with collateral backing via Camunda BPMN process orchestration.]
-    [- Implemented integrations with *government services*: collateral verification, credit history, identity checks.]
-    [- Created *Mattermost integration* for real-time alerts on banking operations.]
-    [- Transitioned to *Credit Pipeline team*: designing unified credit conveyor from scratch with high-load architecture.]
-    [- Laying architectural patterns and integrations with *core banking systems* and external data sources.]
-  } else {
-    [- Работал над запуском *системы автокредитования* под залог с BPMN-оркестрацией через Camunda.]
-    [- Реализовал интеграции с *государственными сервисами*: проверка залога, кредитная история, идентификация личности.]
-    [- Создал *интеграцию с Mattermost* для алертов по банковским операциям в реальном времени.]
-    [- Перешёл в *команду кредитного конвеера*: проектирую единый кредитный конвеер с нуля (high-load архитектура).]
-    [- Закладываю архитектурные паттерны и интеграции с *банковскими системами* и внешними источниками данных.]
-  }
-  v(0.15em)
+  text(size: 8.5pt, fill: light-gray)[#tr("bereke-subtitle")]
+  v(0.14em)
+  [- #tr("bereke-item-1")]
+  [- #tr("bereke-item-2")]
+  [- #tr("bereke-item-3")]
+  [- #tr("bereke-item-4")]
+  v(0.1em)
   tech-stack-badge()
-  h(4pt)
-  text(size: 10pt)[#tr("bereke-stack")]
+  h(3pt)
+  text(size: 9.4pt)[#tr("bereke-stack")]
 }
 
-#v(0.4em)
+#v(0.26em)
 
 // Ozon Junior
 #{
@@ -208,30 +210,21 @@
     text(weight: "bold")[#upper(tr("ozon-jr-title"))] + [ ] + emph(tr("ozon-jr-company")),
     text(weight: "bold", fill: accent)[#tr("ozon-jr-date")]
   )
-  text(size: 9pt, fill: light-gray)[#tr("ozon-jr-subtitle")]
-  v(0.2em)
-  if lang == "en" {
-    [- Led monolith decomposition: extracted employee data into standalone service, reducing core load by *20–25%*.]
-    [- Developed *staff-lib* — reusable library for DB access, validation, and middleware — adopted across dozens of services.]
-    [- Automated attendance enforcement: reclaiming unused seats and blocking repeat no-shows.]
-    [- Built a data export pipeline from Ozon Forms to Vertica for analytics teams.]
-    [- Built *document generation systems* and configurable templating engines for corporate reporting.]
-    [- Implemented *video preview generation* and backend optimizations for large file processing in Ozon Disk.]
-  } else {
-    [- Провёл декомпозицию монолита: вынес данные сотрудников в отдельный сервис, снизив нагрузку на ядро на *20–25%*.]
-    [- Разработал *staff-lib* — переиспользуемую библиотеку для работы с БД, валидации и middleware; внедрил её в десятках сервисов.]
-    [- Автоматизировал контроль посещаемости: освобождение неиспользуемых мест и блокировка повторных неявок.]
-    [- Реализовал конвейер экспорта данных из Ozon Forms в Vertica для аналитических команд.]
-    [- Создал *системы генерации документов* и настраиваемые шаблонизаторы для корпоративной отчётности.]
-    [- Реализовал *генерацию превью видео* и бэкенд-оптимизации для обработки больших файлов в Ozon Disk.]
-  }
-  v(0.15em)
+  text(size: 8.5pt, fill: light-gray)[#tr("ozon-jr-subtitle")]
+  v(0.14em)
+  [- #tr("ozon-jr-item-1")]
+  [- #tr("ozon-jr-item-2")]
+  [- #tr("ozon-jr-item-3")]
+  [- #tr("ozon-jr-item-4")]
+  [- #tr("ozon-jr-item-5")]
+  [- #tr("ozon-jr-item-6")]
+  v(0.1em)
   tech-stack-badge()
-  h(4pt)
-  text(size: 10pt)[#tr("ozon-jr-stack")]
+  h(3pt)
+  text(size: 9.4pt)[#tr("ozon-jr-stack")]
 }
 
-#v(0.4em)
+#v(0.26em)
 
 // Ozon Intern
 #{
@@ -241,23 +234,16 @@
     text(weight: "bold")[#upper(tr("ozon-intern-title"))] + [ ] + emph(tr("ozon-intern-company")),
     text(weight: "bold", fill: accent)[#tr("ozon-intern-date")]
   )
-  text(size: 9pt, fill: light-gray)[#tr("ozon-intern-subtitle")]
-  v(0.2em)
-  if lang == "en" {
-    [- Optimized complex SQL queries, accelerating candidate list generation by up to *8×*.]
-    [- Re-engineered ElasticSearch filter logic — improved speed *2.5×* and reduced cluster load.]
-    [- Integrated Chatzone (Mattermost) via dedicated gRPC notification service with sharding and delayed Kafka dispatch — cut manager response time to applications.]
-    [- Designed Grafana dashboards for proactive error monitoring — boosted anomaly detection and response speed.]
-  } else {
-    [- Оптимизировал сложные SQL-запросы, ускорив генерацию списков кандидатов до *8×*.]
-    [- Переработал логику фильтров ElasticSearch — улучшил скорость в *2.5×* и снизил нагрузку на кластер.]
-    [- Интегрировал Chatzone (Mattermost) через выделенный gRPC-сервис уведомлений с шардированием и отложенной отправкой через Kafka — сократил время ответа менеджеров на заявки.]
-    [- Спроектировал Grafana-дашборды для проактивного мониторинга ошибок — повысил скорость обнаружения и реагирования на аномалии.]
-  }
-  v(0.15em)
+  text(size: 8.5pt, fill: light-gray)[#tr("ozon-intern-subtitle")]
+  v(0.14em)
+  [- #tr("ozon-intern-item-1")]
+  [- #tr("ozon-intern-item-2")]
+  [- #tr("ozon-intern-item-3")]
+  [- #tr("ozon-intern-item-4")]
+  v(0.1em)
   tech-stack-badge()
-  h(4pt)
-  text(size: 10pt)[#tr("ozon-intern-stack")]
+  h(3pt)
+  text(size: 9.4pt)[#tr("ozon-intern-stack")]
 }
 
 // Education
@@ -270,7 +256,7 @@
   (tr("edu-masters-item"),),
 )
 
-#v(0.25em)
+#v(0.16em)
 
 #{
   grid(
@@ -281,7 +267,7 @@
   )
 }
 
-#v(0.25em)
+#v(0.16em)
 
 #edu-entry(
   tr("edu-prev-title"),
@@ -291,10 +277,10 @@
 )
 
 // Two columns for Additional and Languages
-#v(0.2em)
+#v(0.12em)
 #grid(
   columns: (48%, 48%),
-  column-gutter: 4%,
+  column-gutter: 3.5%,
   [
     #section-title(tr("additional"))
     - #tr("additional-item-1")
@@ -318,6 +304,7 @@
   (
     tr("project-item-1"),
     tr("project-item-2"),
+    tr("project-item-3"),
   ),
   tr("project-stack"),
 )
