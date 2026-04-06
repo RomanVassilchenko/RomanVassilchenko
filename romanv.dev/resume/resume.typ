@@ -1,6 +1,6 @@
 // Resume template with localization support
-// Compile with: typst compile resume.typ --input lang=en resume_en.pdf
-//               typst compile resume.typ --input lang=ru resume_ru.pdf
+// Compile with: typst compile resume.typ --input lang=en --input show_masters=false resume_en.pdf
+//               typst compile resume.typ --input lang=ru --input show_masters=false resume_ru.pdf
 
 #import "i18n.typ": translations, t
 // Font Awesome 7 icon helpers (FA7 is installed locally)
@@ -13,6 +13,8 @@
 
 // Get language from CLI input or default to English
 #let lang = sys.inputs.at("lang", default: "en")
+#let show_masters_input = sys.inputs.at("show_masters", default: "false")
+#let show_masters = show_masters_input == true or show_masters_input == "true"
 
 // Personal info (shared across languages)
 #let personal = (
@@ -249,14 +251,16 @@
 // Education
 #section-title(tr("education"))
 
-#edu-entry(
-  tr("edu-masters-title"),
-  tr("edu-masters-school"),
-  tr("edu-masters-date"),
-  (tr("edu-masters-item"),),
-)
+#if show_masters [
+  #edu-entry(
+    tr("edu-masters-title"),
+    tr("edu-masters-school"),
+    tr("edu-masters-date"),
+    (tr("edu-masters-item"),),
+  )
 
-#v(0.16em)
+  #v(0.16em)
+]
 
 #{
   grid(

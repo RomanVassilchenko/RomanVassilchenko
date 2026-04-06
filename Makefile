@@ -3,6 +3,7 @@
 RESUME_DIR = romanv.dev/resume
 PUBLIC_DIR = romanv.dev/public/documents
 SITE_DIR = romanv.dev
+SHOW_MASTERS ?= false
 
 # Default target
 all: help
@@ -25,13 +26,13 @@ ru: $(PUBLIC_DIR)/resume_ru.pdf
 $(PUBLIC_DIR)/resume_en.pdf: $(RESUME_DIR)/resume.typ $(RESUME_DIR)/i18n.typ
 	@mkdir -p $(PUBLIC_DIR)
 	@echo "Building English resume..."
-	@cd $(RESUME_DIR) && typst compile resume.typ --input lang=en ../public/documents/resume_en.pdf
+	@cd $(RESUME_DIR) && typst compile resume.typ --input lang=en --input show_masters=$(SHOW_MASTERS) ../public/documents/resume_en.pdf
 
 # Build Russian resume
 $(PUBLIC_DIR)/resume_ru.pdf: $(RESUME_DIR)/resume.typ $(RESUME_DIR)/i18n.typ
 	@mkdir -p $(PUBLIC_DIR)
 	@echo "Building Russian resume..."
-	@cd $(RESUME_DIR) && typst compile resume.typ --input lang=ru ../public/documents/resume_ru.pdf
+	@cd $(RESUME_DIR) && typst compile resume.typ --input lang=ru --input show_masters=$(SHOW_MASTERS) ../public/documents/resume_ru.pdf
 
 #--------------------------
 # Website targets
@@ -40,28 +41,28 @@ $(PUBLIC_DIR)/resume_ru.pdf: $(RESUME_DIR)/resume.typ $(RESUME_DIR)/i18n.typ
 # Install dependencies
 install:
 	@echo "Installing dependencies..."
-	@cd $(SITE_DIR) && npm install
+	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP npm install
 
 # Run development server
 dev:
-	@cd $(SITE_DIR) && npm run dev
+	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP VITE_SHOW_MASTERS_EDUCATION=$(SHOW_MASTERS) npm run dev
 
 # Build for production
 build: generate
 	@echo "Building website..."
-	@cd $(SITE_DIR) && npm run build
+	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP VITE_SHOW_MASTERS_EDUCATION=$(SHOW_MASTERS) npm run build
 
 # Preview production build
 preview:
-	@cd $(SITE_DIR) && npm run preview
+	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP VITE_SHOW_MASTERS_EDUCATION=$(SHOW_MASTERS) npm run preview
 
 # Lint code
 lint:
-	@cd $(SITE_DIR) && npm run lint
+	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP npm run lint
 
 # Format code
 format:
-	@cd $(SITE_DIR) && npm run format
+	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP npm run format
 	@prettier --write "*.md" 2>/dev/null || true
 	@typstfmt $(RESUME_DIR)/*.typ 2>/dev/null || true
 
@@ -85,6 +86,9 @@ distclean: clean
 
 help:
 	@echo "Usage: make [target]"
+	@echo ""
+	@echo "Flags:"
+	@echo "  SHOW_MASTERS=false  Toggle master's education in Typst and site builds"
 	@echo ""
 	@echo "Resume (Typst):"
 	@echo "  generate    Build both EN/RU resumes to public/documents"

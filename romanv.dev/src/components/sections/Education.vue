@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { GraduationCap, MapPin, Calendar, BookOpen, FileText, ExternalLink } from 'lucide-vue-next'
+import { resumeFlags } from '@/config/resume'
 import Card from '../ui/Card.vue'
 import Badge from '../ui/Badge.vue'
 
 const { t, tm } = useI18n()
 
-const degrees = ['masters', 'bachelors'] as const
+const degrees = resumeFlags.showMastersEducation
+  ? (['masters', 'bachelors'] as const)
+  : (['bachelors'] as const)
 </script>
 
 <template>

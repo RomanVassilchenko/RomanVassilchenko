@@ -25,10 +25,10 @@ export default {
       bereke: {
         company: 'Bereke Bank',
         role: 'Middle Golang Developer',
-        team: 'B2C → CoreHub Teams',
+        team: 'Auto Loan Issuance Team / Unified Credit Pipeline Team',
         period: 'Sep 2025 – Present',
         description:
-          "Building unified credit decision infrastructure at one of Kazakhstan's major banks. Worked across B2C and CoreHub teams on borrower verification flows, government integrations, and high-load microservice orchestration.",
+          "Building unified credit decision infrastructure at one of Kazakhstan's major banks. Worked on auto-loan issuance and on the team creating a unified credit pipeline for borrower verification, government integrations, and high-load microservice orchestration.",
         achievements: [
           'Contributed to the architecture of a unified credit pipeline routing and validating retail loan applications across products',
           'Engineered 20+ production integrations with government and financial systems for compliance and risk checks',

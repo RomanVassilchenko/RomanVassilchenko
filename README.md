@@ -2,9 +2,9 @@
 
 # Roman Vassilchenko
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00ADD8&center=true&vCenter=true&width=600&lines=Go+Backend+Engineer;High+Load+Systems+Specialist;Distributed+Systems+Architect)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00ADD8&center=true&vCenter=true&width=720&lines=Go+Backend+Engineer;Distributed+Systems+%26+Microservices;High-Load+Fintech+%26+Platform+Engineering)](https://git.io/typing-svg)
 
-**Building scalable systems that process millions of requests**
+**Go backend engineer building high-load distributed systems, credit decision workflows, and production microservice platforms**
 
 [![Website](https://img.shields.io/badge/romanv.dev-00ADD8?style=for-the-badge)](https://romanv.dev)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge)](mailto:roman.vassilchenko.work@gmail.com)
@@ -19,16 +19,17 @@
 
 ### Bereke Bank — Middle Backend Developer
 
-**Auto Loan Issuance Team** · Sep 2025 - Present
+**Auto Loan Issuance Team / Unified Credit Pipeline Team** · Sep 2025 - Present
 
-Building car-collateralized auto loan system. Microservice architecture with business process orchestration via Camunda.
+Building a unified credit decision pipeline for retail lending at one of Kazakhstan's major banks.
 
-- Designing and implementing credit issuance features via BPMN orchestration
-- Government service integrations: collateral verification, identity check, credit history
-- Building microservice architecture with integrations to internal banking systems
-- Working on scoring systems and automated decision-making
+- Building a central credit routing and validation platform for multiple loan products
+- Developing 20+ integrations with government and financial systems for compliance, scoring, collateral, and identity verification
+- Designing event-driven microservice flows with strict latency requirements and high downstream fan-out
+- Optimized collateral-backed auto-loan processing, reducing issuance time from 40 to 15 minutes
+- Integrated FICO scoring, fallback logic, and operational alerting into production credit workflows
 
-**Tech**: `Go` `PostgreSQL` `Camunda` `Kafka` `Docker` `Microservices`
+**Tech**: `Go` `PostgreSQL` `Redis` `Kafka` `Camunda BPMN` `Docker` `GraphQL` `REST` `Microservices` `CI/CD`
 
 ---
 
@@ -36,68 +37,37 @@ Building car-collateralized auto loan system. Microservice architecture with bus
 
 **Staff Team** · Aug 2024 - Sep 2025
 
-Built enterprise products for 60,000+ employees. Created key systems and led major legacy code refactoring.
+Built and scaled backend products for a large employee platform serving 10000-15000 DAU and 40000+ MAU.
 
-- Built trademark management system — platform for external brand licensing
-- Decomposed Staff Portal monolith into microservices — 25% performance boost
-- Created internal library adopted across dozens of microservices by other teams
-- Ozon Form — developed key features for corporate data collection
-- Ozon Disk — built functionality for enterprise storage solution
-- Conflict of interest service — automated analysis of 60,000 employees for audits
-- Office booking system — access pass & parking integration, auto-ban for no-shows
+- Decomposed the Staff Portal monolith into microservices, reducing core load by 20-25%
+- Built `staff-lib`, an internal Go library adopted across 30+ services
+- Designed office attendance and seat-reclamation logic for 60000+ employees
+- Developed ETL pipelines from Ozon Forms to Vertica for self-service analytics
+- Built document generation infrastructure with configurable templates
+- Improved large-file and video preview workflows in Ozon Disk
 
-**Tech**: `Go` `PostgreSQL` `ElasticSearch` `Kafka` `Redis` `Grafana`
+**Tech**: `Go` `gRPC` `REST` `PostgreSQL` `ClickHouse` `Vertica` `Kafka` `Redis` `Grafana` `Prometheus` `Microservices`
 
 ---
 
-### Ozon — Go Backend Intern
+### Ozon — Go Backend Intern / Junior Developer
 
 **Matrix Hiring Team** · Dec 2023 - Aug 2024
 
-Worked on Matrix hiring system — full cycle from job posting to employee onboarding.
+Worked on a company-wide hiring platform covering the full flow from job posting to onboarding.
 
-- Built notification service for HR and managers via corporate messenger
-- Created stability monitoring and analytics dashboards
-- Optimized database queries and API response times
+- Optimized candidate ranking SQL queries with up to 8x faster response times under production load
+- Improved ElasticSearch filtering throughput by 2.5x
+- Built a gRPC notification service with Kafka-based sharding and delayed delivery
+- Created Grafana dashboards for hiring funnel monitoring and anomaly detection
 
-**Tech**: `Go` `PostgreSQL` `ElasticSearch` `Kafka`
+**Tech**: `Go` `gRPC` `REST` `PostgreSQL` `Redis` `ElasticSearch` `Kafka` `ClickHouse` `Grafana`
 
 ---
 
 ## Tech Stack
 
-<div align="center">
-
-### Languages & Frameworks
-
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
-![Protobuf](https://img.shields.io/badge/Protobuf-FFCA28?style=for-the-badge&logo=google&logoColor=white)
-
-### Databases & Storage
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![ElasticSearch](https://img.shields.io/badge/ElasticSearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
-![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=for-the-badge&logo=minio&logoColor=white)
-
-### Message Brokers & Orchestration
-
-![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)
-![Camunda](https://img.shields.io/badge/Camunda-FC5D0D?style=for-the-badge&logo=camunda&logoColor=white)
-
-### Monitoring & Observability
-
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
-
-### DevOps & Tools
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
-</div>
+`Go` `gRPC` `REST` `GraphQL` `ConnectRPC` `PostgreSQL` `Redis` `ClickHouse` `Vertica` `ElasticSearch` `MongoDB` `Neo4j` `Kafka` `Camunda BPMN` `Docker` `Kubernetes` `MinIO / S3` `Protobuf` `Buf` `Prometheus` `Grafana` `GitHub Actions` `CI/CD` `Linux` `NixOS` `Python` `TypeScript`
 
 ---
 
@@ -107,42 +77,42 @@ Worked on Matrix hiring system — full cycle from job posting to employee onboa
 
 **Public Procurement Analytics Platform**
 
-Risk scoring system for Kazakhstan's public procurement. Graph-based relationship analysis between participants, automated anomaly detection, and report generation.
+Rule-based corruption risk detection platform for Kazakhstan's public procurement: 14.47 million contracts, 197 thousand buyers, 800 thousand suppliers, an 84 GB dataset, and a 10-minute refresh cycle.
 
-**Stack**: `Go` `PostgreSQL` `MinIO` `Kafka` `GraphQL` `Buf`
+- Built graph and inverted-index based analytics for relationship and collusion detection
+- Produced 448 thousand risk flags across all 20 regions
+- Used in real audit workflows and became the basis for an academic research paper
+
+**Stack**: `Go` `ConnectRPC` `PostgreSQL` `MinIO / S3` `Kafka` `GraphQL` `Buf` `React` `TypeScript` `Docker`
 
 ---
 
 ### Staff Portal 2.0
 
-**Enterprise portal for 60,000+ employees**
+**Enterprise employee platform for 60000+ users**
 
-Decomposed monolith into microservices with 25% performance boost. Built Ozon Form, Ozon Disk, trademark system, office booking, and conflict of interest service.
+Monolith decomposition, shared backend infrastructure, document generation, and large-file workflows for a high-load internal platform.
 
-**Stack**: `Go` `PostgreSQL` `Kafka` `Redis` `Grafana`
+**Stack**: `Go` `gRPC` `PostgreSQL` `ClickHouse` `Vertica` `Kafka` `Redis` `Grafana`
 
 ---
 
 ### Matrix Hiring
 
-**Hiring system from job post to onboarding**
+**Hiring platform from job posting to onboarding**
 
-Built notification service for HR and managers via corporate messenger. Created stability monitoring and analytics dashboards.
+Backend work on ranking, search, notifications, and observability for large-scale recruiting workflows.
 
-**Stack**: `Go` `PostgreSQL` `ElasticSearch` `Kafka`
+**Stack**: `Go` `gRPC` `PostgreSQL` `ElasticSearch` `Kafka` `ClickHouse` `Grafana`
 
 ---
 
 ## Education
 
-**M.Sc. Computer Science & Engineering** — Astana IT University, Kazakhstan (2025 - Present)
-
-- Research topic: Intelligent Methods for Analyzing and Detecting Anomalies in Tender Procurement Data
-
 **B.Sc. Software Engineering** — Astana IT University, Kazakhstan (2023 - 2025)
 
+- Backend, databases, and distributed systems focus
 - Previous studies: ITMO University, St. Petersburg (2021 - 2023)
-- Backend & Distributed Systems Focus
 
 ---
 
