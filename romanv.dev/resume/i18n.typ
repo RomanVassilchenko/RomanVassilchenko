@@ -47,9 +47,9 @@
     ozon-jr-item-1: "Designed and extracted the *employee data domain* into an autonomous service as part of monolith decomposition — reduced core system load by 20–25%.",
     ozon-jr-item-2: "Built *staff-lib* — internal Go SDK for DB access patterns, validation, and middleware — adopted as the standard across 30+ services.",
     ozon-jr-item-3: "Developed automated *attendance management system* with intelligent seat reclamation and enforcement logic across 60000+ employees; platform sustained *2000 concurrent users* during Staff 2.0 launch peaks.",
-    ozon-jr-item-4: "Engineered an *ETL pipeline* from Ozon Forms to Vertica, enabling self-service analytics for cross-functional teams.",
+    ozon-jr-item-4: "Engineered an *ETL pipeline* from internal survey platform to Vertica, enabling self-service analytics for cross-functional teams.",
     ozon-jr-item-5: "Designed *document generation infrastructure* with configurable templating engine for enterprise-wide corporate reporting.",
-    ozon-jr-item-6: "Delivered *video preview generation* service and backend optimizations for large-file processing in Ozon Disk, including video assets up to *several TB per file*.",
+    ozon-jr-item-6: "Delivered *video preview generation* service and backend optimizations for large-file processing in internal cloud storage service, including video assets up to *several TB per file*.",
     ozon-jr-stack: "Go, gRPC, PostgreSQL, ClickHouse, Redis, Kafka, Vertica, Prometheus, Grafana",
 
     // Experience - Ozon Intern
@@ -57,9 +57,9 @@
     ozon-intern-company: "Ozon Tech",
     ozon-intern-date: "Dec 2023 — Aug 2024",
     ozon-intern-subtitle: "Ozon Matrix (Company-wide Hiring Platform) · production; microservices; high traffic",
-    ozon-intern-item-1: "Eliminated critical query bottlenecks in the hiring platform's candidate ranking — *8× speedup* on production SQL under peak load.",
+    ozon-intern-item-1: "Eliminated critical query bottlenecks in the hiring platform's candidate ranking — *significant speedup* on production SQL under peak load.",
     ozon-intern-item-2: "Redesigned *ElasticSearch filter execution*: 2.5× throughput improvement and significant cluster load reduction through query restructuring.",
-    ozon-intern-item-3: "Designed and built a *gRPC notification microservice* for Chatzone (Mattermost) with Kafka-based request sharding and configurable delayed dispatch — cut manager response time to candidate applications.",
+    ozon-intern-item-3: "Designed and built a *gRPC notification microservice* for corporate messenger (Mattermost) with Kafka-based request sharding and configurable delayed dispatch — cut manager response time to candidate applications.",
     ozon-intern-item-4: "Built *Grafana observability layer* for the hiring platform — proactive anomaly detection dashboards that reduced incident response time.",
     ozon-intern-stack: "Go, PostgreSQL, Redis, ElasticSearch, Kafka, ClickHouse, gRPC, REST, Grafana",
 
@@ -144,9 +144,9 @@
     ozon-jr-item-1: "Спроектировал и реализовал выделение *домена данных сотрудников* в автономный сервис в рамках декомпозиции монолита — снизил нагрузку на ядро на 20–25%.",
     ozon-jr-item-2: "Разработал *staff-lib* — внутренний Go SDK для паттернов работы с БД, валидации и middleware — внедрён как стандарт в 30+ сервисах.",
     ozon-jr-item-3: "Реализовал автоматизированную *систему контроля посещаемости* с интеллектуальным высвобождением мест и блокировкой нарушителей для 60000+ сотрудников; платформа выдержала *2000 одновременных пользователей* на пике запуска Staff 2.0.",
-    ozon-jr-item-4: "Построил *ETL-конвейер* из Ozon Forms в хранилище Vertica, открыв self-service аналитику для кросс-функциональных команд.",
+    ozon-jr-item-4: "Построил *ETL-конвейер* из внутренней платформы опросов в хранилище Vertica, открыв self-service аналитику для кросс-функциональных команд.",
     ozon-jr-item-5: "Спроектировал *инфраструктуру генерации документов* с настраиваемым шаблонизатором для корпоративной отчётности.",
-    ozon-jr-item-6: "Реализовал *сервис генерации превью видео* и backend-оптимизации обработки больших файлов в Ozon Disk, включая видеофайлы объёмом до *нескольких ТБ на файл*.",
+    ozon-jr-item-6: "Реализовал *сервис генерации превью видео* и backend-оптимизации обработки больших файлов во внутреннем сервисе хранения файлов, включая видеофайлы объёмом до *нескольких ТБ на файл*.",
     ozon-jr-stack: "Go, gRPC, PostgreSQL, ClickHouse, Redis, Kafka, Vertica, Prometheus, Grafana",
 
     // Experience - Ozon Intern
@@ -154,9 +154,9 @@
     ozon-intern-company: "Ozon Tech",
     ozon-intern-date: "Дек 2023 — Авг 2024",
     ozon-intern-subtitle: "Ozon Matrix (корпоративная платформа найма) · production; микросервисы; высокая нагрузка",
-    ozon-intern-item-1: "Устранил критические узкие места в запросах платформы найма — *ускорение в 8×* при генерации рейтингов кандидатов под production-нагрузкой.",
-    ozon-intern-item-2: "Переработал *логику фильтрации ElasticSearch*: рост пропускной способности в 2.5× и снижение нагрузки на кластер через реструктуризацию запросов.",
-    ozon-intern-item-3: "Спроектировал и реализовал *gRPC-микросервис уведомлений* для Chatzone (Mattermost) с шардированием запросов через Kafka и настраиваемой отложенной отправкой — сократил время ответа менеджеров на заявки кандидатов.",
+    ozon-intern-item-1: "Устранил критические узкие места в запросах платформы найма — *многократное ускорение* при генерации рейтингов кандидатов под production-нагрузкой.",
+    ozon-intern-item-2: "Переработал *логику фильтрации ElasticSearch*: рост пропускной способности в 2.5 раза и снижение нагрузки на кластер через реструктуризацию запросов.",
+    ozon-intern-item-3: "Спроектировал и реализовал *gRPC-микросервис уведомлений* для корпоративного мессенджера (Mattermost) с шардированием запросов через Kafka и настраиваемой отложенной отправкой — сократил время ответа менеджеров на заявки кандидатов.",
     ozon-intern-item-4: "Создал *observability-слой на Grafana* для платформы найма — дашборды проактивного обнаружения аномалий, снизившие время реагирования на инциденты.",
     ozon-intern-stack: "Go, PostgreSQL, Redis, ElasticSearch, Kafka, ClickHouse, gRPC, REST, Grafana",
 

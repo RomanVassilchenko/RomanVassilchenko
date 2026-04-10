@@ -27,7 +27,7 @@ Building a unified credit decision pipeline for retail lending at one of Kazakhs
 - Developing 20+ integrations with government and financial systems for compliance, scoring, collateral, and identity verification
 - Designing event-driven microservice flows with strict latency requirements and high downstream fan-out
 - Optimized collateral-backed auto-loan processing, reducing issuance time from 40 to 15 minutes
-- Integrated FICO scoring, fallback logic, and operational alerting into production credit workflows
+- Integrated credit scoring, fallback logic, and operational alerting into production credit workflows
 
 **Tech**: `Go` `PostgreSQL` `Redis` `Kafka` `Camunda BPMN` `Docker` `GraphQL` `REST` `Microservices` `CI/CD`
 
@@ -42,9 +42,9 @@ Built and scaled backend products for a large employee platform serving 10000-15
 - Decomposed the Staff Portal monolith into microservices, reducing core load by 20-25%
 - Built `staff-lib`, an internal Go library adopted across 30+ services
 - Designed office attendance and seat-reclamation logic for 60000+ employees
-- Developed ETL pipelines from Ozon Forms to Vertica for self-service analytics
+- Developed ETL pipelines from internal survey platform to Vertica for self-service analytics
 - Built document generation infrastructure with configurable templates
-- Improved large-file and video preview workflows in Ozon Disk
+- Improved large-file and video preview workflows in internal cloud storage service
 
 **Tech**: `Go` `gRPC` `REST` `PostgreSQL` `ClickHouse` `Vertica` `Kafka` `Redis` `Grafana` `Prometheus` `Microservices`
 
@@ -56,7 +56,7 @@ Built and scaled backend products for a large employee platform serving 10000-15
 
 Worked on a company-wide hiring platform covering the full flow from job posting to onboarding.
 
-- Optimized candidate ranking SQL queries with up to 8x faster response times under production load
+- Optimized candidate ranking SQL queries with significant speedup under production load
 - Improved ElasticSearch filtering throughput by 2.5x
 - Built a gRPC notification service with Kafka-based sharding and delayed delivery
 - Created Grafana dashboards for hiring funnel monitoring and anomaly detection
