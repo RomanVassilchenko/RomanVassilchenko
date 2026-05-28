@@ -21,13 +21,13 @@
 
 **Auto Loan Issuance Team / Unified Credit Pipeline Team** · Sep 2025 - Present
 
-Building a unified credit decision pipeline for retail lending at one of Kazakhstan's major banks.
+Building unified credit decision infrastructure for retail lending at one of Kazakhstan's major banks.
 
-- Building a central credit routing and validation platform for multiple loan products
-- Developing 20+ integrations with government and financial systems for compliance, scoring, collateral, and identity verification
-- Designing event-driven microservice flows with strict latency requirements and high downstream fan-out
-- Optimized collateral-backed auto-loan processing, reducing issuance time from 40 to 15 minutes
-- Integrated credit scoring, fallback logic, and operational alerting into production credit workflows
+- Architecting and building the company's unified credit pipeline, standardizing loan issuance across products
+- Built numerous production integrations with government and financial services, including FCB, collateral registries, and identity verification
+- Designed fault-tolerant microservice architecture with strict latency SLA and event-driven communication via Kafka
+- Delivered collateral-backed auto-loan processing improvements, reducing issuance time from 40 to 15 minutes and helping increase application throughput by 3x
+- Built a corporate messenger alerting library and operational notifications for production workflows
 
 **Tech**: `Go` `PostgreSQL` `Redis` `Kafka` `Camunda BPMN` `Docker` `GraphQL` `REST` `Microservices` `CI/CD`
 
@@ -39,7 +39,7 @@ Building a unified credit decision pipeline for retail lending at one of Kazakhs
 
 Built and scaled backend products for a large employee platform serving 10000-15000 DAU and 40000+ MAU.
 
-- Decomposed the Staff Portal monolith into microservices, reducing core load by 20-25%
+- Contributed to the design and decomposition of the Staff Portal monolith into microservices, optimizing core load by 20-25% within my domain
 - Built `staff-lib`, an internal Go library adopted across 30+ services
 - Designed office attendance and seat-reclamation logic for 60000+ employees
 - Developed ETL pipelines from internal survey platform to Vertica for self-service analytics
@@ -77,10 +77,10 @@ Worked on a company-wide hiring platform covering the full flow from job posting
 
 **Public Procurement Analytics Platform**
 
-Rule-based corruption risk detection platform for Kazakhstan's public procurement: 14.47 million contracts, 197 thousand buyers, 800 thousand suppliers, an 84 GB dataset, and a 10-minute refresh cycle.
+Rule-based corruption risk detection platform for Kazakhstan's public procurement: 14.47 million contracts, 197 thousand buyers, 800 thousand suppliers, and 8 indicator algorithms operating without labeled data.
 
-- Built graph and inverted-index based analytics for relationship and collusion detection
 - Produced 448 thousand risk flags across all 20 regions
+- Calibrated risk thresholds with government auditors
 - Used in real audit workflows and became the basis for an academic research paper
 
 **Stack**: `Go` `ConnectRPC` `PostgreSQL` `MinIO / S3` `Kafka` `GraphQL` `Buf` `React` `TypeScript` `Docker`
