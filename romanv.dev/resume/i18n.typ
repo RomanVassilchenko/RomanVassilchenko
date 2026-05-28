@@ -22,7 +22,7 @@
     tagline: "Go developer building high-load financial systems. Ex-Ozon · Bereke Bank.",
 
     // Summary
-    summary: "Go backend engineer specializing in high-load distributed systems and financial infrastructure. At Bereke Bank I architect a unified credit pipeline from scratch — engineering government data integrations and fault-tolerant high-throughput microservices for real-time credit decisioning. Previously at Ozon Tech, contributed to production systems serving 60000+ users. Creator of AdalQarau, a public procurement analytics platform processing 6.1 million+ contracts with corruption risk detection.",
+    summary: "Go backend engineer specializing in high-load distributed systems and financial infrastructure. At Bereke Bank I design and build a unified credit pipeline, government data integrations, and fault-tolerant microservices for real-time credit decisioning. Previously at Ozon Tech, contributed to production systems serving 60000+ users. Creator of AdalQarau, a public procurement analytics platform with corruption risk detection.",
 
     // Skills
     skills-text: "Go, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers, MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
@@ -32,10 +32,10 @@
     bereke-company: "Bereke Bank",
     bereke-date: "Sep 2025 — Present",
     bereke-subtitle: "Auto Loan Issuance Team / Unified Credit Pipeline Team · production; high-load; event-driven; microservices",
-    bereke-item-1: "Contributing to the architecture planning and development of a *unified credit pipeline* — the central system routing and validating every retail credit application across all loan products through government data sources and core banking.",
-    bereke-item-2: "Engineering *20+ production integrations* with government data sources: First Credit Bureau (FCB), collateral registries, identity verification — automated data backbone enabling sub-second credit risk decisioning.",
-    bereke-item-3: "Designing fault-tolerant microservice architecture where each application orchestrates *20+ downstream service calls* under strict latency SLA via Kafka.",
-    bereke-item-4: "Previously: delivered *collateral-backed auto loan platform* — optimized and parallelized processing pipeline, *reducing loan issuance time from 40 to 15 minutes*; built a library for corporate messenger alerting.",
+    bereke-item-1: "Architect and build the company's *unified credit pipeline*, standardizing loan issuance across products and centralizing application routing and validation.",
+    bereke-item-2: "Built numerous *production integrations* with government and financial services, including First Credit Bureau (FCB), collateral registries, and identity verification.",
+    bereke-item-3: "Designed fault-tolerant microservice architecture with strict *latency SLA* and event-driven communication via Kafka.",
+    bereke-item-4: "Previously: delivered *collateral-backed auto loan platform* — parallelized the processing pipeline, *reducing loan issuance time from 40 to 15 minutes* and helping increase application throughput by *3×*; built a corporate messenger alerting library.",
     bereke-item-5: "",
     bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, GraphQL, REST, CI/CD",
 
@@ -44,7 +44,7 @@
     ozon-jr-company: "Ozon Tech",
     ozon-jr-date: "Aug 2024 — Sep 2025",
     ozon-jr-subtitle: "Enterprise Employee Portal (10000-15000 DAU / 40000+ MAU) · production; monolith → microservices",
-    ozon-jr-item-1: "Designed and extracted the *employee data domain* into an autonomous service as part of monolith decomposition — reduced core system load by 20–25%.",
+    ozon-jr-item-1: "Contributed to the design and decomposition of a large employee-portal monolith into microservices; optimized core load by 20–25% within my domain.",
     ozon-jr-item-2: "Built *staff-lib* — internal Go SDK for DB access patterns, validation, and middleware — adopted as the standard across 30+ services.",
     ozon-jr-item-3: "Developed automated *attendance management system* with intelligent seat reclamation and enforcement logic across 60000+ employees; platform sustained *2000 concurrent users* during Staff 2.0 launch peaks.",
     ozon-jr-item-4: "Engineered an *ETL pipeline* from internal survey platform to Vertica, enabling self-service analytics for cross-functional teams.",
@@ -93,8 +93,8 @@
     project-title: "Creator",
     project-name: "AdalQarau — Public Procurement Analytics Platform",
     project-date: "2024 — Present",
-    project-item-1: "Built *rule-based corruption risk detection* across 14.47 million contracts, 197 thousand buyers and 800 thousand suppliers — \$24 billion USD in annual procurement volume, 8 indicator algorithms operating without labeled training data.",
-    project-item-2: "Engineered Go backend with *inverted-index algorithm* for collusion detection, automated data ingestion pipelines and 10-minute refresh cycle on an 84 GB dataset.",
+    project-item-1: "Built *rule-based corruption risk detection* across 14.47 million contracts, 197 thousand buyers and 800 thousand suppliers using 8 indicator algorithms operating without labeled training data.",
+    project-item-2: "",
     project-item-3: "System produced 448 thousand risk flags across all 20 regions of Kazakhstan; thresholds calibrated with government auditors; outputs used in real audit workflows by regional Accounts Committee offices.",
     project-stack: "Go, ConnectRPC, PostgreSQL, React, TypeScript, MinIO/S3, Docker, Protobuf",
   ),
@@ -119,7 +119,7 @@
     tagline: "Go разработчик высоконагруженных финансовых систем. Ex-Ozon · Bereke Bank.",
 
     // Summary
-    summary: "Go backend-инженер, специализирующийся на высоконагруженных распределённых системах и финансовой инфраструктуре. В Bereke Bank проектирую единый кредитный конвеер с нуля — разрабатываю государственные интеграции и отказоустойчивые микросервисы для принятия кредитных решений в реальном времени. Ранее в Ozon Tech участвовал в production-системах для 60000+ пользователей. Автор AdalQarau — платформы аналитики госзакупок с обработкой 6.1 млн+ контрактов и алгоритмами обнаружения коррупционных рисков.",
+    summary: "Go backend-инженер, специализирующийся на высоконагруженных распределённых системах и финансовой инфраструктуре. В Bereke Bank проектирую и разрабатываю единый кредитный конвейер, государственные интеграции и отказоустойчивые микросервисы для принятия кредитных решений в реальном времени. Ранее в Ozon Tech участвовал в production-системах для 60000+ пользователей. Автор AdalQarau — платформы аналитики госзакупок с алгоритмами обнаружения коррупционных рисков.",
 
     // Skills
     skills-text: "Go, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers, MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
@@ -128,11 +128,11 @@
     bereke-title: "Middle Golang Developer",
     bereke-company: "Bereke Bank",
     bereke-date: "Сен 2025 — Наст. время",
-    bereke-subtitle: "Auto Loan Issuance / Единый кредитный конвеер · production; high-load; event-driven; микросервисы",
-    bereke-item-1: "Участвую в проектировании архитектуры и разработке *единого кредитного конвеера* — центральной системы маршрутизации и валидации каждой кредитной заявки по всем продуктам через государственные источники данных и банковское ядро.",
-    bereke-item-2: "Разрабатываю *20+ production-интеграций* с государственными источниками данных: Первое кредитное бюро (ПКБ), реестры залогового имущества, верификация личности — автоматизированный слой данных для принятия кредитных решений в реальном времени.",
-    bereke-item-3: "Проектирую отказоустойчивую микросервисную архитектуру, где каждая заявка оркестрирует *20+ downstream-вызовов* при строгих latency SLA и event-driven подходе через Kafka.",
-    bereke-item-4: "Ранее: запустил *платформу автокредитования под залог* — оптимизировал и распараллелил processing pipeline, *сократив время выдачи кредита с 40 до 15 минут*; разработал библиотеку алертинга в корпоративный мессенджер.",
+    bereke-subtitle: "Auto Loan Issuance / Единый кредитный конвейер · production; high-load; event-driven; микросервисы",
+    bereke-item-1: "Проектирую архитектуру и разрабатываю *единый кредитный конвейер* компании, который унифицирует подход к выдаче кредитов по продуктам и централизует маршрутизацию заявок.",
+    bereke-item-2: "Реализовал множество *production-интеграций* с государственными и финансовыми сервисами, включая Первое кредитное бюро (ПКБ), реестры залогового имущества и верификацию личности.",
+    bereke-item-3: "Спроектировал отказоустойчивую микросервисную архитектуру со строгими *latency SLA* и event-driven взаимодействием через Kafka.",
+    bereke-item-4: "Ранее: запустил *платформу автокредитования под залог* — распараллелил processing pipeline, *сократил время выдачи кредита с 40 до 15 минут* и помог увеличить поток заявок в *3 раза*; разработал библиотеку алертинга в корпоративный мессенджер.",
     bereke-item-5: "",
     bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, GraphQL, REST, CI/CD",
 
@@ -141,7 +141,7 @@
     ozon-jr-company: "Ozon Tech",
     ozon-jr-date: "Авг 2024 — Сен 2025",
     ozon-jr-subtitle: "Корпоративный портал сотрудников (10000-15000 DAU / 40000+ MAU) · production; монолит → микросервисы",
-    ozon-jr-item-1: "Спроектировал и реализовал выделение *домена данных сотрудников* в автономный сервис в рамках декомпозиции монолита — снизил нагрузку на ядро на 20–25%.",
+    ozon-jr-item-1: "Участвовал в проектировании и декомпозиции большого монолита портала сотрудников на микросервисы; в рамках своего домена оптимизировал нагрузку на ядро на 20–25%.",
     ozon-jr-item-2: "Разработал *staff-lib* — внутренний Go SDK для паттернов работы с БД, валидации и middleware — внедрён как стандарт в 30+ сервисах.",
     ozon-jr-item-3: "Реализовал автоматизированную *систему контроля посещаемости* с интеллектуальным высвобождением мест и блокировкой нарушителей для 60000+ сотрудников; платформа выдержала *2000 одновременных пользователей* на пике запуска Staff 2.0.",
     ozon-jr-item-4: "Построил *ETL-конвейер* из внутренней платформы опросов в хранилище Vertica, открыв self-service аналитику для кросс-функциональных команд.",
@@ -190,8 +190,8 @@
     project-title: "Создатель",
     project-name: "AdalQarau — Аналитическая платформа госзакупок",
     project-date: "2024 — Наст. время",
-    project-item-1: "Реализовал *детектирование коррупционных рисков* по 14.47 млн контрактов, 197 тыс. заказчиков и 800 тыс. поставщиков — \$24 млрд США годового объёма закупок, 8 алгоритмов без обучающих данных.",
-    project-item-2: "Разработал Go-бэкенд с *алгоритмом инвертированного индекса* для обнаружения сговора, автоматизированными конвейерами загрузки данных и циклом обновления каждые 10 минут на датасете 84 ГБ.",
+    project-item-1: "Реализовал *детектирование коррупционных рисков* по 14.47 млн контрактов, 197 тыс. заказчиков и 800 тыс. поставщиков с 8 алгоритмами без обучающих данных.",
+    project-item-2: "",
     project-item-3: "Система выявила 448 тыс. рисковых флагов по всем 20 регионам Казахстана; пороги откалиброваны с государственными аудиторами; результаты применяются в реальных проверках счётных комитетов.",
     project-stack: "Go, ConnectRPC, PostgreSQL, React, TypeScript, MinIO/S3, Docker, Protobuf",
   ),

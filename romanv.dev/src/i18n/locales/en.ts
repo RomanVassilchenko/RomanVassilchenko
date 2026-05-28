@@ -28,14 +28,13 @@ export default {
         team: 'Auto Loan Issuance Team / Unified Credit Pipeline Team',
         period: 'Sep 2025 – Present',
         description:
-          "Building unified credit decision infrastructure at one of Kazakhstan's major banks. Worked on auto-loan issuance and on the team creating a unified credit pipeline for borrower verification, government integrations, and high-load microservice orchestration.",
+          "Building unified credit decision infrastructure at one of Kazakhstan's major banks: a credit pipeline, government data integrations, and high-load microservice orchestration.",
         achievements: [
-          'Contributed to the architecture of a unified credit pipeline routing and validating retail loan applications across products',
-          'Engineered 20+ production integrations with government and financial systems for compliance and risk checks',
-          'Designed flows where each application orchestrates 20+ downstream calls under strict latency SLA',
-          'Optimized and parallelized collateral-backed auto-loan processing, reducing issuance time from 40 to 15 minutes',
-          'Integrated credit scoring, validation, and fallback logic into credit decision workflows under regulatory constraints',
-          'Built operational alerting integrations and participated in audits, domain refactoring, and technical-debt reduction',
+          "Architect and build the company's unified credit pipeline, standardizing loan issuance across products and centralizing application routing",
+          'Built numerous production integrations with government and financial services, including FCB, collateral registries, and identity verification',
+          'Designed fault-tolerant microservice architecture with strict latency SLA and event-driven communication via Kafka',
+          'Previously delivered a collateral-backed auto-loan platform: parallelized the processing pipeline, reduced issuance time from 40 to 15 minutes, and helped increase application throughput by 3×',
+          'Built a corporate messenger alerting library and operational notifications for production workflows',
         ],
         tech: ['Go', 'PostgreSQL', 'Camunda', 'Kafka', 'Docker', 'GraphQL', 'REST'],
       },
@@ -47,7 +46,7 @@ export default {
         description:
           "Built and maintained internal tooling for Ozon's employee platform serving 10000-15000 daily users and 40000+ monthly active users across a large microservice ecosystem.",
         achievements: [
-          'Led decomposition of monolithic staff system, extracting employee data into dedicated microservices and reducing core load by 20–25%',
+          'Contributed to the design and decomposition of a large employee-portal monolith into microservices; optimized core load by 20–25% within my domain',
           'Designed and developed staff-lib — shared internal library for DB access, validation, and middleware, adopted across 30+ services',
           'Helped launch Staff 2.0 and sustained 2000 concurrent users during peak rollout',
           'Implemented complex office attendance logic with seat reclamation and no-show enforcement across 60000+ employees',
@@ -103,11 +102,11 @@ export default {
         url: 'https://adalqarau.kz',
         description: 'Public Procurement Analytics Platform',
         details:
-          "Rule-based corruption risk detection platform for Kazakhstan's public procurement: 14.47 million contracts, 197 thousand buyers, 800 thousand suppliers, and a 10-minute refresh cycle on an 84 GB dataset.",
+          "Rule-based corruption risk detection platform for Kazakhstan's public procurement: 14.47 million contracts, 197 thousand buyers, 800 thousand suppliers, and 8 indicator algorithms operating without labeled data.",
         highlights: [
           '448 thousand risk flags across all 20 regions',
-          '$24 billion annual procurement volume monitored',
           '8 indicator algorithms without labeled data',
+          'Thresholds calibrated with government auditors',
         ],
         tech: ['Go', 'PostgreSQL', 'MinIO', 'Kafka', 'GraphQL', 'Buf'],
       },

@@ -307,7 +307,6 @@
   tr("project-date"),
   (
     tr("project-item-1"),
-    tr("project-item-2"),
     tr("project-item-3"),
   ),
   tr("project-stack"),
