@@ -6,7 +6,7 @@ import Badge from '../ui/Badge.vue'
 
 const { t, tm } = useI18n()
 
-const projects = ['adalqarau', 'staffPortal', 'matrixHiring'] as const
+const projects = ['adalqarau', 'staffPortal', 'matrixHiring', 'autoLoan'] as const
 
 const getProjectUrl = (project: string): string | undefined => {
   const url = t(`projects.items.${project}.url`, '')
@@ -91,27 +91,6 @@ const getProjectUrl = (project: string): string | undefined => {
                 </Badge>
               </div>
             </div>
-          </div>
-        </Card>
-
-        <Card
-          class="flex flex-col border-primary/30 bg-primary/5 p-6 transition-colors hover:border-primary/60"
-        >
-          <h3 class="text-lg font-semibold text-foreground">
-            {{ t('projects.continuing.title') }}
-          </h3>
-          <p class="mt-3 flex-1 text-sm text-muted-foreground">
-            {{ t('projects.continuing.description') }}
-          </p>
-          <div class="mt-4 flex flex-wrap gap-1.5 border-t border-border pt-4">
-            <Badge
-              v-for="tag in tm('projects.continuing.tags') as string[]"
-              :key="tag"
-              variant="secondary"
-              class="text-xs"
-            >
-              {{ tag }}
-            </Badge>
           </div>
         </Card>
       </div>

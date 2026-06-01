@@ -35,7 +35,7 @@
     bereke-item-1: "Architect and build the company's *unified credit pipeline*, standardizing loan issuance across products and centralizing application routing and validation.",
     bereke-item-2: "Built numerous *production integrations* with government and financial services, including First Credit Bureau (FCB), collateral registries, and identity verification.",
     bereke-item-3: "Designed fault-tolerant microservice architecture with strict *latency SLA* and event-driven communication via Kafka.",
-    bereke-item-4: "Previously: delivered *collateral-backed auto loan platform* — parallelized the processing pipeline, *reducing loan issuance time from 40 to 15 minutes* and helping increase application throughput by *3×*; built a corporate messenger alerting library.",
+    bereke-item-4: "Previously: supported the launch of a large *auto-loan credit pipeline* from pilot to production scale — parallelized processing, *reduced loan issuance time from 40 to 15 minutes*, and grew volume from zero to *130 applications per day within six months*; built a corporate messenger alerting library.",
     bereke-item-5: "",
     bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, GraphQL, REST, CI/CD",
 
@@ -132,7 +132,7 @@
     bereke-item-1: "Проектирую архитектуру и разрабатываю *единый кредитный конвейер* компании, который унифицирует подход к выдаче кредитов по продуктам и централизует маршрутизацию заявок.",
     bereke-item-2: "Реализовал множество *production-интеграций* с государственными и финансовыми сервисами, включая Первое кредитное бюро (ПКБ), реестры залогового имущества и верификацию личности.",
     bereke-item-3: "Спроектировал отказоустойчивую микросервисную архитектуру со строгими *latency SLA* и event-driven взаимодействием через Kafka.",
-    bereke-item-4: "Ранее: запустил *платформу автокредитования под залог* — распараллелил processing pipeline, *сократил время выдачи кредита с 40 до 15 минут* и помог увеличить поток заявок в *3 раза*; разработал библиотеку алертинга в корпоративный мессенджер.",
+    bereke-item-4: "Ранее: сопровождал запуск крупного *кредитного конвейера автокредитования* с пилота до production-масштаба — распараллелил processing pipeline, *сократил время выдачи кредита с 40 до 15 минут* и помог вырастить поток с нуля до *130 заявок в день за полгода*; разработал библиотеку алертинга в корпоративный мессенджер.",
     bereke-item-5: "",
     bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, GraphQL, REST, CI/CD",
 

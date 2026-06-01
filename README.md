@@ -26,7 +26,7 @@ Building unified credit decision infrastructure for retail lending at one of Kaz
 - Architecting and building the company's unified credit pipeline, standardizing loan issuance across products
 - Built numerous production integrations with government and financial services, including FCB, collateral registries, and identity verification
 - Designed fault-tolerant microservice architecture with strict latency SLA and event-driven communication via Kafka
-- Delivered collateral-backed auto-loan processing improvements, reducing issuance time from 40 to 15 minutes and helping increase application throughput by 3x
+- Supported the launch of a large auto-loan credit pipeline from pilot to production scale, reducing issuance time from 40 to 15 minutes and growing volume from zero to 130 applications per day within six months
 - Built a corporate messenger alerting library and operational notifications for production workflows
 
 **Tech**: `Go` `PostgreSQL` `Redis` `Kafka` `Camunda BPMN` `Docker` `GraphQL` `REST` `Microservices` `CI/CD`

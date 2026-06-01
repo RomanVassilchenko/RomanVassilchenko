@@ -38,7 +38,7 @@ export default {
           "Architect and build the company's unified credit pipeline, standardizing loan issuance across products and centralizing application routing",
           'Built numerous production integrations with government and financial services, including FCB, collateral registries, and identity verification',
           'Designed fault-tolerant microservice architecture with strict latency SLA and event-driven communication via Kafka',
-          'Previously delivered a collateral-backed auto-loan platform: parallelized the processing pipeline, reduced issuance time from 40 to 15 minutes, and helped increase application throughput by 3×',
+          'Supported the launch of a large auto-loan credit pipeline from pilot to production scale: parallelized processing, reduced issuance time from 40 to 15 minutes, and grew volume from zero to 130 applications per day within six months',
           'Built a corporate messenger alerting library and operational notifications for production workflows',
         ],
         tech: ['Go', 'PostgreSQL', 'Camunda', 'Kafka', 'Docker', 'GraphQL', 'REST'],
@@ -102,12 +102,6 @@ export default {
     title: 'Featured Projects',
     featuredCase: 'Featured case study',
     viewMore: 'View More',
-    continuing: {
-      title: 'More projects are on the way',
-      description:
-        'This section will keep growing with new backend projects, production systems, experiments, and case studies.',
-      tags: ['Coming soon', 'Backend', 'Case studies'],
-    },
     items: {
       adalqarau: {
         name: 'AdalQarau',
@@ -145,6 +139,18 @@ export default {
           'Kafka-sharded notification service with Grafana monitoring',
         ],
         tech: ['Go', 'PostgreSQL', 'ElasticSearch', 'Kafka'],
+      },
+      autoLoan: {
+        name: 'Auto-Loan Issuance Pipeline',
+        description: 'B2C pipeline for collateral-backed auto loans',
+        details:
+          'Credit issuance backend spanning gRPC APIs, Camunda workflows, Kafka events, PostgreSQL persistence, and external data integrations for auto-loan processing.',
+        highlights: [
+          'Launched from pilot to production scale',
+          'Grew from zero to 130 applications per day within six months',
+          'Reduced loan issuance time from 40 to 15 minutes',
+        ],
+        tech: ['Go', 'gRPC', 'Camunda', 'Kafka', 'PostgreSQL'],
       },
     },
   },
