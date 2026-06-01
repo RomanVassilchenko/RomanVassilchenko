@@ -68,6 +68,7 @@ onMounted(() => {
         v-for="t in themes"
         :key="t.value"
         @click="setTheme(t.value)"
+        :aria-label="`Use ${t.value} theme`"
         :class="[
           'flex w-full items-center gap-2 px-3 py-2 text-sm transition-colors',
           theme === t.value

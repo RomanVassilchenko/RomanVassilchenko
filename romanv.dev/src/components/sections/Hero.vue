@@ -3,7 +3,7 @@ import { useI18n } from 'vue-i18n'
 import { MapPin, Download, Mail } from 'lucide-vue-next'
 import Button from '../ui/Button.vue'
 
-const { t, locale } = useI18n()
+const { t, tm, locale } = useI18n()
 
 const socialLinks = [
   {
@@ -36,14 +36,13 @@ const socialLinks = [
             <img
               src="https://github.com/RomanVassilchenko.png"
               alt="Roman Vassilchenko"
+              width="192"
+              height="192"
+              fetchpriority="high"
+              decoding="async"
               class="h-full w-full object-cover"
             />
           </div>
-          <!-- Status indicator -->
-          <div
-            class="bg-green-500 absolute bottom-2 right-2 h-5 w-5 rounded-full border-4 border-background"
-            title="Available for opportunities"
-          ></div>
         </div>
 
         <!-- Content -->
@@ -77,6 +76,7 @@ const socialLinks = [
               <a
                 href="https://berekebank.kz/ru/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="font-medium text-primary hover:underline"
               >
                 {{ t('hero.company') }}
@@ -84,9 +84,27 @@ const socialLinks = [
             </span>
           </div>
 
+          <div
+            class="mb-6 grid gap-2 text-left text-sm text-muted-foreground sm:grid-cols-3 md:max-w-2xl"
+          >
+            <div
+              v-for="point in tm('hero.proofPoints') as string[]"
+              :key="point"
+              class="rounded-lg border border-border bg-card/60 px-3 py-2"
+            >
+              {{ point }}
+            </div>
+          </div>
+
           <!-- CTA Buttons -->
           <div class="mb-6 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-            <Button as="a" :href="`/documents/resume_${locale}.pdf`" target="_blank" class="gap-2">
+            <Button
+              as="a"
+              :href="`/documents/resume_${locale}.pdf`"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="gap-2"
+            >
               <Download class="h-4 w-4" />
               {{ t('hero.cta.resume') }}
             </Button>
@@ -103,8 +121,10 @@ const socialLinks = [
               :key="link.name"
               :href="link.url"
               target="_blank"
+              rel="noopener noreferrer"
               class="text-muted-foreground transition-colors hover:text-foreground"
               :title="link.name"
+              :aria-label="link.name"
             >
               <svg
                 v-if="link.icon === 'github'"

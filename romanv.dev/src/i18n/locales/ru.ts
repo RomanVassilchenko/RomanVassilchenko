@@ -9,10 +9,15 @@ export default {
   hero: {
     greeting: 'Привет, я',
     name: 'Роман Васильченко',
-    title: 'Go Backend-инженер',
+    title: 'Go Backend-разработчик: кредитные платформы, интеграции, высоконагруженные системы',
     location: 'Астана, Казахстан',
-    currentWork: 'Строю единый кредитный конвейер в',
+    currentWork: 'Строю высоконагруженные системы в',
     company: 'Bereke Bank',
+    proofPoints: [
+      'Системы единого кредитного конвейера и backend-архитектура выдачи',
+      'Production-интеграции с государственными и финансовыми сервисами',
+      'Go, Kafka, PostgreSQL, микросервисы и observability',
+    ],
     cta: {
       resume: 'Резюме',
       contact: 'Связаться',
@@ -95,7 +100,14 @@ export default {
   },
   projects: {
     title: 'Избранные проекты',
+    featuredCase: 'Главный кейс',
     viewMore: 'Подробнее',
+    continuing: {
+      title: 'Здесь будет больше проектов',
+      description:
+        'Раздел будет пополняться новыми backend-проектами, production-системами, экспериментами и кейсами.',
+      tags: ['Скоро', 'Backend', 'Кейсы'],
+    },
     items: {
       adalqarau: {
         name: 'AdalQarau',
@@ -139,7 +151,6 @@ export default {
   education: {
     title: 'Образование',
     thesis: 'Дипломная работа',
-    projectTitle: 'Личный проект',
     degrees: {
       masters: {
         degree: 'Магистр компьютерных наук',
@@ -161,7 +172,8 @@ export default {
   },
   contact: {
     title: 'Связаться',
-    subtitle: 'Давайте создадим что-то крутое вместе!',
+    subtitle:
+      'Открыт к Go backend-ролям, где инженерия напрямую влияет на продуктовый throughput, интеграции и надёжность.',
     email: 'Email',
     telegram: 'Telegram',
     linkedin: 'LinkedIn',

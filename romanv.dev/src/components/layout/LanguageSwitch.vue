@@ -13,6 +13,7 @@ const languages = [
 
 const setLanguage = (code: string) => {
   locale.value = code
+  document.documentElement.lang = code
   localStorage.setItem('locale', code)
   isOpen.value = false
 }
@@ -42,6 +43,7 @@ const currentFlag = computed(() => {
         v-for="lang in languages"
         :key="lang.code"
         @click="setLanguage(lang.code)"
+        :aria-label="`Switch language to ${lang.name}`"
         :class="[
           'flex w-full items-center gap-2 px-3 py-2 text-sm transition-colors',
           locale === lang.code

@@ -7,43 +7,43 @@ const techCategories = [
   {
     key: 'languages',
     items: [
-      { name: 'Go', icon: 'go', color: '#00ADD8' },
-      { name: 'GraphQL', icon: 'graphql', color: '#E10098' },
+      { name: 'Go', color: '#00ADD8' },
+      { name: 'GraphQL', color: '#E10098' },
       { name: 'Protobuf', color: '#FFCA28' },
     ],
   },
   {
     key: 'databases',
     items: [
-      { name: 'PostgreSQL', icon: 'postgresql', color: '#4169E1' },
-      { name: 'ClickHouse', icon: 'clickhouse', color: '#FFCC01' },
-      { name: 'Redis', icon: 'redis', color: '#DC382D' },
-      { name: 'ElasticSearch', icon: 'elasticsearch', color: '#005571' },
+      { name: 'PostgreSQL', color: '#4169E1' },
+      { name: 'ClickHouse', color: '#FFCC01' },
+      { name: 'Redis', color: '#DC382D' },
+      { name: 'ElasticSearch', color: '#005571' },
       { name: 'Vertica', color: '#0073C6' },
-      { name: 'MinIO', icon: 'minio', color: '#C72E49' },
+      { name: 'MinIO', color: '#C72E49' },
     ],
   },
   {
     key: 'messaging',
     items: [
-      { name: 'Apache Kafka', icon: 'apachekafka', color: '#231F20' },
-      { name: 'Camunda', icon: 'camunda', color: '#FC5D0D' },
+      { name: 'Apache Kafka', color: '#231F20' },
+      { name: 'Camunda', color: '#FC5D0D' },
     ],
   },
   {
     key: 'monitoring',
     items: [
-      { name: 'Grafana', icon: 'grafana', color: '#F46800' },
-      { name: 'Prometheus', icon: 'prometheus', color: '#E6522C' },
+      { name: 'Grafana', color: '#F46800' },
+      { name: 'Prometheus', color: '#E6522C' },
     ],
   },
   {
     key: 'devops',
     items: [
-      { name: 'Docker', icon: 'docker', color: '#2496ED' },
-      { name: 'Git', icon: 'git', color: '#F05032' },
-      { name: 'Linux', icon: 'linux', color: '#FCC624' },
-      { name: 'NixOS', icon: 'nixos', color: '#5277C3' },
+      { name: 'Docker', color: '#2496ED' },
+      { name: 'Git', color: '#F05032' },
+      { name: 'Linux', color: '#FCC624' },
+      { name: 'NixOS', color: '#5277C3' },
     ],
   },
 ]
@@ -69,21 +69,7 @@ const techCategories = [
               <div
                 class="flex cursor-default items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 transition-all hover:border-primary/50"
               >
-                <!-- Simple Icons CDN -->
-                <img
-                  v-if="tech.icon"
-                  :src="`https://cdn.simpleicons.org/${tech.icon}/${tech.color?.replace('#', '')}`"
-                  :alt="tech.name"
-                  :class="['h-4 w-4', tech.icon === 'apachekafka' ? 'dark:invert' : '']"
-                />
-                <!-- Color dot fallback for items without icons -->
-                <div
-                  v-else-if="tech.color"
-                  class="h-3 w-3 rounded-full"
-                  :style="{ backgroundColor: tech.color }"
-                ></div>
-                <!-- Default fallback -->
-                <span v-else class="h-3 w-3 rounded-full bg-primary"></span>
+                <span class="h-3 w-3 rounded-full" :style="{ backgroundColor: tech.color }"></span>
                 <span class="text-sm font-medium">{{ tech.name }}</span>
               </div>
             </div>

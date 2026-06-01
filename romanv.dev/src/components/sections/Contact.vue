@@ -38,8 +38,8 @@ const contactLinks = [
 </script>
 
 <template>
-  <section id="contact" class="px-4 py-20">
-    <div class="container mx-auto max-w-3xl text-center">
+  <section id="contact" class="py-20">
+    <div class="container mx-auto max-w-3xl px-4 text-center">
       <!-- Section Title -->
       <h2 class="mb-4 text-3xl font-bold md:text-4xl">
         {{ t('contact.title') }}
@@ -58,22 +58,24 @@ const contactLinks = [
           :key="link.key"
           :href="link.url"
           target="_blank"
-          class="block"
+          rel="noopener noreferrer"
+          :aria-label="`${t('contact.' + link.key)}: ${link.value}`"
+          class="block min-w-0"
         >
           <Card
             :class="[
-              'flex cursor-pointer items-center gap-4 border-2 p-5 transition-all',
+              'flex min-w-0 cursor-pointer items-center gap-4 border-2 p-5 transition-all',
               link.color,
             ]"
           >
             <div class="rounded-lg bg-muted p-2">
               <component :is="link.icon" class="h-5 w-5" />
             </div>
-            <div class="text-left">
+            <div class="min-w-0 text-left">
               <p class="text-sm text-muted-foreground">
                 {{ t(`contact.${link.key}`) }}
               </p>
-              <p class="font-medium text-foreground">
+              <p class="break-words font-medium text-foreground">
                 {{ link.value }}
               </p>
             </div>

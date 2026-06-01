@@ -9,10 +9,15 @@ export default {
   hero: {
     greeting: "Hi, I'm",
     name: 'Roman Vassilchenko',
-    title: 'Go Backend Engineer',
+    title: 'Go Backend Engineer: credit platforms, integrations, high-load systems',
     location: 'Astana, Kazakhstan',
-    currentWork: 'Building unified credit pipeline at',
+    currentWork: 'Building high-load systems at',
     company: 'Bereke Bank',
+    proofPoints: [
+      'Unified credit pipeline systems and lending backend architecture',
+      'Production integrations with government and financial services',
+      'Go, Kafka, PostgreSQL, microservices, and observability',
+    ],
     cta: {
       resume: 'View Resume',
       contact: 'Get in Touch',
@@ -95,7 +100,14 @@ export default {
   },
   projects: {
     title: 'Featured Projects',
+    featuredCase: 'Featured case study',
     viewMore: 'View More',
+    continuing: {
+      title: 'More projects are on the way',
+      description:
+        'This section will keep growing with new backend projects, production systems, experiments, and case studies.',
+      tags: ['Coming soon', 'Backend', 'Case studies'],
+    },
     items: {
       adalqarau: {
         name: 'AdalQarau',
@@ -139,7 +151,6 @@ export default {
   education: {
     title: 'Education',
     thesis: 'Bachelor Thesis',
-    projectTitle: 'Personal Project',
     degrees: {
       masters: {
         degree: 'M.Sc. Computer Science & Engineering',
@@ -161,7 +172,8 @@ export default {
   },
   contact: {
     title: 'Get in Touch',
-    subtitle: "Let's connect and build something amazing together!",
+    subtitle:
+      'Available for Go backend roles where engineering directly affects product throughput, integrations, and reliability.',
     email: 'Email',
     telegram: 'Telegram',
     linkedin: 'LinkedIn',

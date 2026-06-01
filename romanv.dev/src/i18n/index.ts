@@ -5,10 +5,15 @@ import ru from './locales/ru'
 const savedLocale = typeof localStorage !== 'undefined' ? localStorage.getItem('locale') : null
 
 const browserLocale = typeof navigator !== 'undefined' ? navigator.language.split('-')[0] : 'en'
+const initialLocale = savedLocale || (browserLocale === 'ru' ? 'ru' : 'en')
+
+if (typeof document !== 'undefined') {
+  document.documentElement.lang = initialLocale
+}
 
 export const i18n = createI18n({
   legacy: false,
-  locale: savedLocale || (browserLocale === 'ru' ? 'ru' : 'en'),
+  locale: initialLocale,
   fallbackLocale: 'en',
   messages: {
     en,

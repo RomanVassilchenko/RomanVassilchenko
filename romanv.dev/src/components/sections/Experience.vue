@@ -18,45 +18,20 @@ const positions = ['bereke', 'ozonStaff', 'ozonIntern'] as const
       </h2>
       <div class="mx-auto mb-12 h-1 w-20 rounded-full bg-primary"></div>
 
-      <!-- Timeline -->
-      <div class="relative">
-        <!-- Timeline line -->
-        <div
-          class="absolute bottom-0 left-0 top-0 hidden w-0.5 transform bg-border md:left-1/2 md:block md:-translate-x-px"
-        ></div>
-
-        <!-- Experience items -->
-        <div class="space-y-8">
-          <div
-            v-for="(position, index) in positions"
-            :key="position"
-            :class="[
-              'relative',
-              index % 2 === 0 ? 'md:pr-[50%] md:text-right' : 'md:ml-auto md:pl-[50%]',
-            ]"
-          >
-            <!-- Timeline dot -->
-            <div
-              :class="[
-                'absolute top-6 hidden h-4 w-4 rounded-full border-4 border-background bg-primary shadow md:block',
-                index % 2 === 0
-                  ? 'right-0 md:left-1/2 md:right-auto md:-translate-x-1/2'
-                  : 'left-0 md:left-1/2 md:-translate-x-1/2',
-              ]"
-            ></div>
-
-            <Card :class="['p-6', index % 2 === 0 ? 'md:mr-8' : 'md:ml-8']">
+      <div class="space-y-6">
+        <Card
+          v-for="position in positions"
+          :key="position"
+          class="p-6 transition-colors hover:border-primary/50"
+        >
+          <div class="grid gap-5 md:grid-cols-[minmax(0,1fr)_auto]">
+            <div>
               <!-- Company & Role -->
-              <div
-                :class="[
-                  'mb-3 flex items-start gap-3',
-                  index % 2 === 0 ? 'md:flex-row-reverse' : '',
-                ]"
-              >
+              <div class="mb-3 flex items-start gap-3">
                 <div class="shrink-0 rounded-lg bg-primary/10 p-2">
                   <Building2 class="h-5 w-5 text-primary" />
                 </div>
-                <div :class="index % 2 === 0 ? 'md:text-right' : ''">
+                <div>
                   <h3 class="text-lg font-semibold text-foreground">
                     {{ t(`experience.positions.${position}.company`) }}
                   </h3>
@@ -70,18 +45,13 @@ const positions = ['bereke', 'ozonStaff', 'ozonIntern'] as const
               </div>
 
               <!-- Period -->
-              <div
-                :class="[
-                  'mb-4 flex items-center gap-1.5 text-sm text-muted-foreground',
-                  index % 2 === 0 ? 'md:justify-end' : '',
-                ]"
-              >
+              <div class="mb-4 flex items-center gap-1.5 text-sm text-muted-foreground md:hidden">
                 <Calendar class="h-4 w-4" />
                 {{ t(`experience.positions.${position}.period`) }}
               </div>
 
               <!-- Description -->
-              <p :class="['mb-4 text-muted-foreground', index % 2 === 0 ? 'md:text-right' : '']">
+              <p class="mb-4 text-muted-foreground">
                 {{ t(`experience.positions.${position}.description`) }}
               </p>
 
@@ -92,10 +62,7 @@ const positions = ['bereke', 'ozonStaff', 'ozonIntern'] as const
                     `experience.positions.${position}.achievements`
                   ) as string[]"
                   :key="i"
-                  :class="[
-                    'flex items-start gap-2 text-sm text-muted-foreground',
-                    index % 2 === 0 ? 'md:flex-row-reverse md:text-right' : '',
-                  ]"
+                  class="flex items-start gap-2 text-sm text-muted-foreground"
                 >
                   <ChevronRight class="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                   {{ achievement }}
@@ -103,7 +70,7 @@ const positions = ['bereke', 'ozonStaff', 'ozonIntern'] as const
               </ul>
 
               <!-- Tech stack -->
-              <div :class="['flex flex-wrap gap-2', index % 2 === 0 ? 'md:justify-end' : '']">
+              <div class="flex flex-wrap gap-2">
                 <Badge
                   v-for="tech in tm(`experience.positions.${position}.tech`) as string[]"
                   :key="tech"
@@ -111,9 +78,16 @@ const positions = ['bereke', 'ozonStaff', 'ozonIntern'] as const
                   {{ tech }}
                 </Badge>
               </div>
-            </Card>
+            </div>
+
+            <div
+              class="hidden h-fit shrink-0 items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary md:flex"
+            >
+              <Calendar class="h-4 w-4" />
+              {{ t(`experience.positions.${position}.period`) }}
+            </div>
           </div>
-        </div>
+        </Card>
       </div>
     </div>
   </section>

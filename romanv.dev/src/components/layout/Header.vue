@@ -13,6 +13,7 @@ const isMobileMenuOpen = ref(false)
 const navItems = [
   { key: 'experience', href: '#experience' },
   { key: 'skills', href: '#skills' },
+  { key: 'projects', href: '#projects' },
   { key: 'education', href: '#education' },
   { key: 'contact', href: '#contact' },
 ]
@@ -74,6 +75,9 @@ onUnmounted(() => {
           <button
             @click="isMobileMenuOpen = !isMobileMenuOpen"
             class="rounded-md p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground md:hidden"
+            :aria-label="isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'"
+            :aria-expanded="isMobileMenuOpen"
+            aria-controls="mobile-navigation"
           >
             <Menu v-if="!isMobileMenuOpen" class="h-5 w-5" />
             <X v-else class="h-5 w-5" />
@@ -82,7 +86,11 @@ onUnmounted(() => {
       </div>
 
       <!-- Mobile Navigation -->
-      <div v-if="isMobileMenuOpen" class="border-t border-border py-4 md:hidden">
+      <div
+        v-if="isMobileMenuOpen"
+        id="mobile-navigation"
+        class="border-t border-border py-4 md:hidden"
+      >
         <div class="flex flex-col gap-1">
           <a
             v-for="item in navItems"

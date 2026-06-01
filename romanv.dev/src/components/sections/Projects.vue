@@ -23,60 +23,94 @@ const getProjectUrl = (project: string): string | undefined => {
       </h2>
       <div class="mx-auto mb-12 h-1 w-20 rounded-full bg-primary"></div>
 
-      <!-- Projects grid -->
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <Card
-          v-for="project in projects"
+          v-for="(project, index) in projects"
           :key="project"
-          class="group flex flex-col p-6 transition-colors hover:border-primary/50"
+          :class="[
+            'group flex flex-col p-6 transition-colors hover:border-primary/50',
+            index === 0 ? 'md:col-span-2 lg:col-span-3' : '',
+          ]"
         >
-          <!-- Project name -->
-          <h3
-            class="mb-1 text-lg font-semibold text-foreground transition-colors group-hover:text-primary"
-          >
-            <a
-              v-if="getProjectUrl(project)"
-              :href="getProjectUrl(project)"
-              target="_blank"
-              class="inline-flex items-center gap-1.5 hover:underline"
+          <div :class="index === 0 ? 'grid gap-6 lg:grid-cols-[1.2fr_0.8fr]' : 'contents'">
+            <div>
+              <p v-if="index === 0" class="mb-2 text-sm font-medium text-primary">
+                {{ t('projects.featuredCase') }}
+              </p>
+
+              <h3
+                class="mb-1 text-lg font-semibold text-foreground transition-colors group-hover:text-primary"
+              >
+                <a
+                  v-if="getProjectUrl(project)"
+                  :href="getProjectUrl(project)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 hover:underline"
+                >
+                  {{ t(`projects.items.${project}.name`) }}
+                  <ExternalLink class="h-4 w-4" />
+                </a>
+                <span v-else>{{ t(`projects.items.${project}.name`) }}</span>
+              </h3>
+
+              <p class="mb-3 text-sm font-medium text-primary">
+                {{ t(`projects.items.${project}.description`) }}
+              </p>
+
+              <p class="mb-4 flex-1 text-sm text-muted-foreground">
+                {{ t(`projects.items.${project}.details`) }}
+              </p>
+            </div>
+
+            <div
+              :class="[
+                'flex flex-col',
+                index === 0 ? 'rounded-lg border border-border bg-muted/30 p-4' : '',
+              ]"
             >
-              {{ t(`projects.items.${project}.name`) }}
-              <ExternalLink class="h-4 w-4" />
-            </a>
-            <span v-else>{{ t(`projects.items.${project}.name`) }}</span>
+              <ul class="mb-4 space-y-1">
+                <li
+                  v-for="(highlight, i) in tm(`projects.items.${project}.highlights`) as string[]"
+                  :key="i"
+                  class="flex items-start gap-2 text-xs text-muted-foreground"
+                >
+                  <span class="text-primary">•</span>
+                  {{ highlight }}
+                </li>
+              </ul>
+
+              <div class="mt-auto flex flex-wrap gap-1.5 border-t border-border pt-4">
+                <Badge
+                  v-for="tech in tm(`projects.items.${project}.tech`) as string[]"
+                  :key="tech"
+                  variant="secondary"
+                  class="text-xs"
+                >
+                  {{ tech }}
+                </Badge>
+              </div>
+            </div>
+          </div>
+        </Card>
+
+        <Card
+          class="flex flex-col border-primary/30 bg-primary/5 p-6 transition-colors hover:border-primary/60"
+        >
+          <h3 class="text-lg font-semibold text-foreground">
+            {{ t('projects.continuing.title') }}
           </h3>
-
-          <!-- Short description -->
-          <p class="mb-3 text-sm font-medium text-primary">
-            {{ t(`projects.items.${project}.description`) }}
+          <p class="mt-3 flex-1 text-sm text-muted-foreground">
+            {{ t('projects.continuing.description') }}
           </p>
-
-          <!-- Details -->
-          <p class="mb-4 flex-1 text-sm text-muted-foreground">
-            {{ t(`projects.items.${project}.details`) }}
-          </p>
-
-          <!-- Highlights -->
-          <ul class="mb-4 space-y-1">
-            <li
-              v-for="(highlight, i) in tm(`projects.items.${project}.highlights`) as string[]"
-              :key="i"
-              class="flex items-start gap-2 text-xs text-muted-foreground"
-            >
-              <span class="text-primary">•</span>
-              {{ highlight }}
-            </li>
-          </ul>
-
-          <!-- Tech stack -->
-          <div class="mt-auto flex flex-wrap gap-1.5 border-t border-border pt-4">
+          <div class="mt-4 flex flex-wrap gap-1.5 border-t border-border pt-4">
             <Badge
-              v-for="tech in tm(`projects.items.${project}.tech`) as string[]"
-              :key="tech"
+              v-for="tag in tm('projects.continuing.tags') as string[]"
+              :key="tag"
               variant="secondary"
               class="text-xs"
             >
-              {{ tech }}
+              {{ tag }}
             </Badge>
           </div>
         </Card>
