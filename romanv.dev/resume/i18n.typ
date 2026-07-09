@@ -22,7 +22,7 @@
     tagline: "Go developer building high-load financial systems. Ex-Ozon · Bereke Bank.",
 
     // Summary
-    summary: "Go backend engineer specializing in high-load distributed systems and financial infrastructure. At Bereke Bank I design and build a unified credit pipeline, government data integrations, and fault-tolerant microservices for real-time credit decisioning. Previously at Ozon Tech, contributed to production systems serving 60000+ users. Creator of AdalQarau, a public procurement analytics platform with corruption risk detection.",
+    summary: "Go backend engineer specializing in high-load distributed systems and financial infrastructure. At Ozon Tech, worked across company-wide hiring and employee portals, starting as a full-time intern and later contributing as a Junior/Middle Golang Developer. Now at Bereke Bank, I design and build unified credit pipeline services, government data integrations, and fault-tolerant microservices for real-time credit decisioning. Creator of AdalQarau, a public procurement analytics platform with corruption risk detection.",
 
     // Skills
     skills-text: "Go, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers, MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
@@ -40,13 +40,13 @@
     bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, GraphQL, REST, CI/CD",
 
     // Experience - Ozon Junior
-    ozon-jr-title: "Junior Golang Developer",
+    ozon-jr-title: "Junior/Middle Golang Developer",
     ozon-jr-company: "Ozon Tech",
     ozon-jr-date: "Aug 2024 — Sep 2025",
     ozon-jr-subtitle: "Enterprise Employee Portal (10000-15000 DAU / 40000+ MAU) · production; monolith → microservices",
     ozon-jr-item-1: "Contributed to the design and decomposition of a large employee-portal monolith into microservices; optimized core load by 20–25% within my domain.",
     ozon-jr-item-2: "Built *staff-lib* — internal Go SDK for DB access patterns, validation, and middleware — adopted as the standard across 30+ services.",
-    ozon-jr-item-3: "Developed automated *attendance management system* with intelligent seat reclamation and enforcement logic across 60000+ employees; platform sustained *2000 concurrent users* during Staff 2.0 launch peaks.",
+    ozon-jr-item-3: "Developed automated *attendance management system* with intelligent seat reclamation and enforcement logic across 60000+ employees; platform sustained *2000 concurrent users* during employee portal rollout peaks.",
     ozon-jr-item-4: "Engineered an *ETL pipeline* from internal survey platform to Vertica, enabling self-service analytics for cross-functional teams.",
     ozon-jr-item-5: "Designed *document generation infrastructure* with configurable templating engine for enterprise-wide corporate reporting.",
     ozon-jr-item-6: "Delivered *video preview generation* service and backend optimizations for large-file processing in internal cloud storage service, including video assets up to *several TB per file*.",
@@ -56,7 +56,7 @@
     ozon-intern-title: "Intern/Junior Golang Developer",
     ozon-intern-company: "Ozon Tech",
     ozon-intern-date: "Dec 2023 — Aug 2024",
-    ozon-intern-subtitle: "Ozon Matrix (Company-wide Hiring Platform) · production; microservices; high traffic",
+    ozon-intern-subtitle: "Company-wide Hiring Portal · production; microservices; high traffic",
     ozon-intern-item-1: "Eliminated critical query bottlenecks in the hiring platform's candidate ranking — *significant speedup* on production SQL under peak load.",
     ozon-intern-item-2: "Redesigned *ElasticSearch filter execution*: 2.5× throughput improvement and significant cluster load reduction through query restructuring.",
     ozon-intern-item-3: "Designed and built a *gRPC notification microservice* for corporate messenger (Mattermost) with Kafka-based request sharding and configurable delayed dispatch — cut manager response time to candidate applications.",
@@ -119,7 +119,7 @@
     tagline: "Go разработчик высоконагруженных финансовых систем. Ex-Ozon · Bereke Bank.",
 
     // Summary
-    summary: "Go backend-инженер, специализирующийся на высоконагруженных распределённых системах и финансовой инфраструктуре. В Bereke Bank проектирую и разрабатываю единый кредитный конвейер, государственные интеграции и отказоустойчивые микросервисы для принятия кредитных решений в реальном времени. Ранее в Ozon Tech участвовал в production-системах для 60000+ пользователей. Автор AdalQarau — платформы аналитики госзакупок с алгоритмами обнаружения коррупционных рисков.",
+    summary: "Go backend-инженер, специализирующийся на высоконагруженных распределённых системах и финансовой инфраструктуре. В Ozon Tech работал над production-порталом найма и порталом сотрудника на уровне всей компании: начал как full-time intern и затем продолжил как Junior/Middle Golang Developer. Сейчас в Bereke Bank проектирую и разрабатываю сервисы единого кредитного конвейера, государственные интеграции и отказоустойчивые микросервисы для принятия кредитных решений в реальном времени. Автор AdalQarau — платформы аналитики госзакупок с алгоритмами обнаружения коррупционных рисков.",
 
     // Skills
     skills-text: "Go, gRPC, REST/HTTP, PostgreSQL, Redis, Kafka, Docker, Camunda BPMN, MongoDB, Neo4j, Protocol Buffers, MinIO/S3, GitHub Actions, AWS, Kubernetes, testify, NixOS, Python.",
@@ -137,13 +137,13 @@
     bereke-stack: "Go, PostgreSQL, Redis, Kafka, Camunda BPMN, Docker, GraphQL, REST, CI/CD",
 
     // Experience - Ozon Junior
-    ozon-jr-title: "Junior Golang Developer",
+    ozon-jr-title: "Junior/Middle Golang Developer",
     ozon-jr-company: "Ozon Tech",
     ozon-jr-date: "Авг 2024 — Сен 2025",
-    ozon-jr-subtitle: "Корпоративный портал сотрудников (10000-15000 DAU / 40000+ MAU) · production; монолит → микросервисы",
-    ozon-jr-item-1: "Участвовал в проектировании и декомпозиции большого монолита портала сотрудников на микросервисы; в рамках своего домена оптимизировал нагрузку на ядро на 20–25%.",
+    ozon-jr-subtitle: "Корпоративный портал сотрудника (10000-15000 DAU / 40000+ MAU) · production; монолит → микросервисы",
+    ozon-jr-item-1: "Участвовал в проектировании и декомпозиции большого монолита портала сотрудника на микросервисы; в рамках своего домена оптимизировал нагрузку на ядро на 20–25%.",
     ozon-jr-item-2: "Разработал *staff-lib* — внутренний Go SDK для паттернов работы с БД, валидации и middleware — внедрён как стандарт в 30+ сервисах.",
-    ozon-jr-item-3: "Реализовал автоматизированную *систему контроля посещаемости* с интеллектуальным высвобождением мест и блокировкой нарушителей для 60000+ сотрудников; платформа выдержала *2000 одновременных пользователей* на пике запуска Staff 2.0.",
+    ozon-jr-item-3: "Реализовал автоматизированную *систему контроля посещаемости* с интеллектуальным высвобождением мест и блокировкой нарушителей для 60000+ сотрудников; платформа выдержала *2000 одновременных пользователей* на пике rollout портала сотрудника.",
     ozon-jr-item-4: "Построил *ETL-конвейер* из внутренней платформы опросов в хранилище Vertica, открыв self-service аналитику для кросс-функциональных команд.",
     ozon-jr-item-5: "Спроектировал *инфраструктуру генерации документов* с настраиваемым шаблонизатором для корпоративной отчётности.",
     ozon-jr-item-6: "Реализовал *сервис генерации превью видео* и backend-оптимизации обработки больших файлов во внутреннем сервисе хранения файлов, включая видеофайлы объёмом до *нескольких ТБ на файл*.",
@@ -153,7 +153,7 @@
     ozon-intern-title: "Intern/Junior Golang Developer",
     ozon-intern-company: "Ozon Tech",
     ozon-intern-date: "Дек 2023 — Авг 2024",
-    ozon-intern-subtitle: "Ozon Matrix (корпоративная платформа найма) · production; микросервисы; высокая нагрузка",
+    ozon-intern-subtitle: "Корпоративный портал найма · production; микросервисы; высокая нагрузка",
     ozon-intern-item-1: "Устранил критические узкие места в запросах платформы найма — *многократное ускорение* при генерации рейтингов кандидатов под production-нагрузкой.",
     ozon-intern-item-2: "Переработал *логику фильтрации ElasticSearch*: рост пропускной способности в 2.5 раза и снижение нагрузки на кластер через реструктуризацию запросов.",
     ozon-intern-item-3: "Спроектировал и реализовал *gRPC-микросервис уведомлений* для корпоративного мессенджера (Mattermost) с шардированием запросов через Kafka и настраиваемой отложенной отправкой — сократил время ответа менеджеров на заявки кандидатов.",

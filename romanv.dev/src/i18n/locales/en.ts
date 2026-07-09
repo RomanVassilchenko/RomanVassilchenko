@@ -9,14 +9,14 @@ export default {
   hero: {
     greeting: "Hi, I'm",
     name: 'Roman Vassilchenko',
-    title: 'Go Backend Engineer: credit platforms, integrations, high-load systems',
+    title: 'Go Backend Engineer: high-load platforms, fintech systems, production impact',
     location: 'Astana, Kazakhstan',
     currentWork: 'Building high-load systems at',
     company: 'Bereke Bank',
     proofPoints: [
-      'Unified credit pipeline systems and lending backend architecture',
-      'Production integrations with government and financial services',
-      'Go, Kafka, PostgreSQL, microservices, and observability',
+      'Ozon experience across company-wide hiring and employee portals',
+      'High-load credit pipeline systems and lending backend architecture',
+      'Go, Kafka, PostgreSQL, microservices, production integrations',
     ],
     cta: {
       resume: 'View Resume',
@@ -33,7 +33,7 @@ export default {
         team: 'Auto Loan Issuance Team / Unified Credit Pipeline Team',
         period: 'Sep 2025 – Present',
         description:
-          "Building unified credit decision infrastructure at one of Kazakhstan's major banks: a credit pipeline, government data integrations, and high-load microservice orchestration.",
+          "Building unified credit decision infrastructure at one of Kazakhstan's major banks: credit pipeline architecture, government and financial data integrations, and high-load microservice orchestration.",
         achievements: [
           "Architect and build the company's unified credit pipeline, standardizing loan issuance across products and centralizing application routing",
           'Built numerous production integrations with government and financial services, including FCB, collateral registries, and identity verification',
@@ -45,11 +45,11 @@ export default {
       },
       ozonStaff: {
         company: 'Ozon',
-        role: 'Junior Golang Developer',
-        team: 'Staff Team',
+        role: 'Junior/Middle Golang Developer',
+        team: 'Employee Portal Team',
         period: 'Aug 2024 – Sep 2025',
         description:
-          "Built and maintained internal tooling for Ozon's employee platform serving 10000-15000 daily users and 40000+ monthly active users across a large microservice ecosystem.",
+          "Worked at Ozon across two company-wide products: started on the hiring portal as a full-time Go backend intern, then moved to the employee portal in a Junior/Middle role. Built and maintained internal tooling for Ozon's employee platform serving 10000-15000 daily users and 40000+ monthly active users across a large microservice ecosystem before moving to Bereke Bank.",
         achievements: [
           'Contributed to the design and decomposition of a large employee-portal monolith into microservices; optimized core load by 20–25% within my domain',
           'Designed and developed staff-lib — shared internal library for DB access, validation, and middleware, adopted across 30+ services',
@@ -64,10 +64,10 @@ export default {
       ozonIntern: {
         company: 'Ozon',
         role: 'Intern/Junior Golang Developer',
-        team: 'Matrix Hiring Team',
+        team: 'Hiring Portal Team',
         period: 'Dec 2023 – Aug 2024',
         description:
-          'Worked on company-wide hiring platform handling thousands of applications across all Ozon entities. Shipped production features from the first weeks as a full-time intern.',
+          'Started at Ozon as a full-time Go backend intern and shipped production features for a company-wide hiring platform handling thousands of applications across all Ozon entities.',
         achievements: [
           'Optimized complex SQL queries for candidate selection, achieving significant response time improvements',
           'Re-engineered ElasticSearch filtering logic, improving search performance by 2.5× and reducing cluster load',
@@ -117,7 +117,7 @@ export default {
         tech: ['Go', 'PostgreSQL', 'MinIO', 'Kafka', 'GraphQL', 'Buf'],
       },
       staffPortal: {
-        name: 'Staff Portal 2.0',
+        name: 'Employee Portal 2.0',
         description: 'Enterprise portal for 60000+ employees',
         details:
           'Employee platform modernization: monolith decomposition, shared infrastructure, document generation, and large-file workflows for a system serving 10000-15000 DAU and 40000+ MAU.',
@@ -129,7 +129,7 @@ export default {
         tech: ['Go', 'PostgreSQL', 'Kafka', 'Redis', 'Grafana'],
       },
       matrixHiring: {
-        name: 'Matrix Hiring',
+        name: 'Hiring Portal',
         description: 'Hiring system from job post to onboarding',
         details:
           'High-load hiring platform work spanning candidate ranking, search, notifications, and observability for company-wide recruiting workflows.',

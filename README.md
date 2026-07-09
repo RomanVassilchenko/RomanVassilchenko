@@ -4,7 +4,7 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00ADD8&center=true&vCenter=true&width=720&lines=Go+Backend+Engineer;Distributed+Systems+%26+Microservices;High-Load+Fintech+%26+Platform+Engineering)](https://git.io/typing-svg)
 
-**Go backend engineer building high-load distributed systems, credit decision workflows, and production microservice platforms**
+**Go Backend Engineer with Ozon experience across company-wide hiring and employee portals, now building high-load credit decision systems at Bereke Bank**
 
 [![Website](https://img.shields.io/badge/romanv.dev-00ADD8?style=for-the-badge)](https://romanv.dev)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge)](mailto:roman.vassilchenko.work@gmail.com)
@@ -21,7 +21,7 @@
 
 **Auto Loan Issuance Team / Unified Credit Pipeline Team** · Sep 2025 - Present
 
-Building unified credit decision infrastructure for retail lending at one of Kazakhstan's major banks.
+Building unified credit decision infrastructure for retail lending at one of Kazakhstan's major banks, with a focus on production integrations, reliable orchestration, and high-load backend services.
 
 - Architecting and building the company's unified credit pipeline, standardizing loan issuance across products
 - Built numerous production integrations with government and financial services, including FCB, collateral registries, and identity verification
@@ -33,13 +33,13 @@ Building unified credit decision infrastructure for retail lending at one of Kaz
 
 ---
 
-### Ozon — Junior Go Developer
+### Ozon — Junior/Middle Go Developer
 
-**Staff Team** · Aug 2024 - Sep 2025
+**Employee Portal Team** · Aug 2024 - Sep 2025
 
-Built and scaled backend products for a large employee platform serving 10000-15000 DAU and 40000+ MAU.
+Worked at Ozon across two company-wide products: started on the hiring portal as a full-time Go backend intern, then moved to the employee portal in a Junior/Middle role. Built and scaled backend products for a large employee platform serving 10000-15000 DAU and 40000+ MAU before moving to Bereke Bank.
 
-- Contributed to the design and decomposition of the Staff Portal monolith into microservices, optimizing core load by 20-25% within my domain
+- Contributed to the design and decomposition of the employee portal monolith into microservices, optimizing core load by 20-25% within my domain
 - Built `staff-lib`, an internal Go library adopted across 30+ services
 - Designed office attendance and seat-reclamation logic for 60000+ employees
 - Developed ETL pipelines from internal survey platform to Vertica for self-service analytics
@@ -52,9 +52,9 @@ Built and scaled backend products for a large employee platform serving 10000-15
 
 ### Ozon — Go Backend Intern / Junior Developer
 
-**Matrix Hiring Team** · Dec 2023 - Aug 2024
+**Hiring Portal Team** · Dec 2023 - Aug 2024
 
-Worked on a company-wide hiring platform covering the full flow from job posting to onboarding.
+Started at Ozon as a full-time Go backend intern and shipped production features for a company-wide hiring platform covering the full flow from job posting to onboarding.
 
 - Optimized candidate ranking SQL queries with significant speedup under production load
 - Improved ElasticSearch filtering throughput by 2.5x
@@ -87,7 +87,7 @@ Rule-based corruption risk detection platform for Kazakhstan's public procuremen
 
 ---
 
-### Staff Portal 2.0
+### Employee Portal 2.0
 
 **Enterprise employee platform for 60000+ users**
 
@@ -97,7 +97,7 @@ Monolith decomposition, shared backend infrastructure, document generation, and 
 
 ---
 
-### Matrix Hiring
+### Hiring Portal
 
 **Hiring platform from job posting to onboarding**
 
