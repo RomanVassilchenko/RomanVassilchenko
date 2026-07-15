@@ -1,86 +1,80 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { Mail, Send, Linkedin, Github } from 'lucide-vue-next'
-import Card from '../ui/Card.vue'
+import { ArrowUpRight, Github, Linkedin, Mail, Send } from 'lucide-vue-next'
+import Button from '../ui/Button.vue'
 
 const { t } = useI18n()
-
 const contactLinks = [
-  {
-    key: 'email',
-    url: 'mailto:roman.vassilchenko.work@gmail.com',
-    value: 'roman.vassilchenko.work@gmail.com',
-    icon: Mail,
-    color: 'hover:bg-red-500/10 hover:border-red-500/50 hover:text-red-500',
-  },
   {
     key: 'telegram',
     url: 'https://t.me/Roman_Vassilchenko',
     value: '@Roman_Vassilchenko',
     icon: Send,
-    color: 'hover:bg-blue-500/10 hover:border-blue-500/50 hover:text-blue-500',
   },
   {
     key: 'linkedin',
     url: 'https://www.linkedin.com/in/rovassilchenko/',
     value: 'in/rovassilchenko',
     icon: Linkedin,
-    color: 'hover:bg-[#0A66C2]/10 hover:border-[#0A66C2]/50 hover:text-[#0A66C2]',
   },
   {
     key: 'github',
     url: 'https://github.com/RomanVassilchenko',
     value: 'RomanVassilchenko',
     icon: Github,
-    color: 'hover:bg-gray-500/10 hover:border-gray-500/50',
   },
 ]
 </script>
 
 <template>
-  <section id="contact" class="py-20">
-    <div class="container mx-auto max-w-3xl px-4 text-center">
-      <!-- Section Title -->
-      <h2 class="mb-4 text-3xl font-bold md:text-4xl">
-        {{ t('contact.title') }}
-      </h2>
-      <div class="mx-auto mb-6 h-1 w-20 rounded-full bg-primary"></div>
+  <section id="contact" class="section-shell bg-card/40">
+    <div class="page-shell">
+      <div
+        class="relative overflow-hidden border border-border bg-background px-6 py-10 sm:px-10 sm:py-14 lg:px-14 lg:py-16"
+      >
+        <div class="absolute right-0 top-0 h-full w-1 bg-primary" aria-hidden="true"></div>
+        <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_19rem] lg:items-end lg:gap-16">
+          <div>
+            <p class="section-kicker">05 / {{ t('contact.kicker') }}</p>
+            <h2
+              class="max-w-4xl text-balance text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl lg:text-5xl"
+            >
+              {{ t('contact.title') }}
+            </h2>
+            <p class="mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+              {{ t('contact.subtitle') }}
+            </p>
+            <Button
+              as="a"
+              href="mailto:roman.vassilchenko.work@gmail.com"
+              size="lg"
+              class="mt-8 gap-2"
+            >
+              <Mail class="h-4 w-4" />
+              {{ t('contact.emailCta') }}
+            </Button>
+          </div>
 
-      <!-- Subtitle -->
-      <p class="mb-12 text-lg text-muted-foreground">
-        {{ t('contact.subtitle') }}
-      </p>
-
-      <!-- Contact links -->
-      <div class="mb-12 grid gap-4 sm:grid-cols-2">
-        <a
-          v-for="link in contactLinks"
-          :key="link.key"
-          :href="link.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          :aria-label="`${t('contact.' + link.key)}: ${link.value}`"
-          class="block min-w-0"
-        >
-          <Card
-            :class="[
-              'flex min-w-0 cursor-pointer items-center gap-4 border-2 p-5 transition-all',
-              link.color,
-            ]"
-          >
-            <div class="rounded-lg bg-muted p-2">
-              <component :is="link.icon" class="h-5 w-5" />
-            </div>
-            <div class="min-w-0 text-left">
-              <p class="text-sm text-muted-foreground">
-                {{ t(`contact.${link.key}`) }}
-              </p>
-              <p class="break-words font-medium text-foreground">
-                {{ link.value }}
-              </p>
-            </div>
-          </Card>
-        </a>
+          <div class="border-t border-border pt-5 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+            <p class="mb-3 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
+              {{ t('contact.otherChannels') }}
+            </p>
+            <a
+              v-for="link in contactLinks"
+              :key="link.key"
+              :href="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex min-h-12 items-center gap-3 border-b border-border text-sm text-muted-foreground transition-colors hover:text-primary"
+            >
+              <component :is="link.icon" class="h-4 w-4" />
+              <span class="min-w-0 flex-1 truncate">{{ link.value }}</span>
+              <ArrowUpRight
+                class="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

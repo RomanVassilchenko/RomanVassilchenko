@@ -4,74 +4,46 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 const techCategories = [
+  { key: 'backend', items: ['Go', 'gRPC', 'REST', 'GraphQL', 'Protobuf'] },
   {
-    key: 'languages',
-    items: [
-      { name: 'Go', color: '#00ADD8' },
-      { name: 'GraphQL', color: '#E10098' },
-      { name: 'Protobuf', color: '#FFCA28' },
-    ],
+    key: 'data',
+    items: ['PostgreSQL', 'ClickHouse', 'Redis', 'Elasticsearch', 'Vertica', 'MinIO'],
   },
-  {
-    key: 'databases',
-    items: [
-      { name: 'PostgreSQL', color: '#4169E1' },
-      { name: 'ClickHouse', color: '#FFCC01' },
-      { name: 'Redis', color: '#DC382D' },
-      { name: 'ElasticSearch', color: '#005571' },
-      { name: 'Vertica', color: '#0073C6' },
-      { name: 'MinIO', color: '#C72E49' },
-    ],
-  },
-  {
-    key: 'messaging',
-    items: [
-      { name: 'Apache Kafka', color: '#231F20' },
-      { name: 'Camunda', color: '#FC5D0D' },
-    ],
-  },
-  {
-    key: 'monitoring',
-    items: [
-      { name: 'Grafana', color: '#F46800' },
-      { name: 'Prometheus', color: '#E6522C' },
-    ],
-  },
-  {
-    key: 'devops',
-    items: [
-      { name: 'Docker', color: '#2496ED' },
-      { name: 'Git', color: '#F05032' },
-      { name: 'Linux', color: '#FCC624' },
-      { name: 'NixOS', color: '#5277C3' },
-    ],
-  },
+  { key: 'distributed', items: ['Kafka', 'Camunda', 'Microservices', 'Event-driven'] },
+  { key: 'operations', items: ['Docker', 'Linux', 'Grafana', 'Prometheus', 'Git'] },
 ]
 </script>
 
 <template>
-  <section id="skills" class="bg-muted/30 px-4 py-20">
-    <div class="container mx-auto max-w-5xl">
-      <!-- Section Title -->
-      <h2 class="mb-4 text-center text-3xl font-bold md:text-4xl">
-        {{ t('skills.title') }}
-      </h2>
-      <div class="mx-auto mb-12 h-1 w-20 rounded-full bg-primary"></div>
+  <section id="skills" class="section-shell border-b border-border bg-card/40">
+    <div class="page-shell">
+      <div class="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
+        <div>
+          <p class="section-kicker">03 / {{ t('skills.kicker') }}</p>
+          <h2 class="section-heading">{{ t('skills.title') }}</h2>
+          <p class="section-copy">{{ t('skills.intro') }}</p>
+        </div>
 
-      <!-- Tech categories -->
-      <div class="space-y-10">
-        <div v-for="category in techCategories" :key="category.key">
-          <h3 class="mb-6 text-center text-lg font-semibold text-muted-foreground">
-            {{ t(`skills.categories.${category.key}`) }}
-          </h3>
-          <div class="flex flex-wrap justify-center gap-3">
-            <div v-for="tech in category.items" :key="tech.name" class="group relative">
-              <div
-                class="flex cursor-default items-center gap-2 rounded-lg border border-border bg-card px-4 py-2 transition-all hover:border-primary/50"
+        <div class="border-x border-t border-border bg-background">
+          <div
+            v-for="(category, index) in techCategories"
+            :key="category.key"
+            class="grid border-b border-border sm:grid-cols-[11rem_minmax(0,1fr)]"
+          >
+            <div class="border-b border-border bg-muted/35 p-5 sm:border-b-0 sm:border-r">
+              <p class="font-mono text-[10px] text-primary">0{{ index + 1 }}</p>
+              <h3 class="mt-2 text-sm font-semibold text-foreground">
+                {{ t(`skills.categories.${category.key}`) }}
+              </h3>
+            </div>
+            <div class="flex flex-wrap content-center gap-x-5 gap-y-3 p-5">
+              <span
+                v-for="tech in category.items"
+                :key="tech"
+                class="font-mono text-xs text-muted-foreground transition-colors hover:text-primary"
               >
-                <span class="h-3 w-3 rounded-full" :style="{ backgroundColor: tech.color }"></span>
-                <span class="text-sm font-medium">{{ tech.name }}</span>
-              </div>
+                {{ tech }}
+              </span>
             </div>
           </div>
         </div>

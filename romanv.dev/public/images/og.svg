@@ -1,36 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Roman Vassilchenko - Go Backend Engineer</title>
-  <desc id="desc">Open Graph preview card for romanv.dev</desc>
+  <title id="title">Roman Vassilchenko — Go Backend Engineer</title>
+  <desc id="desc">Open Graph preview for romanv.dev</desc>
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#eff1f5"/>
-      <stop offset="100%" stop-color="#e6e9ef"/>
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#4c4f69" flood-opacity="0.16"/>
-    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#333333" stroke-width="1"/>
+    </pattern>
   </defs>
+  <rect width="1200" height="630" fill="#1f1f1f"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="64" y="64" width="1072" height="502" fill="#252526" stroke="#3c3c3c"/>
+  <rect x="64" y="64" width="8" height="120" fill="#4daafc"/>
 
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="64" y="64" width="1072" height="502" rx="28" fill="#eff1f5" stroke="#ccd0da" filter="url(#shadow)"/>
-  <circle cx="998" cy="132" r="56" fill="#8839ef" opacity="0.14"/>
-  <circle cx="1060" cy="202" r="34" fill="#209fb5" opacity="0.18"/>
-  <circle cx="930" cy="498" r="78" fill="#40a02b" opacity="0.12"/>
+  <circle cx="1052" cy="112" r="7" fill="#89d185"/>
+  <text x="109" y="120" fill="#9d9d9d" font-family="JetBrains Mono, monospace" font-size="20" font-weight="500" letter-spacing="3">ROMANV.DEV / GO BACKEND</text>
 
-  <text x="112" y="154" fill="#8839ef" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">romanv.dev</text>
-  <text x="112" y="254" fill="#4c4f69" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="800">Roman Vassilchenko</text>
-  <text x="112" y="326" fill="#6c6f85" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="600">Go Backend Engineer</text>
+  <text x="109" y="238" fill="#d4d4d4" font-family="Inter, sans-serif" font-size="64" font-weight="700">Roman Vassilchenko</text>
+  <text x="109" y="316" fill="#4daafc" font-family="Inter, sans-serif" font-size="38" font-weight="600">Reliable fintech &amp; high-load platforms.</text>
+  <text x="109" y="376" fill="#9d9d9d" font-family="Inter, sans-serif" font-size="26">Go · distributed systems · production outcomes</text>
 
-  <g font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">
-    <rect x="112" y="394" width="188" height="58" rx="14" fill="#8839ef" opacity="0.12"/>
-    <text x="138" y="432" fill="#8839ef">Go</text>
-
-    <rect x="324" y="394" width="236" height="58" rx="14" fill="#209fb5" opacity="0.12"/>
-    <text x="350" y="432" fill="#209fb5">Kafka</text>
-
-    <rect x="584" y="394" width="292" height="58" rx="14" fill="#40a02b" opacity="0.12"/>
-    <text x="610" y="432" fill="#40a02b">PostgreSQL</text>
+  <line x1="109" y1="432" x2="1091" y2="432" stroke="#3c3c3c"/>
+  <g font-family="JetBrains Mono, monospace">
+    <text x="109" y="493" fill="#d4d4d4" font-size="34" font-weight="700">&gt;2.5× faster</text>
+    <text x="109" y="526" fill="#9d9d9d" font-size="16">AUTO-LOAN ISSUANCE</text>
+    <text x="424" y="493" fill="#d4d4d4" font-size="34" font-weight="700">30+ services</text>
+    <text x="424" y="526" fill="#9d9d9d" font-size="16">SHARED GO SDK</text>
+    <text x="808" y="493" fill="#d4d4d4" font-size="34" font-weight="700">3× faster</text>
+    <text x="808" y="526" fill="#9d9d9d" font-size="16">CANDIDATE SEARCH</text>
   </g>
-
-  <text x="112" y="514" fill="#4c4f69" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Credit platforms, production integrations, and high-load systems</text>
 </svg>

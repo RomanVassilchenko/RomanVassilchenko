@@ -12,12 +12,12 @@ const props = withDefaults(defineProps<Props>(), {
 
 const classes = computed(() => {
   const base =
-    'inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
+    'inline-flex items-center border px-2 py-0.5 font-mono text-[11px] font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2'
 
   const variants = {
-    default: 'bg-primary/10 text-primary border border-primary/20',
-    secondary: 'bg-secondary text-secondary-foreground',
-    outline: 'border border-input bg-background text-foreground',
+    default: 'border-primary/30 bg-primary/10 text-primary',
+    secondary: 'border-border bg-secondary text-secondary-foreground',
+    outline: 'border-input bg-transparent text-foreground',
   }
 
   return cn(base, variants[props.variant])

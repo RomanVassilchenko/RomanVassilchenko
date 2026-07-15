@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { Sun, Moon, Monitor } from 'lucide-vue-next'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { Check, Monitor, Moon, Sun } from 'lucide-vue-next'
+import { useTheme, type Theme } from '@/composables/useTheme'
 
-type Theme = 'light' | 'dark' | 'system'
-
-const theme = ref<Theme>('system')
+const { t } = useI18n()
+const { theme, setTheme } = useTheme()
 const isOpen = ref(false)
+const root = ref<HTMLElement | null>(null)
+const trigger = ref<HTMLButtonElement | null>(null)
 
 const themes: { value: Theme; icon: typeof Sun }[] = [
   { value: 'light', icon: Sun },
@@ -13,75 +16,72 @@ const themes: { value: Theme; icon: typeof Sun }[] = [
   { value: 'system', icon: Monitor },
 ]
 
-const applyTheme = (t: Theme) => {
-  const root = document.documentElement
+const currentIcon = computed(
+  () => themes.find((item) => item.value === theme.value)?.icon ?? Monitor
+)
 
-  if (t === 'system') {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    root.classList.toggle('dark', prefersDark)
-  } else {
-    root.classList.toggle('dark', t === 'dark')
-  }
-}
-
-const setTheme = (newTheme: Theme) => {
-  theme.value = newTheme
-  localStorage.setItem('theme', newTheme)
-  applyTheme(newTheme)
+const close = (restoreFocus = false) => {
   isOpen.value = false
+  if (restoreFocus) trigger.value?.focus()
 }
 
-const getCurrentIcon = () => {
-  return themes.find((t) => t.value === theme.value)?.icon || Sun
+const selectTheme = (value: Theme) => {
+  setTheme(value)
+  close(true)
+}
+
+const handlePointerDown = (event: PointerEvent) => {
+  if (!root.value?.contains(event.target as Node)) close()
+}
+
+const handleKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape' && isOpen.value) close(true)
+}
+
+const handleFocusOut = (event: FocusEvent) => {
+  if (!root.value?.contains(event.relatedTarget as Node | null)) close()
 }
 
 onMounted(() => {
-  const saved = localStorage.getItem('theme') as Theme | null
-  if (saved) {
-    theme.value = saved
-  }
-  applyTheme(theme.value)
+  document.addEventListener('pointerdown', handlePointerDown)
+  document.addEventListener('keydown', handleKeydown)
+})
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (theme.value === 'system') {
-      document.documentElement.classList.toggle('dark', e.matches)
-    }
-  })
+onUnmounted(() => {
+  document.removeEventListener('pointerdown', handlePointerDown)
+  document.removeEventListener('keydown', handleKeydown)
 })
 </script>
 
 <template>
-  <div class="relative">
+  <div ref="root" class="relative" @focusout="handleFocusOut">
     <button
+      ref="trigger"
+      class="flex h-10 w-10 items-center justify-center text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+      :aria-label="t('theme.change')"
+      :aria-expanded="isOpen"
       @click="isOpen = !isOpen"
-      class="rounded-md p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-      aria-label="Toggle theme"
     >
-      <component :is="getCurrentIcon()" class="h-5 w-5" />
+      <component :is="currentIcon" class="h-4 w-4" />
     </button>
 
     <div
       v-if="isOpen"
-      class="absolute right-0 mt-2 w-36 overflow-hidden rounded-lg border border-border bg-popover shadow-lg"
+      class="absolute right-0 top-full z-50 mt-2 w-40 border border-border bg-popover p-1 shadow-xl"
+      role="group"
+      :aria-label="t('theme.change')"
     >
       <button
-        v-for="t in themes"
-        :key="t.value"
-        @click="setTheme(t.value)"
-        :aria-label="`Use ${t.value} theme`"
-        :class="[
-          'flex w-full items-center gap-2 px-3 py-2 text-sm transition-colors',
-          theme === t.value
-            ? 'bg-accent text-accent-foreground'
-            : 'text-muted-foreground hover:bg-accent hover:text-foreground',
-        ]"
+        v-for="item in themes"
+        :key="item.value"
+        class="flex min-h-10 w-full items-center gap-2 px-3 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+        :aria-pressed="theme === item.value"
+        @click="selectTheme(item.value)"
       >
-        <component :is="t.icon" class="h-4 w-4" />
-        <span class="capitalize">{{ t.value }}</span>
+        <component :is="item.icon" class="h-4 w-4" />
+        <span>{{ t(`theme.${item.value}`) }}</span>
+        <Check v-if="theme === item.value" class="ml-auto h-4 w-4 text-success" />
       </button>
     </div>
   </div>
-
-  <!-- Backdrop to close dropdown -->
-  <div v-if="isOpen" @click="isOpen = false" class="fixed inset-0 z-[-1]" />
 </template>

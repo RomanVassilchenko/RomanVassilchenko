@@ -1,62 +1,87 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Languages } from 'lucide-vue-next'
+import { Check, Languages } from 'lucide-vue-next'
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const isOpen = ref(false)
+const root = ref<HTMLElement | null>(null)
+const trigger = ref<HTMLButtonElement | null>(null)
 
 const languages = [
-  { code: 'en', name: 'English', flag: 'EN' },
-  { code: 'ru', name: 'Русский', flag: 'RU' },
+  { code: 'en', name: 'English', short: 'EN' },
+  { code: 'ru', name: 'Русский', short: 'RU' },
 ] as const
+
+const currentLanguage = computed(() => languages.find((language) => language.code === locale.value))
+
+const close = (restoreFocus = false) => {
+  isOpen.value = false
+  if (restoreFocus) trigger.value?.focus()
+}
 
 const setLanguage = (code: string) => {
   locale.value = code
   document.documentElement.lang = code
   localStorage.setItem('locale', code)
-  isOpen.value = false
+  close(true)
 }
 
-const currentFlag = computed(() => {
-  const found = languages.find((l) => l.code === locale.value)
-  return found ? found.flag : 'EN'
+const handlePointerDown = (event: PointerEvent) => {
+  if (!root.value?.contains(event.target as Node)) close()
+}
+
+const handleKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape' && isOpen.value) close(true)
+}
+
+const handleFocusOut = (event: FocusEvent) => {
+  if (!root.value?.contains(event.relatedTarget as Node | null)) close()
+}
+
+onMounted(() => {
+  document.addEventListener('pointerdown', handlePointerDown)
+  document.addEventListener('keydown', handleKeydown)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('pointerdown', handlePointerDown)
+  document.removeEventListener('keydown', handleKeydown)
 })
 </script>
 
 <template>
-  <div class="relative">
+  <div ref="root" class="relative" @focusout="handleFocusOut">
     <button
+      ref="trigger"
+      class="flex h-10 min-w-10 items-center justify-center gap-1.5 px-2 font-mono text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+      :aria-label="t('language.change')"
+      :aria-expanded="isOpen"
       @click="isOpen = !isOpen"
-      class="flex items-center gap-1.5 rounded-md px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-      aria-label="Change language"
     >
       <Languages class="h-4 w-4" />
-      <span class="font-medium">{{ currentFlag }}</span>
+      <span>{{ currentLanguage?.short }}</span>
     </button>
 
     <div
       v-if="isOpen"
-      class="absolute right-0 mt-2 w-36 overflow-hidden rounded-lg border border-border bg-popover shadow-lg"
+      class="absolute right-0 top-full z-50 mt-2 w-40 border border-border bg-popover p-1 shadow-xl"
+      role="group"
+      :aria-label="t('language.change')"
     >
       <button
-        v-for="lang in languages"
-        :key="lang.code"
-        @click="setLanguage(lang.code)"
-        :aria-label="`Switch language to ${lang.name}`"
-        :class="[
-          'flex w-full items-center gap-2 px-3 py-2 text-sm transition-colors',
-          locale === lang.code
-            ? 'bg-accent text-accent-foreground'
-            : 'text-muted-foreground hover:bg-accent hover:text-foreground',
-        ]"
+        v-for="language in languages"
+        :key="language.code"
+        class="flex min-h-10 w-full items-center justify-between px-3 text-left text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+        :aria-pressed="locale === language.code"
+        @click="setLanguage(language.code)"
       >
-        <span class="font-medium">{{ lang.flag }}</span>
-        <span>{{ lang.name }}</span>
+        <span
+          ><span class="mr-2 font-mono text-xs text-primary">{{ language.short }}</span
+          >{{ language.name }}</span
+        >
+        <Check v-if="locale === language.code" class="h-4 w-4 text-success" />
       </button>
     </div>
   </div>
-
-  <!-- Backdrop to close dropdown -->
-  <div v-if="isOpen" @click="isOpen = false" class="fixed inset-0 z-[-1]" />
 </template>
