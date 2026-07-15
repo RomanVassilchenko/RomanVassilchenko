@@ -9,7 +9,7 @@ SHOW_MASTERS ?= false
 all: help
 
 #--------------------------
-# Resume targets (Typst)
+# Resume targets (HTML/CSS + Playwright)
 #--------------------------
 
 # Generate both English and Russian PDFs
@@ -23,16 +23,16 @@ en: $(PUBLIC_DIR)/resume_en.pdf
 ru: $(PUBLIC_DIR)/resume_ru.pdf
 
 # Build English resume
-$(PUBLIC_DIR)/resume_en.pdf: $(RESUME_DIR)/resume.typ $(RESUME_DIR)/i18n.typ
+$(PUBLIC_DIR)/resume_en.pdf: $(RESUME_DIR)/generate.mjs $(RESUME_DIR)/data.mjs $(RESUME_DIR)/resume.css
 	@mkdir -p $(PUBLIC_DIR)
 	@echo "Building English resume..."
-	@cd $(RESUME_DIR) && typst compile resume.typ --input lang=en --input show_masters=$(SHOW_MASTERS) ../public/documents/resume_en.pdf
+	@cd $(SITE_DIR) && node resume/generate.mjs en ../public/documents/resume_en.pdf $(SHOW_MASTERS)
 
 # Build Russian resume
-$(PUBLIC_DIR)/resume_ru.pdf: $(RESUME_DIR)/resume.typ $(RESUME_DIR)/i18n.typ
+$(PUBLIC_DIR)/resume_ru.pdf: $(RESUME_DIR)/generate.mjs $(RESUME_DIR)/data.mjs $(RESUME_DIR)/resume.css
 	@mkdir -p $(PUBLIC_DIR)
 	@echo "Building Russian resume..."
-	@cd $(RESUME_DIR) && typst compile resume.typ --input lang=ru --input show_masters=$(SHOW_MASTERS) ../public/documents/resume_ru.pdf
+	@cd $(SITE_DIR) && node resume/generate.mjs ru ../public/documents/resume_ru.pdf $(SHOW_MASTERS)
 
 #--------------------------
 # Website targets
@@ -42,6 +42,8 @@ $(PUBLIC_DIR)/resume_ru.pdf: $(RESUME_DIR)/resume.typ $(RESUME_DIR)/i18n.typ
 install:
 	@echo "Installing dependencies..."
 	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP npm install
+	@echo "Installing Chromium for resume generation..."
+	@cd $(SITE_DIR) && npx playwright install chromium
 
 # Run development server
 dev:
@@ -64,7 +66,6 @@ lint:
 format:
 	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP npm run format
 	@prettier --write "*.md" 2>/dev/null || true
-	@typstfmt $(RESUME_DIR)/*.typ 2>/dev/null || true
 
 #--------------------------
 # Clean targets
@@ -88,9 +89,9 @@ help:
 	@echo "Usage: make [target]"
 	@echo ""
 	@echo "Flags:"
-	@echo "  SHOW_MASTERS=false  Toggle master's education in Typst and site builds"
+	@echo "  SHOW_MASTERS=false  Toggle master's education in generated PDFs and site builds"
 	@echo ""
-	@echo "Resume (Typst):"
+	@echo "Resume (HTML/CSS + Playwright):"
 	@echo "  generate    Build both EN/RU resumes to public/documents"
 	@echo "  en          Build English resume only"
 	@echo "  ru          Build Russian resume only"
@@ -101,7 +102,7 @@ help:
 	@echo "  build       Build for production (includes resume generation)"
 	@echo "  preview     Preview production build"
 	@echo "  lint        Run type checker"
-	@echo "  format      Format code (Prettier + typstfmt)"
+	@echo "  format      Format website and resume frontend sources with Prettier"
 	@echo ""
 	@echo "Clean:"
 	@echo "  clean       Remove generated resume PDFs"
