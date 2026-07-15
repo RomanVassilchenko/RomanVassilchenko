@@ -220,8 +220,8 @@ export default {
   contact: {
     kicker: 'Контакты',
     title: 'Ищете Go-разработчика для финтеха или распределённых систем?',
-    subtitle: 'Пришлите описание позиции, команды и задачи. Быстрее всего отвечаю по email.',
-    emailCta: 'Написать Роману',
+    subtitle: 'Пришлите описание позиции, команды и задачи. Быстрее всего отвечаю в Telegram.',
+    primaryCta: 'Написать в Telegram',
     otherChannels: 'Другие каналы',
     telegram: 'Telegram',
     linkedin: 'LinkedIn',

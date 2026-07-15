@@ -222,8 +222,8 @@ export default {
     kicker: 'Contact',
     title: 'Looking for a Go engineer for fintech or distributed-systems work?',
     subtitle:
-      'Send the role, team context, and the problem you need solved. Email is the fastest way to reach me.',
-    emailCta: 'Email Roman',
+      'Send the role, team context, and the problem you need solved. Telegram is the fastest way to reach me.',
+    primaryCta: 'Message on Telegram',
     otherChannels: 'Other channels',
     telegram: 'Telegram',
     linkedin: 'LinkedIn',

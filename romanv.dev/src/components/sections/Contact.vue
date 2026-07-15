@@ -6,10 +6,10 @@ import Button from '../ui/Button.vue'
 const { t } = useI18n()
 const contactLinks = [
   {
-    key: 'telegram',
-    url: 'https://t.me/Roman_Vassilchenko',
-    value: '@Roman_Vassilchenko',
-    icon: Send,
+    key: 'email',
+    url: 'mailto:roman.vassilchenko.work@gmail.com',
+    value: 'roman.vassilchenko.work@gmail.com',
+    icon: Mail,
   },
   {
     key: 'linkedin',
@@ -46,12 +46,14 @@ const contactLinks = [
             </p>
             <Button
               as="a"
-              href="mailto:roman.vassilchenko.work@gmail.com"
+              href="https://t.me/Roman_Vassilchenko"
+              target="_blank"
+              rel="noopener noreferrer"
               size="lg"
               class="mt-8 gap-2"
             >
-              <Mail class="h-4 w-4" />
-              {{ t('contact.emailCta') }}
+              <Send class="h-4 w-4" />
+              {{ t('contact.primaryCta') }}
             </Button>
           </div>
 

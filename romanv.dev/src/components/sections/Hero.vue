@@ -67,7 +67,7 @@ const socialLinks = [
           <div class="relative border border-border bg-card p-3">
             <div class="absolute -left-px -top-px h-8 w-1 bg-primary" aria-hidden="true"></div>
             <img
-              src="/images/roman-vassilchenko.png"
+              src="/images/roman-vassilchenko.png?v=2"
               alt="Roman Vassilchenko"
               width="288"
               height="288"
