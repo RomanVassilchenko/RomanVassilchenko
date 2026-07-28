@@ -12,13 +12,17 @@ const degrees = resumeFlags.showMastersEducation
 <template>
   <section id="education" class="section-shell border-b border-border">
     <div class="page-shell">
-      <div class="grid gap-10 lg:grid-cols-[minmax(0,0.55fr)_minmax(0,1.45fr)] lg:gap-20">
-        <div>
-          <p class="section-kicker">04 / {{ t('education.kicker') }}</p>
-          <h2 class="section-heading">{{ t('education.title') }}</h2>
+      <div class="grid gap-10 lg:grid-cols-[minmax(14rem,0.7fr)_minmax(0,1.3fr)] lg:gap-16">
+        <div class="min-w-0">
+          <p class="section-kicker">{{ t('education.kicker') }}</p>
+          <h2
+            class="text-balance text-4xl font-semibold tracking-[-0.05em] text-foreground sm:text-5xl"
+          >
+            {{ t('education.title') }}
+          </h2>
         </div>
 
-        <div class="border-t border-border">
+        <div class="min-w-0 border-t border-border">
           <article
             v-for="degree in degrees"
             :key="degree"

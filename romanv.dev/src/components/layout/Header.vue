@@ -11,11 +11,11 @@ const isMobileMenuOpen = ref(false)
 const mobileMenuTrigger = ref<HTMLButtonElement | null>(null)
 
 const navItems = [
-  { key: 'projects', href: '#projects', index: '01' },
-  { key: 'experience', href: '#experience', index: '02' },
-  { key: 'skills', href: '#skills', index: '03' },
-  { key: 'education', href: '#education', index: '04' },
-  { key: 'contact', href: '#contact', index: '05' },
+  { key: 'projects', href: '#projects' },
+  { key: 'experience', href: '#experience' },
+  { key: 'skills', href: '#skills' },
+  { key: 'education', href: '#education' },
+  { key: 'contact', href: '#contact' },
 ]
 
 const handleScroll = () => {
@@ -55,10 +55,10 @@ onUnmounted(() => {
 
   <header
     :class="[
-      'fixed inset-x-0 top-0 z-50 border-b transition-colors duration-200',
+      'fixed inset-x-0 top-0 z-50 transition-all duration-200',
       isScrolled || isMobileMenuOpen
-        ? 'border-border bg-background/95 backdrop-blur-xl'
-        : 'border-transparent bg-background/70 backdrop-blur-md',
+        ? 'bg-background/88 shadow-[0_1px_0_hsl(var(--border))] backdrop-blur-xl'
+        : 'bg-background/60 backdrop-blur-md',
     ]"
   >
     <nav class="page-shell" :aria-label="t('nav.primaryLabel')">
@@ -69,7 +69,7 @@ onUnmounted(() => {
           aria-label="Roman Vassilchenko"
         >
           <span
-            class="flex h-8 w-8 shrink-0 items-center justify-center border border-primary bg-primary/10 font-mono text-xs font-semibold text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground"
+            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-foreground font-mono text-xs font-semibold text-background transition-transform group-hover:-rotate-6"
           >
             RV
           </span>
@@ -89,9 +89,8 @@ onUnmounted(() => {
             v-for="item in navItems"
             :key="item.key"
             :href="item.href"
-            class="group flex h-16 items-center gap-1.5 border-b-2 border-transparent px-3 text-sm text-muted-foreground transition-colors hover:border-primary hover:text-foreground"
+            class="group flex h-16 items-center gap-1.5 px-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            <span class="font-mono text-[10px] text-primary/80">{{ item.index }}</span>
             {{ t(`nav.${item.key}`) }}
           </a>
         </div>
@@ -101,7 +100,7 @@ onUnmounted(() => {
             :href="`/documents/resume_${locale}.pdf`"
             target="_blank"
             rel="noopener noreferrer"
-            class="mr-1 hidden h-9 items-center gap-2 border border-primary bg-primary px-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/85 sm:flex"
+            class="mr-1 hidden h-9 items-center gap-2 rounded-full bg-primary px-4 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 sm:flex"
           >
             <FileText class="h-4 w-4" />
             {{ t('nav.resume') }}
@@ -135,7 +134,6 @@ onUnmounted(() => {
             class="flex min-h-11 items-center gap-3 px-3 text-sm text-muted-foreground hover:bg-accent hover:text-foreground"
             @click="closeMobileMenu"
           >
-            <span class="font-mono text-xs text-primary">{{ item.index }}</span>
             {{ t(`nav.${item.key}`) }}
           </a>
           <a

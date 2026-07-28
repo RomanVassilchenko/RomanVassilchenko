@@ -13,26 +13,26 @@ const getProjectUrl = (project: string): string | undefined => {
 </script>
 
 <template>
-  <section id="projects" class="section-shell border-b border-border bg-card/40">
+  <section id="projects" class="section-shell">
     <div class="page-shell">
       <div class="mb-12 grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-end">
         <div>
-          <p class="section-kicker">01 / {{ t('projects.kicker') }}</p>
+          <p class="section-kicker">{{ t('projects.kicker') }}</p>
           <h2 class="section-heading">{{ t('projects.title') }}</h2>
         </div>
         <p class="text-base leading-7 text-muted-foreground">{{ t('projects.intro') }}</p>
       </div>
 
-      <div class="border-x border-t border-border">
+      <div class="grid gap-5 lg:grid-cols-2">
         <article
           v-for="(project, index) in projects"
           :key="project"
-          class="group grid border-b border-border bg-background transition-colors hover:bg-card lg:grid-cols-[11rem_minmax(0,1fr)_minmax(17rem,0.72fr)]"
+          class="group grid overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
         >
-          <div class="border-b border-border p-5 lg:border-b-0 lg:border-r lg:p-6">
+          <div class="flex items-center justify-between border-b border-border px-6 py-4">
             <p class="font-mono text-xs text-primary">0{{ index + 1 }}</p>
             <p
-              class="mt-3 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-muted-foreground"
+              class="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground"
             >
               <CheckCircle2 v-if="getProjectUrl(project)" class="h-3.5 w-3.5 text-success" />
               <LockKeyhole v-else class="h-3.5 w-3.5" />
@@ -40,11 +40,11 @@ const getProjectUrl = (project: string): string | undefined => {
             </p>
           </div>
 
-          <div class="p-5 sm:p-6 lg:p-8">
+          <div class="p-6 sm:p-8">
             <p class="mb-2 font-mono text-xs text-primary">
               {{ t(`projects.items.${project}.description`) }}
             </p>
-            <h3 class="text-2xl font-semibold tracking-[-0.03em] text-foreground sm:text-3xl">
+            <h3 class="text-2xl font-semibold tracking-[-0.04em] text-foreground sm:text-3xl">
               <a
                 v-if="getProjectUrl(project)"
                 :href="getProjectUrl(project)"
@@ -81,9 +81,7 @@ const getProjectUrl = (project: string): string | undefined => {
             </div>
           </div>
 
-          <div
-            class="border-t border-border bg-muted/35 p-5 sm:p-6 lg:border-l lg:border-t-0 lg:p-8"
-          >
+          <div class="border-t border-border bg-accent/35 p-6 sm:p-8">
             <p class="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
               {{ t('projects.outcomes') }}
             </p>

@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'JetBrains Mono', 'monospace'],
       },
       colors: {
         border: 'hsl(var(--border))',

@@ -1,8 +1,8 @@
 export default {
   nav: {
     experience: 'Experience',
-    skills: 'Toolkit',
-    projects: 'Selected work',
+    skills: 'Tools',
+    projects: 'Projects',
     education: 'Education',
     contact: 'Contact',
     resume: 'Resume',
@@ -13,43 +13,23 @@ export default {
   },
   hero: {
     name: 'Roman Vassilchenko',
-    role: 'Go Backend Engineer · Bereke Bank',
+    role: 'Go backend engineer · fintech & platforms',
     location: 'Astana, Kazakhstan · UTC+5',
+    current: 'Building at Bereke Bank',
     profileLabel: 'Profile',
-    headline: 'Go backend engineer building reliable fintech and high-load platforms.',
+    headline: 'Go backend engineer.',
     summary:
-      'I build backend systems that accelerate critical business workflows and stay reliable under load, from credit pipelines at Bereke Bank to internal platforms and shared libraries at Ozon.',
-    metrics: {
-      issuance: {
-        value: '>2.5×',
-        label: 'Faster auto-loan issuance',
-        detail: 'More than 2.5× faster, from 40 to 15 minutes',
-        href: '#projects',
-      },
-      adoption: {
-        value: '30+',
-        label: 'Services using shared libraries',
-        detail: 'Developed and maintained internal Go libraries at Ozon',
-        href: '#experience-ozonStaff',
-      },
-      search: {
-        value: '3×',
-        label: 'Faster search in Ozon Hiring',
-        detail: 'Reworked Elasticsearch filtering and reduced cluster load',
-        href: '#experience-ozonIntern',
-      },
-    },
+      'I work on credit decision systems at Bereke Bank. Previously, I built employee and hiring platform services at Ozon.',
     cta: {
       resume: 'Open resume',
       contact: 'Discuss a role',
-      projects: 'Selected work',
+      projects: 'Projects',
     },
   },
   experience: {
     kicker: 'Experience',
-    title: 'Production systems, not side-project scale.',
-    intro:
-      'A track record across banking and company-wide platforms: architecture, delivery, reliability, and measurable operational outcomes.',
+    title: 'Experience',
+    intro: 'Backend development in banking, employee platforms, and hiring systems.',
     present: 'Present',
     positions: {
       bereke: {
@@ -60,45 +40,40 @@ export default {
         description:
           "Building unified credit decision infrastructure at one of Kazakhstan's major banks: credit pipeline architecture, government and financial data integrations, and high-load microservice orchestration.",
         achievements: [
-          "Architect and build the company's unified credit pipeline, standardizing loan issuance across products and centralizing application routing",
-          'Built numerous production integrations with government and financial services, including FCB, collateral registries, and identity verification',
-          'Designed fault-tolerant microservice architecture with strict latency SLA and event-driven communication via Kafka',
-          'Supported the launch of a large auto-loan credit pipeline from pilot to production scale: parallelized processing, made issuance more than 2.5× faster, from 40 to 15 minutes, and grew volume from zero to 130 applications per day within six months',
-          'Built a corporate messenger alerting library and operational notifications for production workflows',
+          "Design and build the bank's unified credit pipeline, standardizing routing, validation, and decision flows across loan products",
+          'Own production integrations with government and financial systems, including credit bureau, collateral, and identity data',
+          'Took an auto-loan pipeline from pilot to production: parallel processing cut issuance from 40 to 15 minutes and supported growth to 130 applications a day',
+          'Built reliability into the workflow through latency controls, Kafka-based communication, fallback logic, and operational alerting',
         ],
         tech: ['Go', 'PostgreSQL', 'Camunda', 'Kafka', 'Docker', 'GraphQL', 'REST'],
       },
       ozonStaff: {
         company: 'Ozon',
-        role: 'Junior/Middle Golang Developer',
+        role: 'Junior Go Backend Engineer',
         team: 'Employee Portal Team',
         period: 'Aug 2024 to Sep 2025',
         description:
-          "Worked at Ozon across two company-wide products: started on the hiring portal as a full-time Go backend intern, then moved to the employee portal in a Junior/Middle role. Built and maintained internal tooling for Ozon's employee platform serving 10000-15000 daily users and 40000+ monthly active users across a large microservice ecosystem before moving to Bereke Bank.",
+          "Joined a three-person backend team responsible for Ozon's company-wide employee platform. Combined on-call ownership with delivery across employee data, compliance workflows, office operations, analytics integrations, and document generation.",
         achievements: [
-          'Helped migrate a large employee-portal monolith to microservices; reduced pod load by 20-25% within my domain',
-          'Actively maintained internal Go libraries: built shared DB, validation, and middleware components used by 30+ services, strengthening a culture of reusable engineering solutions',
-          'Helped launch Staff 2.0 and sustained 2000 concurrent users during peak rollout',
-          'Implemented complex office attendance logic with seat reclamation and no-show enforcement across 60000+ employees',
-          'Built ETL pipelines from internal survey platform to Vertica for self-service analytics',
-          'Designed document generation infrastructure with configurable templates for enterprise reporting',
-          'Improved internal cloud storage large-file workflows and video preview generation for assets up to several TB per file',
+          'Co-designed the decomposition of a large monolith into roughly 10 domain services; built the employee-data service and cut average lookup time by 25%',
+          'Sole backend owner of recurring compliance-questionnaire workflows, including employee assignment, notifications, and a legal administration interface',
+          'Automated office attendance and no-show handling for 10000+ employees, including notifications and automatic seat reclamation; the platform sustained 2000 concurrent users at rollout',
+          'Built the complete backend and a Go document generator for a new trademark-approval workflow',
+          'Co-authored shared Go components for database access, middleware, retries, workers, and watchers; also delivered analytics exports and video-preview workflows for files up to 2 TB',
         ],
         tech: ['Go', 'gRPC', 'PostgreSQL', 'ClickHouse', 'Vertica', 'Kafka', 'Redis', 'Grafana'],
       },
       ozonIntern: {
         company: 'Ozon',
-        role: 'Intern/Junior Golang Developer',
+        role: 'Go Backend Intern',
         team: 'Hiring Portal Team',
         period: 'Dec 2023 to Aug 2024',
         description:
-          'Started at Ozon as a full-time Go backend intern and shipped production features for a company-wide hiring platform handling thousands of applications across all Ozon entities.',
+          'Worked in a four-person backend team on the core service behind Ozon’s hiring platform. Progressed from SQL reporting tasks to on-call support and production ownership.',
         achievements: [
-          'Optimized complex SQL queries for candidate selection, achieving significant response time improvements',
-          'Re-engineered ElasticSearch filtering logic, making search in the Ozon hiring platform 3× faster while reducing cluster load',
-          'Developed a gRPC-based notification service integrating corporate messenger (Mattermost)',
-          'Implemented Kafka-based delayed message delivery and sharding for reliable and scalable notification processing',
-          'Designed Grafana dashboards for real-time monitoring of hiring pipeline metrics and system errors',
+          'Cut candidate-search p95 from 1.5-2 seconds to 500-850 ms by fixing SQL indexes and rewriting inefficient Elasticsearch queries; validated the result with repeated load tests',
+          'Designed and built a notification bot for candidate updates, including reliable delayed delivery through Kafka',
+          'Joined the on-call rotation, resolved long-standing production defects, and built Grafana dashboards for hiring-funnel anomalies and system errors',
         ],
         tech: [
           'Go',
@@ -115,9 +90,8 @@ export default {
   },
   skills: {
     kicker: 'Production toolkit',
-    title: 'Tools chosen for throughput and operability.',
-    intro:
-      'Technologies used to build, integrate, observe, and operate the production systems above.',
+    title: 'Production tools',
+    intro: 'The technologies I use to build, integrate, and operate backend services.',
     categories: {
       backend: 'Backend',
       data: 'Data & storage',
@@ -126,14 +100,13 @@ export default {
     },
   },
   projects: {
-    kicker: 'Selected systems',
-    title: 'Engineering decisions tied to real outcomes.',
-    intro:
-      'A selection of banking, platform, and analytics systems where backend work moved delivery speed, scale, or reliability.',
+    kicker: 'Backend',
+    title: 'Projects',
+    intro: 'A few systems I worked on and the concrete results.',
     public: 'Public product',
     internal: 'Internal system',
-    outcomes: 'Measured outcomes',
-    contribution: 'My contribution',
+    outcomes: 'Results',
+    contribution: 'Work',
     viewMore: 'View More',
     items: {
       adalqarau: {
@@ -152,16 +125,16 @@ export default {
         tech: ['Go', 'PostgreSQL', 'MinIO', 'Kafka', 'GraphQL', 'Buf'],
       },
       staffPortal: {
-        name: 'Employee Portal: Monolith to Microservices',
-        description: 'Enterprise platform for 60000+ employees',
+        name: 'Employee Platform: Monolith to Domain Services',
+        description: 'Company-wide platform with a 2000-user rollout peak',
         details:
-          'Migration of the employee portal from a monolith to microservices, alongside shared infrastructure, document generation, and large-file workflows for a system serving 10000-15000 DAU and 40000+ MAU.',
+          'Decomposition of a large employee-platform monolith into roughly 10 domain services, alongside new compliance, office, document, analytics, and large-file workflows.',
         contribution:
-          'Served as the primary developer responsible for reworking internal user-data storage, office-booking workflows, and corporate messenger integrations.',
+          'Co-designed the service boundaries, built the employee-data service, and owned several business-critical workflows as part of a three-person backend team.',
         highlights: [
-          'Pod load reduced by 20-25%',
+          'Average employee-data lookup time reduced by 25%',
           '2000 concurrent users during the new portal rollout peak',
-          'Developed and maintained internal libraries used by 30+ services',
+          'Attendance automation and seat reclamation for 10000+ employees',
         ],
         tech: ['Go', 'PostgreSQL', 'Kafka', 'Redis', 'Grafana'],
       },
@@ -173,8 +146,8 @@ export default {
         contribution:
           'Built backend search, notification, and observability improvements as a Go engineer.',
         highlights: [
-          'Candidate ranking SQL significantly accelerated',
-          'Search in the Ozon hiring platform made 3× faster',
+          'Candidate-search p95 reduced from 1.5-2 s to 500-850 ms',
+          'SQL indexes and Elasticsearch queries rebuilt and load-tested',
           'Kafka-sharded notification service with Grafana monitoring',
         ],
         tech: ['Go', 'PostgreSQL', 'ElasticSearch', 'Kafka'],
@@ -197,7 +170,7 @@ export default {
   },
   education: {
     kicker: 'Education',
-    title: 'Research grounded in real data.',
+    title: 'Education',
     thesis: 'Read bachelor thesis (PDF)',
     degrees: {
       masters: {
@@ -220,9 +193,8 @@ export default {
   },
   contact: {
     kicker: 'Contact',
-    title: 'Looking for a Go engineer for fintech or distributed-systems work?',
-    subtitle:
-      'Send the role, team context, and the problem you need solved. Telegram is the fastest way to reach me.',
+    title: 'Contact',
+    subtitle: 'The fastest way to reach me is Telegram. You can also use email or LinkedIn.',
     primaryCta: 'Message on Telegram',
     otherChannels: 'Other channels',
     telegram: 'Telegram',

@@ -15,22 +15,22 @@ const techCategories = [
 </script>
 
 <template>
-  <section id="skills" class="section-shell border-b border-border bg-card/40">
+  <section id="skills" class="section-shell">
     <div class="page-shell">
       <div class="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20">
         <div>
-          <p class="section-kicker">03 / {{ t('skills.kicker') }}</p>
+          <p class="section-kicker">{{ t('skills.kicker') }}</p>
           <h2 class="section-heading">{{ t('skills.title') }}</h2>
           <p class="section-copy">{{ t('skills.intro') }}</p>
         </div>
 
-        <div class="border-x border-t border-border bg-background">
+        <div class="overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm">
           <div
             v-for="(category, index) in techCategories"
             :key="category.key"
-            class="grid border-b border-border sm:grid-cols-[11rem_minmax(0,1fr)]"
+            class="grid border-b border-border last:border-b-0 sm:grid-cols-[11rem_minmax(0,1fr)]"
           >
-            <div class="border-b border-border bg-muted/35 p-5 sm:border-b-0 sm:border-r">
+            <div class="border-b border-border bg-accent/35 p-5 sm:border-b-0 sm:border-r">
               <p class="font-mono text-[10px] text-primary">0{{ index + 1 }}</p>
               <h3 class="mt-2 text-sm font-semibold text-foreground">
                 {{ t(`skills.categories.${category.key}`) }}

@@ -8,18 +8,18 @@ const positions = ['bereke', 'ozonStaff', 'ozonIntern'] as const
 </script>
 
 <template>
-  <section id="experience" class="section-shell border-b border-border">
+  <section id="experience" class="section-shell bg-card/55">
     <div class="page-shell">
-      <p class="section-kicker">02 / {{ t('experience.kicker') }}</p>
+      <p class="section-kicker">{{ t('experience.kicker') }}</p>
       <h2 class="section-heading">{{ t('experience.title') }}</h2>
       <p class="section-copy">{{ t('experience.intro') }}</p>
 
-      <div class="relative mt-14 border-l border-border lg:ml-40">
+      <div class="relative mt-16 border-l border-border lg:ml-32">
         <article
           v-for="(position, index) in positions"
           :id="`experience-${position}`"
           :key="position"
-          class="relative border-b border-border py-10 pl-6 first:pt-0 last:border-b-0 last:pb-0 sm:pl-10 lg:grid lg:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] lg:gap-12"
+          class="relative py-12 pl-6 first:pt-0 last:pb-0 sm:pl-10 lg:grid lg:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] lg:gap-12"
         >
           <span
             class="absolute -left-[5px] h-2.5 w-2.5 border-2 border-background"
@@ -42,7 +42,7 @@ const positions = ['bereke', 'ozonStaff', 'ozonIntern'] as const
             </p>
           </div>
 
-          <div>
+          <div class="rounded-[1.5rem] border border-border bg-background p-6 shadow-sm sm:p-8">
             <p class="max-w-3xl text-base leading-7 text-muted-foreground">
               {{ t(`experience.positions.${position}.description`) }}
             </p>

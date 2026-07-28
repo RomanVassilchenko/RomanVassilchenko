@@ -27,15 +27,15 @@ const contactLinks = [
 </script>
 
 <template>
-  <section id="contact" class="section-shell bg-card/40">
+  <section id="contact" class="section-shell">
     <div class="page-shell">
       <div
-        class="relative overflow-hidden border border-border bg-background px-6 py-10 sm:px-10 sm:py-14 lg:px-14 lg:py-16"
+        class="relative overflow-hidden rounded-[1.5rem] border border-border bg-card px-6 py-10 text-foreground shadow-sm sm:px-10 sm:py-14 lg:px-14 lg:py-16"
       >
         <div class="absolute right-0 top-0 h-full w-1 bg-primary" aria-hidden="true"></div>
         <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_19rem] lg:items-end lg:gap-16">
           <div>
-            <p class="section-kicker">05 / {{ t('contact.kicker') }}</p>
+            <p class="section-kicker">{{ t('contact.kicker') }}</p>
             <h2
               class="max-w-4xl text-balance text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl lg:text-5xl"
             >
@@ -67,7 +67,7 @@ const contactLinks = [
               :href="link.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="group flex min-h-12 items-center gap-3 border-b border-border text-sm text-muted-foreground transition-colors hover:text-primary"
+              class="group flex min-h-12 items-center gap-3 border-b border-border text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               <component :is="link.icon" class="h-4 w-4" />
               <span class="min-w-0 flex-1 truncate">{{ link.value }}</span>

@@ -41,9 +41,13 @@ $(PUBLIC_DIR)/resume_ru.pdf: $(RESUME_DIR)/generate.mjs $(RESUME_DIR)/data.mjs $
 # Install dependencies
 install:
 	@echo "Installing dependencies..."
-	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP npm install
-	@echo "Installing Chromium for resume generation..."
-	@cd $(SITE_DIR) && npx playwright install chromium
+	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP npm ci
+	@if [ -z "$$PLAYWRIGHT_BROWSERS_PATH" ]; then \
+		echo "Installing Chromium for resume generation..."; \
+		cd $(SITE_DIR) && npx playwright install chromium; \
+	else \
+		echo "Using Chromium provided by the Nix development environment."; \
+	fi
 
 # Run development server
 dev:
@@ -65,7 +69,8 @@ lint:
 # Format code
 format:
 	@cd $(SITE_DIR) && env -u NPM_CONFIG_TMP npm run format
-	@prettier --write "*.md" 2>/dev/null || true
+	@cd $(SITE_DIR) && npx prettier --write ../\*.md
+	@nixfmt flake.nix
 
 #--------------------------
 # Clean targets
@@ -87,6 +92,7 @@ distclean: clean
 
 help:
 	@echo "Usage: make [target]"
+	@echo "       nix run .#[dev|build|preview|lint|format|resume|install]"
 	@echo ""
 	@echo "Flags:"
 	@echo "  SHOW_MASTERS=false  Toggle master's education in generated PDFs and site builds"

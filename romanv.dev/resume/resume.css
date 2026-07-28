@@ -4,13 +4,13 @@
 }
 
 :root {
-  --ink: #202124;
-  --muted: #60656d;
-  --line: #d7dadd;
+  --ink: #101a2c;
+  --muted: #596170;
+  --line: #d7d4ca;
   --paper: #ffffff;
-  --panel: #f6f8fa;
-  --blue: #0078d4;
-  --blue-bright: #4daafc;
+  --panel: #f5f3ed;
+  --blue: #3157ff;
+  --blue-bright: #3157ff;
 }
 
 * {
@@ -21,7 +21,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #dfe2e5;
+  background: #e7e4dc;
   color: var(--ink);
   font-family: Inter, 'Segoe UI', Arial, sans-serif;
   -webkit-print-color-adjust: exact;
@@ -57,7 +57,7 @@ body {
   padding: 6mm 7mm 7mm;
   border-top: 0.3mm solid var(--line);
   border-bottom: 0.3mm solid var(--line);
-  background: #f5f7f9;
+  background: #f5f3ed;
   color: var(--ink);
 }
 
@@ -65,7 +65,7 @@ body {
   position: absolute;
   inset: 0;
   content: '';
-  background-image: linear-gradient(to right, #e5e9ed 1px, transparent 1px);
+  background-image: linear-gradient(to right, #e1ded5 1px, transparent 1px);
   background-size: 18mm 100%;
 }
 
