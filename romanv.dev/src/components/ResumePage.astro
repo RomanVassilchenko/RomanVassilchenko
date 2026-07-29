@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { resume, type Locale } from '../data/resume'
+
+interface Props {
+  lang: Locale
+}
+
+const { lang } = Astro.props
+const content = resume[lang]
+const otherLang = lang === 'en' ? 'ru' : 'en'
+const otherLangHref = otherLang === 'en' ? '/' : '/ru/'
+const resumeHref = `/documents/resume_${lang}.pdf`
+const linkClass =
+  'text-blue-400 underline decoration-zinc-600 underline-offset-4 hover:text-blue-300'
+---
+
+<BaseLayout title={content.meta.title} description={content.meta.description} lang={lang}>
+  <a
+    href="#content"
+    class="fixed top-3 left-4 z-50 -translate-y-20 bg-zinc-100 px-3 py-2 text-sm text-zinc-950 transition-transform focus:translate-y-0"
+  >
+    {lang === 'en' ? 'Skip to content' : 'Перейти к содержимому'}
+  </a>
+
+  <main id="content" class="mx-auto max-w-3xl px-5 pt-8 pb-16 sm:px-6 sm:pt-10">
+    <nav
+      class="mb-12 flex justify-end gap-5 text-xs text-zinc-500"
+      aria-label={lang === 'en' ? 'Language and résumé' : 'Язык и резюме'}
+    >
+      <a class="transition-colors hover:text-zinc-200" href={otherLangHref}>
+        {otherLang.toUpperCase()}
+      </a>
+      <a class={linkClass} href={resumeHref} target="_blank" rel="noreferrer">
+        {content.nav.resume}
+      </a>
+    </nav>
+
+    <section class="grid gap-8 sm:grid-cols-[minmax(0,1fr)_9rem] sm:items-start sm:gap-10">
+      <div>
+        <h1
+          class="max-w-2xl text-4xl leading-[1.1] font-semibold tracking-[-0.04em] text-zinc-100 sm:text-5xl"
+        >
+          {content.hero.headline}
+        </h1>
+        <p class="mt-4 max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
+          {content.hero.summary}
+        </p>
+        <p class="mt-4 text-xs text-zinc-500">
+          {content.hero.role} · {content.hero.location}
+        </p>
+        <div class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          <a
+            class={linkClass}
+            href="https://t.me/Roman_Vassilchenko"
+            target="_blank"
+            rel="noreferrer">Telegram</a
+          >
+          <a
+            class={linkClass}
+            href="https://github.com/RomanVassilchenko"
+            target="_blank"
+            rel="noreferrer">GitHub</a
+          >
+          <a
+            class={linkClass}
+            href="https://www.linkedin.com/in/rovassilchenko/"
+            target="_blank"
+            rel="noreferrer">LinkedIn</a
+          >
+        </div>
+      </div>
+      <img
+        src="/images/roman-vassilchenko.png"
+        alt={content.hero.name}
+        width="200"
+        height="200"
+        fetchpriority="high"
+        class="aspect-square w-28 justify-self-start rounded-full border-4 border-zinc-800 bg-zinc-800 object-cover grayscale-[15%] sm:w-36 sm:justify-self-end"
+      />
+    </section>
+
+    <section class="prose prose-sm prose-zinc prose-invert sm:prose-base mt-14 max-w-none sm:mt-16">
+      <h2>{content.about.title}</h2>
+      <p>{content.about.body}</p>
+    </section>
+
+    <section id="experience" class="mt-14 sm:mt-16">
+      <h2 class="text-xl font-semibold tracking-[-0.02em] text-zinc-100">
+        {content.experience.title}
+      </h2>
+      <div class="mt-6">
+        {
+          content.experience.items.map((item) => (
+            <article class="border-t border-zinc-700 py-6 first:border-t-0 first:pt-0">
+              <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
+                <div>
+                  <h3 class="font-semibold tracking-[-0.01em] text-zinc-100">{item.company}</h3>
+                  <p class="mt-0.5 text-sm text-zinc-400 sm:text-base">{item.role}</p>
+                </div>
+                <p class="shrink-0 text-xs leading-5 text-zinc-500">{item.period}</p>
+              </div>
+              <p class="mt-1.5 text-xs text-zinc-500">{item.team}</p>
+              <p class="mt-3 max-w-2xl text-sm leading-6 text-zinc-400 sm:text-base sm:leading-7">
+                {item.summary}
+              </p>
+              <ul class="mt-3 max-w-2xl space-y-1.5 text-sm leading-6 text-zinc-300 sm:text-base sm:leading-7">
+                {item.highlights.map((highlight) => (
+                  <li class="grid grid-cols-[0.75rem_1fr] gap-2">
+                    <span class="text-zinc-600" aria-hidden="true">
+                      —
+                    </span>
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+              <p class="mt-4 text-xs leading-5 text-zinc-500">{item.tech}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="work" class="mt-14 sm:mt-16">
+      <h2 class="text-xl font-semibold tracking-[-0.02em] text-zinc-100">{content.work.title}</h2>
+      <div class="mt-6">
+        {
+          content.work.items.map((item) => (
+            <article class="border-t border-zinc-700 py-5 first:border-t-0 first:pt-0">
+              <h3 class="font-semibold text-zinc-100">
+                {item.href ? (
+                  <a class={linkClass} href={item.href} target="_blank" rel="noreferrer">
+                    {item.name}
+                  </a>
+                ) : (
+                  item.name
+                )}
+              </h3>
+              <p class="mt-2 max-w-2xl text-sm leading-6 text-zinc-400 sm:text-base sm:leading-7">
+                {item.description}
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mt-14 sm:mt-16">
+      <h2 class="text-xl font-semibold tracking-[-0.02em] text-zinc-100">
+        {content.skills.title}
+      </h2>
+      <dl class="mt-6 border-t border-zinc-700">
+        {
+          content.skills.rows.map(([label, tools]) => (
+            <div class="grid gap-1 border-b border-zinc-700 py-3 sm:grid-cols-[7rem_1fr] sm:gap-5">
+              <dt class="text-sm font-medium text-zinc-200 sm:text-base">{label}</dt>
+              <dd class="text-sm leading-6 text-zinc-400 sm:text-base sm:leading-7">{tools}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section id="education" class="mt-14 sm:mt-16">
+      <h2 class="text-xl font-semibold tracking-[-0.02em] text-zinc-100">
+        {content.education.title}
+      </h2>
+      <div class="mt-6 border-t border-zinc-700 pt-5">
+        <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+          <div>
+            <h3 class="font-semibold text-zinc-100">{content.education.degree}</h3>
+            <p class="mt-1 text-sm text-zinc-400 sm:text-base">{content.education.school}</p>
+          </div>
+          <p class="text-xs text-zinc-500">{content.education.period}</p>
+        </div>
+        <p class="mt-3 max-w-2xl text-sm leading-6 text-zinc-400 sm:text-base sm:leading-7">
+          {content.education.note}
+        </p>
+        <a
+          class={`mt-4 inline-block text-sm ${linkClass}`}
+          href="/documents/diploma_bachelor.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {content.education.thesis}
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="mt-14 sm:mt-16">
+      <h2 class="text-xl font-semibold tracking-[-0.02em] text-zinc-100">
+        {content.contact.title}
+      </h2>
+      <div class="mt-5">
+        <p class="text-sm leading-6 text-zinc-400 sm:text-base sm:leading-7">
+          {content.contact.intro}
+        </p>
+        <div
+          class="mt-4 flex flex-col items-start gap-3 text-sm sm:flex-row sm:gap-x-6 sm:text-base"
+        >
+          <a
+            class={linkClass}
+            href="https://t.me/Roman_Vassilchenko"
+            target="_blank"
+            rel="noreferrer">@Roman_Vassilchenko</a
+          >
+          <a class={linkClass} href="mailto:roman.vassilchenko.work@gmail.com">
+            roman.vassilchenko.work@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

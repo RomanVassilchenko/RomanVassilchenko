@@ -1,6 +1,6 @@
 # Development
 
-This repository contains the GitHub profile README, the `romanv.dev` Vue site, and the bilingual PDF resume generator.
+This repository contains the GitHub profile README, the `romanv.dev` Astro site, and the bilingual PDF resume generator.
 
 ## Environment
 
@@ -32,7 +32,7 @@ Inside the Nix environment, `make install` uses Chromium from nixpkgs and does n
 make dev          # live site at http://localhost:5173
 make build        # generate resumes and build the production site
 make preview      # preview the production build
-make lint         # run the Vue/TypeScript type checker
+make lint         # run Astro and TypeScript checks
 make format       # format frontend and resume sources
 make generate     # regenerate both PDF resumes
 make en           # regenerate the English PDF
@@ -60,6 +60,6 @@ make build SHOW_MASTERS=true
 ## Structure
 
 - `README.md` is the public GitHub profile and intentionally contains no development documentation.
-- `romanv.dev/src/` contains the bilingual Vue site.
+- `romanv.dev/src/` contains the bilingual Astro site.
 - `romanv.dev/resume/` contains the structured resume content, HTML generator, and print stylesheet.
 - `romanv.dev/public/documents/` contains the generated one-page English and Russian PDFs.
