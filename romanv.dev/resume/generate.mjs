@@ -108,15 +108,10 @@ const html = `<!doctype html>
   <section class="page">
     <div class="page-inner">
       <header class="masthead">
-        <div>
-          <h1 class="name">${escapeHtml(data.name)}</h1>
-          <div class="role-line">
-            <span class="role">${escapeHtml(data.role)}</span>
-            <span>${escapeHtml(data.location)}</span>
-          </div>
-        </div>
-        <div class="summary-block">
-          <p>${escapeHtml(data.summary)}</p>
+        <h1 class="name">${escapeHtml(data.name)}</h1>
+        <div class="role-line">
+          <span class="role">${escapeHtml(data.role)}</span>
+          <span>${escapeHtml(data.location)}</span>
         </div>
       </header>
 
@@ -124,36 +119,28 @@ const html = `<!doctype html>
         ${contacts.map(contactGroup).join('')}
       </div>
 
-      <div class="one-page-grid">
-        <main class="one-page-main">
+      <main class="resume-content">
+        <section>
           ${sectionHeading('01', data.labels.experience)}
           ${data.experience.map(job).join('')}
-        </main>
+        </section>
 
-        <aside class="side-panel">
-          <section class="side-section">
-            <h2 class="side-title">${escapeHtml(data.labels.impact)}</h2>
-            ${data.metrics
-              .map(
-                (metric) => `
-                  <div class="side-metric">
-                    <span class="side-metric-value">${escapeHtml(metric.value)}</span>
-                    <span class="side-metric-copy"><strong>${escapeHtml(metric.label)}</strong><small>${escapeHtml(metric.note)}</small></span>
-                  </div>`
-              )
-              .join('')}
-          </section>
-
-          <section class="side-section project-side">
+        <section class="project-section">
+          ${sectionHeading('02', data.labels.project)}
+          <div class="project-heading">
+            <div>
+              <h3 class="project-name">${escapeHtml(data.project.name)}</h3>
+              <p class="project-subtitle">${escapeHtml(data.project.subtitle)}</p>
+            </div>
             <div class="project-role">${escapeHtml(data.project.role)}</div>
-            <h2 class="project-name">${escapeHtml(data.project.name)}</h2>
-            <p class="project-subtitle">${escapeHtml(data.project.subtitle)}</p>
-            <ul class="project-list">${data.project.items.map((item) => `<li>${item}</li>`).join('')}</ul>
-            ${techList(data.project.stack)}
-          </section>
+          </div>
+          <ul class="project-list">${data.project.items.map((item) => `<li>${item}</li>`).join('')}</ul>
+          ${techList(data.project.stack)}
+        </section>
 
-          <section class="side-section">
-            <h2 class="side-title">${escapeHtml(data.labels.toolkit)}</h2>
+        <div class="details-grid">
+          <section>
+            <h2 class="detail-title">${escapeHtml(data.labels.toolkit)}</h2>
             ${data.skills
               .map(
                 (skill) => `
@@ -165,32 +152,30 @@ const html = `<!doctype html>
               .join('')}
           </section>
 
-          <section class="side-section two-column-side">
-            <div>
-              <h2 class="side-title">${escapeHtml(data.labels.education)}</h2>
-              ${education
-                .map(
-                  (item) => `
-                    <div class="education-item">
-                      <div class="education-degree">${escapeHtml(item.degree)}</div>
-                      <div class="education-school">${escapeHtml(item.school)}</div>
-                      <div class="education-period">${escapeHtml(item.period)}</div>
-                      ${item.note ? `<div class="education-note">${escapeHtml(item.note)}</div>` : ''}
-                    </div>`
-                )
-                .join('')}
-            </div>
-            <div>
-              <h2 class="side-title">${escapeHtml(data.labels.languages)}</h2>
-              <ul class="simple-list">${data.languages.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-              <h2 class="side-title availability-title">${escapeHtml(data.labels.additional)}</h2>
-              <ul class="simple-list">${data.additional.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-            </div>
+          <section>
+            <h2 class="detail-title">${escapeHtml(data.labels.education)}</h2>
+            ${education
+              .map(
+                (item) => `
+                  <div class="education-item">
+                    <div class="education-degree">${escapeHtml(item.degree)}</div>
+                    <div class="education-school">${escapeHtml(item.school)}</div>
+                    <div class="education-period">${escapeHtml(item.period)}</div>
+                    ${item.note ? `<div class="education-note">${escapeHtml(item.note)}</div>` : ''}
+                  </div>`
+              )
+              .join('')}
           </section>
-        </aside>
-      </div>
+
+          <section>
+            <h2 class="detail-title">${escapeHtml(data.labels.languages)}</h2>
+            <ul class="simple-list">${data.languages.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+            <h2 class="detail-title availability-title">${escapeHtml(data.labels.additional)}</h2>
+            <ul class="simple-list">${data.additional.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+          </section>
+        </div>
+      </main>
     </div>
-    <footer class="footer"><span>romanv.dev · ${personal.email}</span><span class="page-number">01 / 01</span></footer>
   </section>
 </body>
 </html>`
@@ -207,7 +192,7 @@ try {
   await page.evaluate(() => document.fonts.ready)
 
   const overflow = await page.evaluate(() =>
-    ['.page', '.one-page-grid', '.one-page-main', '.side-panel'].flatMap((selector) =>
+    ['.page', '.page-inner', '.resume-content', '.details-grid'].flatMap((selector) =>
       [...document.querySelectorAll(selector)]
         .filter(
           (element) =>
