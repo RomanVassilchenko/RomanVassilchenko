@@ -4,8 +4,8 @@
 
 ### I make complex systems move faster.
 
-Go backend engineer working on credit decision infrastructure at Bereke Bank.<br />
-Previously built company-wide employee and hiring platforms at Ozon.
+Go backend engineer. Joined 7Generation on October 20, 2026.<br />
+Previously at Bereke Bank and Ozon.
 
 [**romanv.dev**](https://romanv.dev) · [LinkedIn](https://www.linkedin.com/in/rovassilchenko/) · [Telegram](https://t.me/Roman_Vassilchenko) · [Email](mailto:roman.vassilchenko.work@gmail.com)
 
@@ -22,9 +22,11 @@ Previously built company-wide employee and hiring platforms at Ozon.
 | **500–850 ms p95** | Reduced candidate-search latency from 1.5–2 seconds and verified it under load |
 | **15M+ contracts** | Created a public-procurement risk platform used in real audit workflows        |
 
-### Current work
+### Experience
 
-At **Bereke Bank**, I design and build a unified credit pipeline: workflow orchestration, external government and financial integrations, Kafka-based communication, fallback logic, and production observability. The work sits where correctness, latency, and business continuity meet.
+**7Generation** · October 20, 2026 — present.
+
+At **Bereke Bank** (September 2025 — October 19, 2026), I designed and built a unified credit pipeline: workflow orchestration, external government and financial integrations, Kafka-based communication, fallback logic, and production observability. The work sat where correctness, latency, and business continuity meet.
 
 Before that, at **Ozon**, I grew from a backend intern supporting a core hiring system to a Junior Go engineer in a three-person employee-platform team. I co-designed a monolith split into roughly 10 domain services, owned compliance and office workflows, built an employee-data service that responded 25% faster, and joined the production on-call rotation.
 

@@ -18,22 +18,31 @@ const en = {
     role: 'Go backend engineer',
     location: 'Astana, Kazakhstan · UTC+5',
     summary:
-      'I build reliable backend systems that make complex business processes faster and easier to operate. Currently working on credit decision infrastructure at Bereke Bank; previously at Ozon.',
+      'I build reliable backend systems that make complex business processes faster and easier to operate. Joined 7Generation on October 20, 2026; previously at Bereke Bank and Ozon.',
   },
   about: {
     title: 'About',
-    body: 'I began working professionally with Go in 2023 on Ozon’s hiring platform, then moved to its company-wide employee portal. Today I design credit decision infrastructure at Bereke Bank. Across these roles, my work has stayed at the intersection of distributed systems, business-critical workflows, and production reliability. I care about clear service boundaries, predictable failure handling, and improvements that can be measured in production.',
+    body: 'I began working professionally with Go in 2023 on Ozon’s hiring platform, then moved to its company-wide employee portal. I later designed credit decision infrastructure at Bereke Bank. Across these roles, my work has stayed at the intersection of distributed systems, business-critical workflows, and production reliability. I care about clear service boundaries, predictable failure handling, and improvements that can be measured in production. I joined 7Generation on October 20, 2026.',
   },
   experience: {
     title: 'Work experience',
     items: [
       {
+        company: '7Generation',
+        role: '',
+        team: '',
+        period: 'Oct 20, 2026 — present',
+        summary: '',
+        highlights: [],
+        tech: '',
+      },
+      {
         company: 'Bereke Bank',
         role: 'Middle Golang Developer',
         team: 'Unified Credit Pipeline / Auto Loan Issuance',
-        period: 'Sep 2025 — present',
+        period: 'Sep 2025 — Oct 19, 2026',
         summary:
-          'Designing the bank’s unified credit pipeline, government and financial data integrations, and high-load microservice orchestration.',
+          'Designed the bank’s unified credit pipeline, government and financial data integrations, and high-load microservice orchestration.',
         highlights: [
           'Took an auto-loan pipeline from pilot to production and reduced issuance time from 40 to 15 minutes.',
           'Built Kafka-based communication, latency controls, fallback logic, and operational alerting.',
@@ -105,7 +114,7 @@ const en = {
     title: 'Contact',
     intro: 'The fastest way to reach me is Telegram. Email works too.',
   },
-  footer: 'Astana · Go backend · English / Russian · Updated July 2026',
+  footer: 'Astana · Go backend · English / Russian · Updated October 2026',
 }
 
 const ru: typeof en = {
@@ -126,22 +135,31 @@ const ru: typeof en = {
     role: 'Go backend-разработчик',
     location: 'Астана, Казахстан · UTC+5',
     summary:
-      'Разрабатываю надёжные backend-системы, которые ускоряют сложные бизнес-процессы и упрощают их эксплуатацию. Сейчас работаю над кредитной инфраструктурой Bereke Bank, до этого — в Ozon.',
+      'Разрабатываю надёжные backend-системы, которые ускоряют сложные бизнес-процессы и упрощают их эксплуатацию. С 20 октября 2026 года — в 7Generation, ранее — в Bereke Bank и Ozon.',
   },
   about: {
     title: 'Обо мне',
-    body: 'Начал профессионально работать с Go в 2023 году над платформой найма Ozon, затем перешёл в команду корпоративного портала сотрудников. Сейчас проектирую инфраструктуру кредитных решений в Bereke Bank. Во всех этих ролях моя работа находилась на пересечении распределённых систем, критичных бизнес-процессов и production-надежности. Ценю ясные границы сервисов, предсказуемую обработку сбоев и результаты, которые можно измерить в production.',
+    body: 'Начал профессионально работать с Go в 2023 году над платформой найма Ozon, затем перешёл в команду корпоративного портала сотрудников. Затем проектировал инфраструктуру кредитных решений в Bereke Bank. Во всех этих ролях моя работа находилась на пересечении распределённых систем, критичных бизнес-процессов и production-надежности. Ценю ясные границы сервисов, предсказуемую обработку сбоев и результаты, которые можно измерить в production. 20 октября 2026 года перешёл в 7Generation.',
   },
   experience: {
     title: 'Опыт работы',
     items: [
       {
+        company: '7Generation',
+        role: '',
+        team: '',
+        period: '20 окт 2026 — настоящее время',
+        summary: '',
+        highlights: [],
+        tech: '',
+      },
+      {
         company: 'Bereke Bank',
         role: 'Middle Golang Developer',
         team: 'Единый кредитный конвейер / Автокредитование',
-        period: 'Сен 2025 — настоящее время',
+        period: 'Сен 2025 — 19 окт 2026',
         summary:
-          'Проектирую единый кредитный конвейер банка, интеграции с государственными и финансовыми источниками и high-load оркестрацию микросервисов.',
+          'Проектировал единый кредитный конвейер банка, интеграции с государственными и финансовыми источниками и high-load оркестрацию микросервисов.',
         highlights: [
           'Довёл конвейер автокредитования от пилота до production и сократил время выдачи с 40 до 15 минут.',
           'Реализовал Kafka-взаимодействие, контроль latency, fallback-логику и операционный алертинг.',
@@ -213,7 +231,7 @@ const ru: typeof en = {
     title: 'Контакты',
     intro: 'Быстрее всего отвечаю в Telegram. Также можно написать на почту.',
   },
-  footer: 'Астана · Go backend · Русский / English · Обновлено в июле 2026',
+  footer: 'Астана · Go backend · Русский / English · Обновлено в октябре 2026',
 }
 
 export const resume = { en, ru }

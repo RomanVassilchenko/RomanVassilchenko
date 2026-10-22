@@ -40,12 +40,16 @@ export const resumes = {
     ],
     experience: [
       {
+        company: '7Generation',
+        period: 'Oct 20, 2026 · Present',
+      },
+      {
         company: 'Bereke Bank',
         role: 'Middle Golang Developer',
-        period: 'Sep 2025 · Present',
+        period: 'Sep 2025 · Oct 19, 2026',
         context: 'Auto Loan Issuance / Unified Credit Pipeline · high load · event driven',
         items: [
-          "Architect and build the company's <strong>unified credit pipeline</strong>, standardizing loan issuance across products and centralizing application routing and validation.",
+          "Architected and built the company's <strong>unified credit pipeline</strong>, standardizing loan issuance across products and centralizing application routing and validation.",
           'Built numerous <strong>production integrations</strong> with government and financial services, including First Credit Bureau, collateral registries and identity verification.',
           'Designed fault-tolerant microservice architecture with strict <strong>latency SLA</strong> and event-driven communication via Kafka.',
           'Supported the auto-loan pipeline from pilot to production: parallelized processing, made issuance <strong>more than 2.5× faster</strong>, from 40 to 15 minutes, and grew volume to <strong>130 applications per day within six months</strong>.',
@@ -174,12 +178,16 @@ export const resumes = {
     ],
     experience: [
       {
+        company: '7Generation',
+        period: '20 окт 2026 · настоящее время',
+      },
+      {
         company: 'Bereke Bank',
         role: 'Middle Golang Developer',
-        period: 'Сен 2025 · настоящее время',
+        period: 'Сен 2025 · 19 окт 2026',
         context: 'Auto Loan Issuance / Единый кредитный конвейер · высокая нагрузка · event driven',
         items: [
-          'Проектирую архитектуру и разрабатываю <strong>единый кредитный конвейер</strong>, унифицирующий выдачу кредитов по продуктам и централизующий маршрутизацию заявок.',
+          'Спроектировал архитектуру и разработал <strong>единый кредитный конвейер</strong>, унифицирующий выдачу кредитов по продуктам и централизующий маршрутизацию заявок.',
           'Реализовал множество <strong>production-интеграций</strong> с государственными и финансовыми сервисами, включая Первое кредитное бюро, реестры залогового имущества и верификацию личности.',
           'Спроектировал отказоустойчивую микросервисную архитектуру со строгими <strong>latency SLA</strong> и event-driven взаимодействием через Kafka.',
           'Сопровождал кредитный конвейер автокредитования от пилота до production: распараллелил обработку, <strong>ускорил выдачу более чем в 2,5 раза</strong>, с 40 до 15 минут, и помог вырастить поток до <strong>130 заявок в день за полгода</strong>.',

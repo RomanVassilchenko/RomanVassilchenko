@@ -35,13 +35,17 @@ const job = (entry) => `
     <div class="job-meta">
       <h3 class="job-company">${escapeHtml(entry.company)}</h3>
       <div class="job-period">${escapeHtml(entry.period)}</div>
-      <div class="job-role">${escapeHtml(entry.role)}</div>
-      <div class="job-context">${escapeHtml(entry.context)}</div>
+      ${entry.role ? `<div class="job-role">${escapeHtml(entry.role)}</div>` : ''}
+      ${entry.context ? `<div class="job-context">${escapeHtml(entry.context)}</div>` : ''}
     </div>
-    <div class="job-body">
+    ${
+      entry.items?.length
+        ? `<div class="job-body">
       <ul class="achievement-list">${entry.items.map((item) => `<li>${item}</li>`).join('')}</ul>
       ${techList(entry.stack)}
-    </div>
+    </div>`
+        : ''
+    }
   </article>`
 
 const contactGroup = (items) => `
